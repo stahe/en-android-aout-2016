@@ -1,0 +1,2275 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to Android Tablet Programming with Android Studio">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/en-android-aout-2016/appendices.html">
+      
+      
+        <link rel="prev" href="assignment-2---controlling-arduinos-with-an-android-tablet.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. Appendices - An Introduction to Android Tablet Programming with Android Studio</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to Android Tablet Programming with Android Studio";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-appendices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to Android Tablet Programming with Android Studio" class="md-header__button md-logo" aria-label="An Introduction to Android Tablet Programming with Android Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to Android Tablet Programming with Android Studio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Appendices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/en-android-aout-2016" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to Android Tablet Programming with Android Studio" class="md-nav__button md-logo" aria-label="An Introduction to Android Tablet Programming with Android Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to Android Tablet Programming with Android Studio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/en-android-aout-2016" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="learning-android-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Learning Android Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="skeleton-of-an-android-client-communicating-with-a-web-service--json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Skeleton of an Android client communicating with a web service / JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study---appointment-management.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Case Study - Appointment Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignment-1-basic-paystub-management.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Assignment 1: Basic Paystub Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignment-2---controlling-arduinos-with-an-android-tablet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Assignment 2 - Controlling Arduinos with an Android Tablet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Appendices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="appendices.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-installing-the-arduino-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Installing the Arduino IDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-installing-the-arduino-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Installing the Arduino driver
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-testing-the-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Testing the IDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-arduino-network-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Arduino network connection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-testing-a-network-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. Testing a network application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-the-ajson-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6. The aJson library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-the-android-tablet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7. The Android tablet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-installing-a-jdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8. Installing a JDK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-installing-the-genymotion-emulator-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9. Installing the Genymotion emulator manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-installing-maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.10. Installing Maven
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611-installing-the-android-studio-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.11. Installing the Android Studio IDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#612-using-the-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.12. Using the examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#613-installing-the-chrome-plugin-advanced-rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.13. Installing the Chrome plugin &#91;Advanced Rest Client&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#614-managing-json-j-s-in-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.14. Managing JSON j s in Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#615-installing-wampserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.15. Installing &#91; WampServer&#93;
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="6-appendices">6. <a id="refheading191902103626402"></a><span>Appendices</span></h1>
+<p><a id="refheading472751712028290"></a><span style="color:#000000">Here we explain how to install the tools used in this document on Windows 7 through 10 machines. The reader should adapt these instructions to their own environment.</span></p>
+<h2 id="61-installing-the-arduino-ide">6.1. <a id="annexes"></a><a id="refheading397078041079301"></a><span>Installing the Arduino IDE</span></h2>
+<p><span>The official Arduino website is &#91;http://www.arduino.cc/&#93;. This is where you’ll find the development IDE for Arduinos &#91;http://arduino.cc/en/Main/Software&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image579.png" class="docx-zoomable" style="width:152px;height:136px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image580.png" class="docx-zoomable" style="width:125px;height:259px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The downloaded file &#91;1&#93; is a ZIP file that, once extracted, creates the directory structure &#91;2&#93;. You can launch the IDE by double-clicking the executable file &#91;3&#93;.</span></p>
+<h2 id="62-installing-the-arduino-driver">6.2. <a id="refheading33719961377870"></a><span>Installing the Arduino driver</span></h2>
+<p><span>In order for the IDE to communicate with an Arduino, the Arduino must be recognized by the host PC. To do this, follow these steps:</span></p>
+<ul>
+<li><span>Connect the Arduino to a USB port on the host computer;</span></li>
+<li><span>The system will then attempt to find the driver for the new USB device. It will not find it. You must then specify that the driver is located on the disk at </span><b>&lt;arduino&gt;/drivers</b><span>, where &lt;arduino&gt; is the installation folder for the Arduino IDE. </span></li>
+</ul>
+
+<h2 id="63-testing-the-ide">6.3. <a id="refheading33721961377870"></a><span>Testing the IDE</span></h2>
+<p><span>To test the IDE, follow these steps:</span></p>
+<ul>
+<li><span>Launch the IDE;</span></li>
+<li><span>connect the Arduino to the PC via its USB cable. For now, do not include the network card;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image581.png" class="docx-zoomable" style="width:395px;height:126px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image582.png" class="docx-zoomable" style="width:258px;height:66px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;1&#93;, select the type of Arduino board connected to the USB port;</span></li>
+<li><span>in &#91;2&#93;, specify the USB port to which the Arduino is connected. To find this out, unplug the Arduino and note the ports. Plug it back in and check the ports again: the one that has been added is the Arduino’s port;</span></li>
+</ul>
+
+<p><span>Run some of the examples included in the IDE:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image583.png" class="docx-zoomable" style="width:397px;height:131px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The example is loaded and displayed:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image584.png" class="docx-zoomable" style="width:375px;height:354px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The examples included with the IDE are very educational and well-commented. Arduino code is written in C and consists of two distinct parts:</span></p>
+<ul>
+<li><span>a &#91;</span><b>setup</b><span>&#93; function that runs once when the application starts, either when it is &quot;uploaded&quot; from the host PC to the Arduino, or when the application is already present on the Arduino and the &#91;Reset&#93; button is pressed. This is where you place the application&#x27;s initialization code;</span></li>
+<li><span>a &#91;</span><b>loop</b><span>&#93; function that runs continuously (infinite loop). This is where the core of the application goes.</span></li>
+</ul>
+
+<p><span>Here,</span></p>
+<ul>
+<li><span>the &#91;setup&#93; function configures pin 13 as an output;</span></li>
+<li><span>the &#91;loop&#93; function turns it on and off repeatedly: the LED turns on and off every second.</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image585.png" class="docx-zoomable" style="width:153px;height:99px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The displayed program is uploaded to the Arduino using the &#91;1&#93; button. Once uploaded, it runs and LED 13 begins to blink indefinitely.</span></p>
+<h2 id="64-arduino-network-connection">6.4. <a id="refheading33723961377870"></a><span>Arduino network connection</span></h2>
+<p><span>The Arduino(s) and the host PC must be on the same private network:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image586.png" class="docx-zoomable" style="width:467px;height:132px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<p><span>If there is only one Arduino, it can be connected to the host PC using a simple RJ-45 cable. If there is more than one, the host PC and the Arduinos will be connected to the same network via a mini-hub.</span></p>
+<p><span>The host PC and the Arduinos will be placed on the</span><b> 192.168.2.x </b><span>private network.</span></p>
+<ul>
+<li><span>The IP addresses of the Arduinos are set by the source code. We’ll see how;</span></li>
+<li><span>The host computer’s IP address can be set as follows:</span></li>
+<li><span>Go to &#91;Control Panel\Network and Internet\Network and Sharing Center&#93;:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image587.png" class="docx-zoomable" style="width:500px;height:279px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;1&#93;, follow the link &#91;Local Area Connection&#93;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image588.png" class="docx-zoomable" style="width:264px;height:318px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image589.png" class="docx-zoomable" style="width:311px;height:260px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;2&#93;, view the connection properties;</span></li>
+<li><span>In &#91;4&#93;, view the IPv4 properties &#91;3&#93; of the connection;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image590.png" class="docx-zoomable" style="width:285px;height:319px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;5&#93;, assign the IP address &#91;192.168.2.1&#93; to the host computer;</span></li>
+<li><span>in &#91;6&#93;, assign the subnet mask &#91;255.255.255.0&#93; to the network;</span></li>
+<li><span>confirm everything in &#91;7&#93;.</span></li>
+</ul>
+
+<h2 id="65-testing-a-network-application">6.5. <a id="refheading33725961377870"></a><span>Testing a network application</span></h2>
+<p><span>Using the IDE, load the example &#91;Examples / Ethernet / WebServer&#93;:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">/*</span>
+<span class="docx-code-line">  Web Server</span>
+<span class="docx-code-line"> </span>
+<span class="docx-code-line"> A simple web server that displays the value of the analog input pins.</span>
+<span class="docx-code-line"> using an Arduino Wiznet Ethernet shield. </span>
+<span class="docx-code-line"> </span>
+<span class="docx-code-line"> Circuit:</span>
+<span class="docx-code-line"> * Ethernet shield connected to pins 10, 11, 12, 13</span>
+<span class="docx-code-line"> * Analog inputs connected to pins A0 through A5 (optional)</span>
+<span class="docx-code-line"> </span>
+<span class="docx-code-line"> created Dec 18, 2009</span>
+<span class="docx-code-line"> by David A. Mellis</span>
+<span class="docx-code-line"> modified April 9, 2012</span>
+<span class="docx-code-line"> by Tom Igoe</span>
+<span class="docx-code-line"> </span>
+<span class="docx-code-line"> */</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">#include &lt;SPI.h&gt;</span>
+<span class="docx-code-line">#include &lt;Ethernet.h&gt;</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Enter a MAC address and IP address for your controller below.</span>
+<span class="docx-code-line">// The IP address will depend on your local network:</span>
+<span class="docx-code-line"><span style="color:#000000">byte mac[] = { </span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000080">0xDE</span><span style="color:#000000">,</span><span style="color:#000080"> 0xAD</span><span style="color:#000000">,</span><span style="color:#000080"> 0xBE</span><span style="color:#000000">,</span><span style="color:#000080"> 0xEF</span><span style="color:#000000">,</span><span style="color:#000080"> 0xFE</span><span style="color:#000000">,</span><span style="color:#000080"> 0xED </span><span style="color:#000000">};</span></span>
+<span class="docx-code-line"><span style="color:#000000">IPAddress ip(</span><span style="color:#000080">192</span><span style="color:#000000">,</span><span style="color:#000080"> 168</span><span style="color:#000000">,</span><span style="color:#000080"> 1</span><span style="color:#000000">,</span><span style="color:#000080"> 177</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">// Initialize the Ethernet server library</span>
+<span class="docx-code-line">// with the IP address and port you want to use </span>
+<span class="docx-code-line">// (port 80 is the default for HTTP):</span>
+<span class="docx-code-line"><span style="color:#000000">EthernetServer server(</span><span style="color:#000080">80</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#000000">void </span><span style="color:#000000">setup() {</span></span>
+<span class="docx-code-line"><span style="color:#008080"> </span><span style="font-style:italic;color:#008000">// Open serial communications and wait for the port to open:</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">Serial.begin(</span><span style="color:#000080">9600</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">   </span><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(!Serial) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">; </span><span style="font-style:italic;color:#008000">// wait for serial port to connect. Needed for Leonardo only</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// Start the Ethernet connection and the server:</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">Ethernet.begin(mac, ip);</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">server.begin();</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">Serial.print(</span><span style="color:#800000">&quot;server is at &quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">Serial.println(Ethernet.localIP());</span></span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#000000">void </span><span style="color:#000000">loop() {</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// listen for incoming clients</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">EthernetClient client = server.available();</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(client) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">Serial.println(</span><span style="color:#800000">&quot;new client&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// an HTTP request ends with a blank line</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">boolean currentLineIsBlank = </span><span style="font-weight:bold;color:#000000">true</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(client.connected()) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(client.available()) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">char </span><span style="color:#000000">c = client.read();</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="color:#000000">Serial.write(c);</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-style:italic;color:#008000">// if you&#x27;ve reached the end of the line (received a newline</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-style:italic;color:#008000">// character) and the line is blank, the HTTP request has ended,</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-style:italic;color:#008000">// so you can send a reply</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(c == &#x27;\n&#x27; &amp;&amp; currentLineIsBlank) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="font-style:italic;color:#008000">// send a standard HTTP response header</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;HTTP/1.1 200 OK&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;Content-Type: text/html&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;Connection: close&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println();</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;!DOCTYPE HTML&gt;&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;html&gt;&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">                    </span><span style="font-style:italic;color:#008000">// add a meta refresh tag, so the browser reloads every 5 seconds:</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;5\&quot;&gt;&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="font-style:italic;color:#008000">// output the value of each analog input pin</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">int </span><span style="color:#000000">analogChannel =</span><span style="color:#000080"> 0</span><span style="color:#000000">; analogChannel &lt;</span><span style="color:#000080"> 6</span><span style="color:#000000">; analogChannel++) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">            </span><span style="font-weight:bold;color:#000000">int </span><span style="color:#000000">sensorReading = analogRead(analogChannel);</span></span>
+<span class="docx-code-line"><span style="color:#008080">            </span><span style="color:#000000">client.print(</span><span style="color:#800000">&quot;analog input &quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">            </span><span style="color:#000000">client.print(analogChannel);</span></span>
+<span class="docx-code-line"><span style="color:#008080">            </span><span style="color:#000000">client.print(</span><span style="color:#800000">&quot; is &quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">            </span><span style="color:#000000">client.print(sensorReading);</span></span>
+<span class="docx-code-line"><span style="color:#008080">            </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;br /&gt;&quot;</span><span style="color:#000000">);       </span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">client.println(</span><span style="color:#800000">&quot;&lt;/html&gt;&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="font-weight:bold;color:#000000">break</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(c == &#x27;\n&#x27;) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="font-style:italic;color:#008000">// you&#x27;re starting a new line</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">currentLineIsBlank = </span><span style="font-weight:bold;color:#000000">true</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="color:#000000">} </span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">else if </span><span style="color:#000000">(c != &#x27;\r&#x27;) {</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="font-style:italic;color:#008000">// you&#x27;ve encountered a character on the current line</span></span>
+<span class="docx-code-line"><span style="color:#008080">          </span><span style="color:#000000">currentLineIsBlank = </span><span style="font-weight:bold;color:#000000">false</span><span style="color:#000000">;</span></span>
+<span class="docx-code-line"><span style="color:#008080">        </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"><span style="color:#008080">      </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// give the web browser time to receive the data</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">delay(</span><span style="color:#000080">1</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// close the connection:</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">client.stop();</span></span>
+<span class="docx-code-line"><span style="color:#008080">    </span><span style="color:#000000">Serial.println(</span><span style="color:#800000">&quot;client disconnected&quot;</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<p><span>This application creates a web server on port 80 (line 30) at the IP address specified on line 25. The MAC address on line 23 is the MAC address specified on the Arduino&#x27;s network board.</span></p>
+<p><span>The &#91;setup&#93; function initializes the web server:</span></p>
+<ul>
+<li><span>line 34: initializes the serial port on which the application will log data. We will monitor these logs;</span></li>
+<li><span>line 41: the TCP/IP node (IP, port) is initialized;</span></li>
+<li><span>line 42: the server from line 30 is launched on this network node;</span></li>
+<li><span>lines 43–44: logs the web server’s IP address;</span></li>
+</ul>
+
+<p><span>The &#91;loop&#93; function implements the web server:</span></p>
+<ul>
+<li><span>line 50: if a client connects to the web server, </span><i>&#91;server&#93;.available </i><span>returns that client; otherwise, it returns </span><i>null</i><span>;</span></li>
+<li><span>line 51: if the client is not </span><i>null</i><span>;</span></li>
+<li><span>line 55: as long as the client is connected;</span></li>
+<li><span>line 56: </span><i>&#91;client&#93;.available </i><span>is true if the client has sent characters. These are stored in a buffer. </span><i>&#91;client&#93;.available </i><span>returns true as long as this buffer is not empty;</span></li>
+<li><span>line 57: a character sent by the client is read;</span></li>
+<li><span>line 58: this character is echoed to the log console;</span></li>
+<li><span>line 62: In the HTTP protocol, the client and server exchange lines of text. </span><ul>
+<li><span>The client sends an HTTP request to the web server by sending a series of text lines ending with an empty line;</span></li>
+<li><span>the server then responds to the client by sending a response and closing the connection;</span></li>
+</ul>
+</li>
+</ul>
+
+<p><span>Line 62: The server does nothing with the HTTP headers it receives from the client. It simply waits for the empty line: a line containing only the character </span><b>\n</b><span>;</span></p>
+<ul>
+<li><span>Lines 64–67: The server sends the client the standard text lines of the HTTP protocol. They end with a blank line (line 67);</span></li>
+<li><span>Starting on line 68, the server sends a document to its client. This document is dynamically generated by the server and is in HTML format (lines 68–69);</span></li>
+<li><span>line 71: a special HTML line that instructs the client browser to refresh the page every 5 seconds. Thus, the browser will request the same page every 5 seconds;</span></li>
+<li><span>Lines 73–80: The server sends the values of the Arduino’s 6 analog inputs to the client browser;</span></li>
+<li><span>line 81: the HTML document is closed;</span></li>
+<li><span>line 82: we exit the </span><i>while</i><span> loop from line 55;</span></li>
+<li><span>line 97: the connection with the client is closed;</span></li>
+<li><span>line 98: the event is logged in the log console;</span></li>
+<li><span>line 100: we loop back to the beginning of the </span><b>loop</b><span> function: the server will resume listening for clients. We mentioned that the client browser would request the same page every 5 seconds. The server will be there to respond again.</span></li>
+</ul>
+
+<p><span>Modify the code on line 25 to include your Arduino’s IP address, for example:</span></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>IPAddress ip(192,168,2,2);
+</code></pre></div>
+<p><span>Upload the program to the Arduino. Launch the log console (Ctrl-M) (M uppercase):</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image591.png" class="docx-zoomable" style="width:141px;height:82px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image592.png" class="docx-zoomable" style="width:172px;height:164px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;1&#93;, the log console. The server has been launched;</span></li>
+<li><span>in &#91;2&#93;, using a browser, we request the Arduino’s IP address. Here, &#91;192.168.2.2&#93; is translated by default to &#91;http://198.162.2.2:80&#93;;</span></li>
+<li><span>in &#91;3&#93;, the information sent by the web server. If you view the source code of the browser page, you get:</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;5&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>analog input 0 is 1023<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>analog input 1 is 1023<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>analog input 2 is 727<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>analog input 3 is 543<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>analog input 4 is 395<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>analog input 5 is 310<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+
+</li>
+</ul>
+
+<p><span>Here, we can see the lines of text sent by the server. On the Arduino side, the log console displays what the client sends it:</span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">new</span> <span class="n">client</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">GET</span> <span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="n">ico</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">Host</span><span class="p">:</span> <span class="mf">192.168.2.2</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">Accept</span><span class="p">:</span> <span class="o">*/*</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span> <span class="n">NT</span> <span class="mf">6.2</span><span class="p">;</span> <span class="n">WOW64</span><span class="p">)</span> <span class="n">AppleWebKit</span><span class="o">/</span><span class="mf">537.22</span> <span class="p">(</span><span class="n">KHTML</span><span class="p">,</span> <span class="n">like</span> <span class="n">Gecko</span><span class="p">)</span> <span class="n">Chrome</span><span class="o">/</span><span class="mf">25.0.1364.172</span> <span class="n">Safari</span><span class="o">/</span><span class="mf">537.22</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="n">gzip</span><span class="p">,</span><span class="n">deflate</span><span class="p">,</span><span class="n">sdch</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Charset</span><span class="p">:</span> <span class="n">ISO</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="o">*</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.3</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">client</span> <span class="n">disconnected</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><span>lines 2–9: standard HTTP headers;</span></li>
+<li><span>line 10: the empty line that terminates them.</span></li>
+</ul>
+
+<p><span>Study this example carefully. It will help you understand the Arduino programming used in the lab.</span></p>
+<h2 id="66-the-ajson-library">6.6. <a id="refheading34558350318798"></a><span>The aJson library</span></h2>
+<p><span>In the lab assignment you’ll be writing, the Arduinos exchange lines of text in JSON format with their clients. By default, the Arduino IDE does not include a library for handling JSON. We’ll install the </span><b>aJson</b><span> library available at &#91;</span><a href="https://github.com/interactive-matter/aJson"><span style="color:#0563C1"><u>https://github.com/interactive-matter/aJson</u></span></a><span>&#93;.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image593.png" class="docx-zoomable" style="width:256px;height:78px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image594.png" class="docx-zoomable" style="width:82px;height:72px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;1&#93;, download the zipped version from the GitHub repository;</span></li>
+<li><span>unzip the folder and copy the &#91;aJson-master&#93; folder &#91;2&#93; into the &#91;&lt;arduino&gt;/libraries&#93; folder &#91;3&#93;, where &lt;arduino&gt; is the Arduino IDE installation folder;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image595.png" class="docx-zoomable" style="width:97px;height:196px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image596.png" class="docx-zoomable" style="width:100px;height:191px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image597.png" class="docx-zoomable" style="width:97px;height:134px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;4&#93;, rename this folder to &#91;aJson&#93;;</span></li>
+<li><span>in &#91;5&#93;, its contents.</span></li>
+</ul>
+
+<p><span>Now, launch the Arduino IDE:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image598.png" class="docx-zoomable" style="width:491px;height:330px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>Check that in the examples, you now have examples for the </span><b>aJson</b><span> library. Run and study these examples.</span></p>
+<h2 id="67-the-android-tablet">6.7. <a id="refheading472731712028290"></a><span>The Android tablet</span></h2>
+<p><span>The examples have been tested with the Samsung Galaxy Tab 2.</span></p>
+<p><span>To test the examples on a tablet, you must first install the tablet’s driver on your development machine. The driver for the Samsung Galaxy Tab 2 can be found at the URL &#91;</span><a href="http://www.samsung.com/fr/support/usefulsoftware/KIES/"><span style="color:#0563C1"><u>http://www.samsung.com/fr/support/usefulsoftware/KIES/</u></span></a><span>&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image599.png" class="docx-zoomable" style="width:435px;height:279px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><a id="refheading16265013307711381"></a><span>To test the examples, you will need to connect the tablet to a network (likely Wi-Fi) and know its IP address on that network. Here’s how to proceed (Samsung Galaxy Tab 2):</span></p>
+<ul>
+<li><span>Turn on your tablet;</span></li>
+<li><span>Look through the apps available on the tablet (top right) for the one called &#91;Settings&#93; with a gear icon;</span></li>
+<li><span>in the left-hand section, turn on Wi-Fi;</span></li>
+<li><span>in the right-hand section, select a Wi-Fi network;</span></li>
+<li><span>Once connected to the network, tap briefly on the selected network. The tablet’s IP address will be displayed. Write it down. You’ll need it;</span></li>
+</ul>
+
+<p><span>Still in the &#91;Settings&#93; app, </span></p>
+<ul>
+<li><span>select the &#91;Developer Options&#93; option on the left (at the very bottom of the options);</span></li>
+<li><span>Make sure the &#91;USB Debugging&#93; option on the right is checked.</span></li>
+</ul>
+
+<p><span>To return to the menu, tap the middle icon in the status bar at the bottom—the one that looks like a house. Still in the status bar at the bottom,</span></p>
+<ul>
+<li><span>the icon on the far left is the back button: it takes you back to the previous screen;</span></li>
+<li><span>the icon on the far right is the task manager. You can view and manage all tasks currently running on your tablet;</span></li>
+</ul>
+
+<p><span>Connect your tablet to your PC using the included USB cable.</span></p>
+<p><span>Plug the Wi-Fi dongle into one of the PC’s USB ports, then connect to the same Wi-Fi network as the tablet. Once that’s done, in a DOS window, type the command &#91;ipconfig&#93;:</span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>dos&gt;ipconfig
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Windows IP Configuration
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Ethernet adapter Local Area Connection:
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>   Connection-specific DNS suffix . . . :
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>   Local-link IPv6 address. . . . .: fe80::698b:455a:925:6b13%4
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>   IPv4 address. . . . . . . . . . . . . .: 192.168.2.1
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>   Subnet mask. . . . . . . . . : 255.255.255.0
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>   Default gateway. . . . . . . . . :
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>Wi-Fi wireless network adapter:
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>   Connection-specific DNS suffix. . . :
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>   Local link IPv6 address . . . . .: fe80::39aa:47f6:7537:f8e1%2
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>   IPv4 address . . . . . . . . . . . . . .: 192.168.1.25
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>   Subnet mask. . . . . . . . . . . . . .: 255.255.255.0
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>Default gateway. . . . . . . . . : 192.168.1.1
+</code></pre></div></td></tr></table></div>
+<p><span>Your PC has two network cards and therefore two IP addresses:</span></p>
+<ul>
+<li><span>the one on line 9, which is the PC’s address on the wired network;</span></li>
+<li><span>the one on line 17, which is the PC’s address on the Wi-Fi network;</span></li>
+</ul>
+
+<p><span>Make a note of these two pieces of information. You&#x27;ll need them. You are now in the following configuration:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image600.png" class="docx-zoomable" style="width:326px;height:129px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<p><span>The tablet will need to connect to your PC. Your PC is normally protected by a firewall that prevents any external device from establishing a connection with it. You will therefore need to disable the firewall. Do this using the &#91;Control Panel\System and Security\Windows Firewall&#93; option. Sometimes you also need to disable the firewall set up by your antivirus software. This depends on your antivirus program.</span></p>
+<p><span>Now, on your PC, check the network connection with the tablet using the command &#91;ping 192.168.1.y&#93;, where &#91;192.168.1.y&#93; is the tablet’s IP address. You should see something like this:</span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">dos</span><span class="o">&gt;</span><span class="n">ping</span> <span class="mf">192.168.1.26</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">Sending</span> <span class="n">a</span> <span class="s1">&#39;Ping&#39;</span> <span class="n">request</span> <span class="n">to</span> <span class="mf">192.168.1.26</span> <span class="k">with</span> <span class="mi">32</span> <span class="nb">bytes</span> <span class="n">of</span> <span class="n">data</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Reply</span> <span class="kn">from</span><span class="w"> </span><span class="mf">192.168.1.26</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">=</span><span class="mi">32</span> <span class="n">time</span><span class="o">=</span><span class="mi">244</span> <span class="n">ms</span> <span class="n">TTL</span><span class="o">=</span><span class="mi">64</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">Reply</span> <span class="kn">from</span><span class="w"> </span><span class="mf">192.168.1.26</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">=</span><span class="mi">32</span> <span class="n">time</span><span class="o">=</span><span class="mi">199</span> <span class="n">ms</span> <span class="n">TTL</span><span class="o">=</span><span class="mi">64</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">Response</span> <span class="kn">from</span><span class="w"> </span><span class="mf">192.168.1.26</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">=</span><span class="mi">32</span> <span class="n">time</span><span class="o">=</span><span class="mi">28</span> <span class="n">ms</span> <span class="n">TTL</span><span class="o">=</span><span class="mi">64</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">Response</span> <span class="kn">from</span><span class="w"> </span><span class="mf">192.168.1.26</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">=</span><span class="mi">32</span> <span class="n">time</span><span class="o">=</span><span class="mi">88</span> <span class="n">ms</span> <span class="n">TTL</span><span class="o">=</span><span class="mi">64</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">Ping</span> <span class="n">statistics</span> <span class="k">for</span> <span class="mf">192.168.1.26</span><span class="p">:</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="n">Packets</span><span class="p">:</span> <span class="n">sent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">lost</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">(</span><span class="mi">0</span><span class="o">%</span> <span class="n">loss</span><span class="p">),</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="n">Approximate</span> <span class="nb">round</span><span class="o">-</span><span class="n">trip</span> <span class="n">times</span> <span class="ow">in</span> <span class="n">milliseconds</span><span class="p">:</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">Minimum</span> <span class="o">=</span> <span class="mi">28</span> <span class="n">ms</span><span class="p">,</span> <span class="n">Maximum</span> <span class="o">=</span> <span class="mi">244</span> <span class="n">ms</span><span class="p">,</span> <span class="n">Average</span> <span class="o">=</span> <span class="mi">139</span> <span class="n">ms</span>
+</code></pre></div></td></tr></table></div>
+<p><span>Lines 4–7 indicate that the IP address &#91;192.168.1.y&#93; responded to the &#91;ping&#93; command.</span></p>
+<h2 id="68-installing-a-jdk">6.8. <a id="refheading104224374082361"></a><span>Installing a JDK</span></h2>
+<p><a id="refheading1633352067866943"></a><span>The latest JDK can be found at the URL &#91;</span><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html"><span style="color:#0563C1"><u>http://www.oracle.com/technetwork/java/javase/downloads/index.html</u></span></a><span>&#93; (June 2016). We will refer to the JDK installation folder as &lt;jdk-install&gt; from here on.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image601.png" class="docx-zoomable" style="width:405px;height:290px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<h2 id="69-installing-the-genymotion-emulator-manager">6.9. <a id="refheading454551405398942"></a><span>Installing the Genymotion emulator manager</span></h2>
+<p><span>The company &#91;</span><a href="http://www.genymotion.com/features/"><span style="color:#0563C1"><u>Genymotion</u></span></a><span>&#93; offers a high-performance Android emulator. It is available at the URL &#91;</span><a href="https://cloud.genymotion.com/page/launchpad/download/"><span style="color:#0563C1"><u>https://cloud.genymotion.com/page/launchpad/download/</u></span></a><span>&#93; (June 2016).</span></p>
+<p><span>You will need to register to obtain a version for personal use. Download the &#91;Genymotion&#93; product with the VirtualBox virtual machine:</span></p>
+<p><img src="images/image602.png" class="docx-zoomable" style="width:313px;height:223px;" alt="Image" /></p>
+<p><span>We will refer to the &#91;Genymotion&#93; installation folder as &lt;genymotion-install&gt; from now on. Launch &#91;Genymotion&#93;. Then download an image for a tablet:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image603.png" class="docx-zoomable" style="width:306px;height:182px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;1&#93;, add the virtual terminal described in &#91;2&#93;;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image604.png" class="docx-zoomable" style="width:563px;height:198px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;3&#93;, configure the terminal;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image605.png" class="docx-zoomable" style="width:259px;height:425px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image606.png" class="docx-zoomable" style="width:257px;height:193px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;4-5&#93;, customize the terminal for your environment;</span></li>
+<li><span>in &#91;6&#93;, launch the virtual terminal;</span></li>
+</ul>
+
+<p><span>If all goes well, you will see the Android emulator window:</span></p>
+<p><img src="images/image607.png" class="docx-zoomable" style="width:670px;height:377px;" alt="Image" /></p>
+<p><span>Sometimes, the Android emulator does not launch. On a Windows machine, you can check the following two points:</span></p>
+<ul>
+<li><span>Check that the &#91;Hyper-V&#93; virtual machine is not installed. If necessary, uninstall it &#91;1-2&#93;;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image608.png" class="docx-zoomable" style="width:369px;height:100px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image609.png" class="docx-zoomable" style="width:248px;height:201px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>then in the configuration wizard &#91;Network and Sharing Center&#93; &#91;1&#93;:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image610.png" class="docx-zoomable" style="width:393px;height:148px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image611.png" class="docx-zoomable" style="width:351px;height:248px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image612.png" class="docx-zoomable" style="width:223px;height:228px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;3&#93;, select the network adapter(s) associated with the VirtualBox virtual machine;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image613.png" class="docx-zoomable" style="width:275px;height:98px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>verify that in &#91;6&#93;, the driver for VirtualBox is checked. Repeat this step for all network adapters associated with the VirtualBox virtual machine;</span></li>
+</ul>
+
+<h2 id="610-installing-maven">6.10. <a id="refheading463261712028290"></a><span>Installing Maven</span></h2>
+<p><span>Maven is a tool for managing dependencies in a Java project and more. It is available at the URL &#91;</span><a href="http://maven.apache.org/download.cgi"><span style="color:#0563C1"><u>http://maven.apache.org/download.cgi</u></span></a><span>&#93;.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image614.png" class="docx-zoomable" style="width:356px;height:143px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>Download and unzip the archive. We will refer to the Maven installation folder as &lt;maven-install&gt;.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image615.png" class="docx-zoomable" style="width:192px;height:109px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;1&#93;, the &#91;conf/settings.xml&#93; file configures Maven;</span></li>
+</ul>
+
+<p><span>It contains the following lines:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#3F5FBF">&lt;!-- localRepository</span></span>
+<span class="docx-code-line">   | The path to the local repository Maven will use to store artifacts.</span>
+<span class="docx-code-line">   |</span>
+<span class="docx-code-line">   | Default: ${user.home}/.m2/repository</span>
+<span class="docx-code-line">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span>
+<span class="docx-code-line">--&gt;</span>
+</code></pre></div>
+
+<p><span>The default value on line 4, if—as in my case—your {user.home} path contains a space (for example, &#91;C:\Users\Serge Tahé&#93;), may cause issues with certain software. In that case, you should write something like:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#3F5FBF">&lt;!-- localRepository</span></span>
+<span class="docx-code-line">   | The path to the local repository Maven will use to store artifacts.</span>
+<span class="docx-code-line">   |</span>
+<span class="docx-code-line">   | Default: ${user.home}/.m2/repository</span>
+<span class="docx-code-line">  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</span>
+<span class="docx-code-line">  --&gt;</span>
+<span class="docx-code-line"><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">localRepository</span><span style="color:#008080">&gt;</span><span style="color:#FF0000">D:\Programs\devjava\maven\.m2\repository</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/localRepository</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p><span>and on line 7, we will avoid a path that contains spaces.</span></p>
+<h2 id="611-installing-the-android-studio-ide">6.11. <a id="refheading2088641855421712"></a><span>Installing the Android Studio IDE</span></h2>
+<p><span>The Android Studio Community Edition IDE is available at &#91;</span><a href="https://developer.android.com/studio/index.html"><span style="color:#0563C1"><u>https://developer.android.com/studio/index.html</u></span></a><span>&#93; (June 2016):</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image616.png" class="docx-zoomable" style="width:335px;height:285px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>Install the IDE and then launch it. Follow steps &#91;1-8&#93; to install the SDK Manager components used by the examples that follow. If you decide to install newer components, you will likely receive warnings from Android Studio stating that the example configuration references SDK components that do not exist in your environment. You can then follow the suggestions provided by the IDE.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image617.png" class="docx-zoomable" style="width:497px;height:359px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image618.png" class="docx-zoomable" style="width:501px;height:201px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image619.png" class="docx-zoomable" style="width:607px;height:362px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;9&#93;, view the package details:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image620.png" class="docx-zoomable" style="width:297px;height:293px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;11&#93; above, the examples used SDK Build-Tools 23.0.3;</span></li>
+<li><span>in &#91;9-12&#93; below, specify the folder where you installed the emulator manager &#91;Genymotion&#93;;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image621.png" class="docx-zoomable" style="width:183px;height:111px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image622.png" class="docx-zoomable" style="width:381px;height:207px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;13-18&#93;, configure the default project type;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image623.png" class="docx-zoomable" style="width:220px;height:191px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image624.png" class="docx-zoomable" style="width:336px;height:184px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;17&#93;, the default value is usually correct;</span></li>
+<li><span>in &#91;18&#93;, make sure you have JDK 1.8;</span></li>
+</ul>
+
+<p><span>Below, in &#91;19-26&#93;, disable spell checking, which is set to English by default;</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image625.png" class="docx-zoomable" style="width:130px;height:96px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image626.png" class="docx-zoomable" style="width:321px;height:120px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image627.png" class="docx-zoomable" style="width:452px;height:304px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>below, in &#91;27-28&#93;, choose the type of keyboard shortcuts you want. You can keep IntelliJ’s default settings or choose those from another IDE you’re more accustomed to;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image628.png" class="docx-zoomable" style="width:334px;height:185px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>Below, in &#91;29-30&#93;, enable line numbers in the code;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image629.png" class="docx-zoomable" style="width:565px;height:327px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>below, in &#91;31-34&#93;, specify how you want to handle the first project when launching the IDE and subsequent projects;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image630.png" class="docx-zoomable" style="width:402px;height:215px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>With Android 2.1 (May 2016), the &#91;Instant Run&#93; feature sometimes causes issues. In this document, we have disabled it:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image31.png" class="docx-zoomable" style="width:121px;height:146px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image32.png" class="docx-zoomable" style="width:431px;height:237px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;3-4&#93;, everything has been disabled;</span></li>
+</ul>
+
+<h2 id="612-using-the-examples">6.12. <a id="refheading90386104415204"></a><span>Using the examples</span></h2>
+<p><span>The Android Studio projects for the examples are available HERE|. Download them.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image631.png" class="docx-zoomable" style="width:143px;height:153px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The examples were built using the components defined previously:</span></p>
+<ul>
+<li><span>JDK 1.8;</span></li>
+<li><span>Android SDK Platform 23 for runtime;</span></li>
+</ul>
+
+<p><span>The following SDK tools:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image632.png" class="docx-zoomable" style="width:407px;height:165px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>If your environment does not match the one described above, you will need to change the project configuration. This can be quite tedious. Initially, it is probably easier to set up a working environment similar to the one described above.</span></p>
+<p><span>Launch Android Studio and then open the &#91;example-07&#93; project, for example:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image633.png" class="docx-zoomable" style="width:218px;height:188px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image634.png" class="docx-zoomable" style="width:209px;height:171px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image635.png" class="docx-zoomable" style="width:200px;height:197px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;1-3&#93;, open the &#91;Example-07&#93; project;</span></li>
+<li><span>In &#91;4&#93;, check the &#91;local.properties&#93; file;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image636.png" class="docx-zoomable" style="width:413px;height:165px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image637.png" class="docx-zoomable" style="width:116px;height:143px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>on line 11 above, enter the location of the Android SDK Manager &lt;sdk-manager-install&gt;. You can find this by following steps &#91;1-4&#93;:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image638.png" class="docx-zoomable" style="width:475px;height:193px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>All examples in this document are Gradle projects configured by a &#91;build.gradle&#93; file &#91;1-2&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image639.png" class="docx-zoomable" style="width:234px;height:205px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The &#91;build.gradle&#93; file for Example 07 is as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-python">
+<span class="docx-code-line">buildscript {</span>
+<span class="docx-code-line">  repositories {</span>
+<span class="docx-code-line">    mavenCentral()</span>
+<span class="docx-code-line">    mavenLocal()</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">  dependencies {</span>
+<span class="docx-code-line">    <span style="font-style:italic;color:#808080">// replace with the current version of the Android plugin</span></span>
+<span class="docx-code-line"><span style="color:#808080">    </span>classpath <span style="color:#008000">&#x27;com.android.tools.build:gradle:2.1.0&#x27;</span></span>
+<span class="docx-code-line"><span style="color:#008000">    </span><span style="font-style:italic;color:#808080">// Since Android&#x27;s Gradle plugin 0.11, you must use android-apt &gt;= 1.3</span></span>
+<span class="docx-code-line"><span style="color:#808080">    </span>classpath <span style="color:#008000">&#x27;com.neenbedankt.gradle.plugins:android-apt:1.8&#x27;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>}</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">apply <span style="color:#008000">plugin</span>: <span style="color:#008000">&#x27;com.android.application&#x27;</span></span>
+<span class="docx-code-line">apply <span style="color:#008000">plugin</span>: <span style="color:#008000">&#x27;android-apt&#x27;</span></span>
+<span class="docx-code-line"><span style="color:#000043">def </span>AAVersion = <span style="color:#008000">&#x27;4.0.0&#x27;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">dependencies {</span>
+<span class="docx-code-line">  apt <span style="color:#008000">&quot;org.androidannotations:androidannotations:</span>$AAVersion<span style="color:#008000">&quot;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>compile <span style="color:#008000">&quot;org.androidannotations:androidannotations-api:</span>$AAVersion<span style="color:#008000">&quot;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>compile <span style="color:#008000">&#x27;com.android.support:appcompat-v7:23.4.0&#x27;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>compile <span style="color:#008000">&#x27;com.android.support:design:23.4.0&#x27;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>compile fileTree(<span style="color:#008000">dir</span>: <span style="color:#008000">&#x27;libs&#x27;</span>, <span style="color:#008000">include</span>: [<span style="color:#008000">&#x27;*.jar&#x27;</span>])</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">repositories {</span>
+<span class="docx-code-line">  jcenter()</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">apt {</span>
+<span class="docx-code-line">  arguments {</span>
+<span class="docx-code-line">    androidManifestFile <span style="color:#808000">variant</span>.outputs[<span style="color:#0000FF">0</span>].processResources.manifestFile</span>
+<span class="docx-code-line">    resourcePackageName android.defaultConfig.applicationId</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">android {</span>
+<span class="docx-code-line">  compileSdkVersion<span style="color:#0000FF"> 23</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">  </span>buildToolsVersion <span style="color:#008000">&quot;23.0.3&quot;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>defaultConfig {</span>
+<span class="docx-code-line">    applicationId <span style="color:#008000">&quot;android.examples&quot;</span></span>
+<span class="docx-code-line"><span style="color:#008000">    </span>minSdkVersion<span style="color:#0000FF"> 15</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">    </span>targetSdkVersion<span style="color:#0000FF"> 23</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">    </span>versionCode<span style="color:#0000FF"> 1</span></span>
+<span class="docx-code-line"><span style="color:#0000FF">    </span>versionName <span style="color:#008000">&quot;1.0&quot;</span></span>
+<span class="docx-code-line"><span style="color:#008000">  </span>}</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">  buildTypes {</span>
+<span class="docx-code-line">    release {</span>
+<span class="docx-code-line">      minifyEnabled <span style="color:#000043">false</span></span>
+<span class="docx-code-line"><span style="color:#000043">      </span>proguardFiles getDefaultProguardFile(<span style="color:#008000">&#x27;proguard-android.txt&#x27;</span>), <span style="color:#008000">&#x27;proguard-rules.pro&#x27;</span></span>
+<span class="docx-code-line"><span style="color:#008000">    </span>}</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">  compileOptions {</span>
+<span class="docx-code-line">    sourceCompatibility JavaVersion.<span style="font-style:italic;color:#660E7A">VERSION_1_7</span></span>
+<span class="docx-code-line"><span style="color:#660E7A">    </span>targetCompatibility JavaVersion.<span style="font-style:italic;color:#660E7A">VERSION_1_7</span></span>
+<span class="docx-code-line"><span style="color:#660E7A">  </span>}</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<p><span>Depending on the Android environment (SDK and tools) you have set up, you may need to change the versions in lines 8, 21, 22, 38, and 39. Android Studio helps by making suggestions. The easiest approach is to follow these suggestions.</span></p>
+<p><span>The elements of the &#91;build.gradle&#93; file can be accessed in another way:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image640.png" class="docx-zoomable" style="width:202px;height:85px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image641.png" class="docx-zoomable" style="width:405px;height:259px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>the various tabs in &#91;3&#93; reflect the different values in the &#91;build.gradle&#93; file. You can therefore configure it this way, which allows you to avoid syntax issues in the &#91;build.gradle&#93; file;</span></li>
+</ul>
+
+<p><span>Another point to check is the JDK used by the IDE &#91;5&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image642.png" class="docx-zoomable" style="width:365px;height:188px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>In &#91;6&#93;, check the JDK.</span></p>
+<p><span>All examples are Gradle projects with dependencies that need to be downloaded. To do this, proceed as follows:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image643.png" class="docx-zoomable" style="width:415px;height:289px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image644.png" class="docx-zoomable" style="width:221px;height:110px;" alt="Image" /><img src="images/image645.png" class="docx-zoomable" style="width:149px;height:98px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;5&#93;, compile the project;</span></li>
+</ul>
+
+<p><span>Once the project is error-free, you must create a run configuration &#91;1-8&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image646.png" class="docx-zoomable" style="width:130px;height:121px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image647.png" class="docx-zoomable" style="width:472px;height:300px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;8&#93;, you can specify that you always want to use the same terminal for execution. Generally, this option is checked to avoid having to specify the terminal to use for each new execution. Here, we leave it unchecked because we are going to test different Android devices;</span></li>
+<li><span>Once the run configuration has been created, launch the Android Emulator Manager &#91;1-3&#93;;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image648.png" class="docx-zoomable" style="width:173px;height:94px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image649.png" class="docx-zoomable" style="width:381px;height:239px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>if the Android emulator does not launch, check the points mentioned in section</span><a href="#refheading2088641855421712"><span style="color:#0563C1"><u> 6.11</u></span></a><span>;</span></li>
+</ul>
+
+<p><span>To launch the application on the emulator, proceed as follows &#91;1-4&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image650.png" class="docx-zoomable" style="width:155px;height:93px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image651.png" class="docx-zoomable" style="width:438px;height:222px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;2&#93;, you should see the emulator you previously launched;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image652.png" class="docx-zoomable" style="width:542px;height:319px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;5&#93;, the view displayed by the emulator;</span></li>
+</ul>
+
+<p><span>Now connect an Android tablet to a USB port on the PC and run the application on it:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image653.png" class="docx-zoomable" style="width:438px;height:222px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;6&#93;, select the Android tablet and test the application.</span></li>
+</ul>
+
+<p><span>In &#91;7&#93;, we have predefined virtual terminals. We will learn how to add and remove them.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image654.png" class="docx-zoomable" style="width:132px;height:83px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image655.png" class="docx-zoomable" style="width:603px;height:251px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<p><span>In the screenshot above, all the devices listed are running API 22. We are removing them all because we want to use API 23. We follow the procedure &#91;2-3&#93; to remove the devices.</span></p>
+<p><img src="images/image656.png" class="docx-zoomable" style="width:533px;height:431px;" alt="Image" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image657.png" class="docx-zoomable" style="width:480px;height:283px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;4-5&#93;, we add a tablet;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image658.png" class="docx-zoomable" style="width:458px;height:160px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;6&#93;, we select an API. Above, we select API 23 for 64-bit Windows;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image659.png" class="docx-zoomable" style="width:482px;height:363px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>In &#91;7&#93;, the summary of the configuration is displayed;</span></li>
+<li><span>In &#91;8&#93;, more advanced configuration of the virtual terminal can be performed;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image660.png" class="docx-zoomable" style="width:619px;height:147px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<p><span>Once the wizard is complete, the created terminal appears in &#91;9&#93;.</span></p>
+<p><span>Once this is done, if you rerun &#91;Example-07&#93;, you will now see the following window:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image661.png" class="docx-zoomable" style="width:438px;height:222px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;1&#93;, the new virtual terminal appears;</span></li>
+<li><span>in &#91;2&#93;, you can create new ones;</span></li>
+</ul>
+
+<p><span>Experiment to determine the virtual terminal best suited to your system. In this document, the examples have been tested primarily with the Genymotion emulator.</span></p>
+<p><span>Regardless of the virtual terminal chosen, logs are displayed in the window called &#91;Logcat&#93; &#91;1-2&#93;:</span></p>
+<p><img src="images/image662.png" class="docx-zoomable" style="width:284px;height:237px;" alt="Image" /></p>
+<p><span>Check these logs regularly. This is where exceptions that caused your program to crash will be reported.</span></p>
+<p><span>You can also debug your program using standard debugging tools:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image663.png" class="docx-zoomable" style="width:161px;height:82px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image664.png" class="docx-zoomable" style="width:304px;height:118px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;2&#93;, set a breakpoint by clicking once on the column to the left of the target line. Clicking again removes the breakpoint;</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image665.png" class="docx-zoomable" style="width:339px;height:169px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;3&#93;, at the breakpoint, press:</span></li>
+<li><span>&#91;F6&#93; to execute the line without entering methods if the line contains method calls,</span></li>
+<li><span>&#91;F5&#93;, to execute the line by entering the methods if the line contains method calls,</span></li>
+<li><span>&#91;F8&#93; to continue to the next breakpoint;</span></li>
+<li><span>&#91;Ctrl-F2&#93; to stop debugging;</span></li>
+</ul>
+
+<h2 id="613-installing-the-chrome-plugin-advanced-rest-client">6.13. <a id="refheading2334521890746156"></a><span>Installing the Chrome plugin &#91;Advanced Rest Client&#93;</span></h2>
+<p><span>In this document, we use Google&#x27;s </span><b>Chrome</b><span> browser (</span><a href="http://www.google.fr/intl/fr/chrome/browser/"><span style="color:#0563C1"><u>http://www.google.fr/intl/fr/chrome/browser/</u></span></a><span>). We will add the &#91;</span><a id="advanced-rest-client"></a><span> Advanced Rest Client&#93; extension to it. Here&#x27;s how to do it:</span></p>
+<ul>
+<li><span>Go to the &#91;Google Web Store&#93; (</span><a href="https://chrome.google.com/webstore"><span style="color:#0563C1"><u>https://chrome.google.com/webstore</u></span></a><span>) using the Chrome browser;</span></li>
+<li><span>search for the &#91;Advanced Rest Client&#93; app:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image666.png" class="docx-zoomable" style="width:302px;height:147px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>the app is then available for download:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image667.png" class="docx-zoomable" style="width:661px;height:120px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>to get it, you’ll need to create a Google account. The &#91;Google Web Store&#93; will then ask for confirmation &#91;1&#93;:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image668.png" class="docx-zoomable" style="width:274px;height:182px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image669.png" class="docx-zoomable" style="width:334px;height:269px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;2&#93;, the added extension is available in the &#91;Applications&#93; option &#91;3&#93;. This option appears on every new tab you create (CTRL-T) in the browser.</span></li>
+</ul>
+
+<h2 id="614-managing-json-j-s-in-java">6.14. <a id="refheading191922103626402"></a><span>Managing JSON j</span><a id="json"></a><span> s in Java</span></h2>
+<p><span>Transparently for the developer, the &#91;Spring MVC&#93; framework uses the &#91;Jackson&#93; JSON library. To illustrate what JSON (JavaScript Object Notation) is, we present here a program that serializes objects into JSON and does the reverse by deserializing the generated JSON strings to recreate the original objects.</span></p>
+<p><span>The &#x27;Jackson&#x27; library allows you to construct:</span></p>
+<ul>
+<li><span>the JSON string of an object: </span><i>new ObjectMapper().writeValueAsString(object)</i><span>;</span></li>
+<li><span>an object from a JSON string: </span><i>new ObjectMapper().readValue(jsonString, Object.class)</i><span>.</span></li>
+</ul>
+
+<p><span>Both methods may throw an </span><i>IOException</i><span>. Here is an example.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image670.png" class="docx-zoomable" style="width:149px;height:167px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The project above is a Maven project with the following &#91;pom.xml&#93; file;</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-xml">
+<span class="docx-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3F7F7F">xml </span><span style="color:#000000">version=</span><span style="font-style:italic;color:#2A00FF">&quot;1.0&quot; </span><span style="color:#000000">encoding=</span><span style="font-style:italic;color:#2A00FF">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
+<span class="docx-code-line"><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">project </span><span style="color:#000000">xmlns=</span><span style="font-style:italic;color:#2A00FF">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span>
+<span class="docx-code-line">         <span style="color:#7F007F">xmlns:</span><span style="color:#000000">xsi=</span><span style="font-style:italic;color:#2A00FF">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
+<span class="docx-code-line">         <span style="color:#7F007F">xsi:</span><span style="color:#000000">schemaLocation=</span><span style="font-style:italic;color:#2A00FF">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/modelVersion</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">istia.st.pam</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/groupId</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">json</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/artifactId</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">1.0-SNAPSHOT</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/version</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">dependencies</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">dependency</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">com.fasterxml.jackson.core</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/groupId</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">jackson-databind</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/artifactId</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">2.3.3</span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/version</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/dependency</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/dependencies</span><span style="color:#008080">&gt;</span></span>
+<span class="docx-code-line"><span style="color:#008080">&lt;</span><span style="color:#3F7F7F">/project</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<ul>
+<li><span>lines 12–16: the dependency that includes the &#x27;Jackson&#x27; library;</span></li>
+</ul>
+
+<p><span>The &#91;Person&#93; class is as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">istia.st.json;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Person {</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// data</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String lastName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String firstName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">age;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Person() {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Person(String lastName, String firstName, </span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">age) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.lastName = lastName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.firstName = firstName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.age = age;</span></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// signature</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">String toString() {</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">return </span><span style="color:#000000">String.format(</span><span style="color:#2A00FF">&quot;Person[%s, %s, %d]&quot;</span><span style="color:#000000">, lastName, firstName, age);</span></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
+<span class="docx-code-line">...</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<p><span>The &#91;Main&#93; class is as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">istia.st.json;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">com.fasterxml.jackson.databind.ObjectMapper;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.IOException;</span></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.util.HashMap;</span></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.util.Map;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Main {</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="color:#3F7F5F">// the serialization/deserialization tool</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">static </span><span style="color:#000000">ObjectMapper mapper = </span><span style="font-weight:bold;color:#7F0055">new </span><span style="color:#000000">ObjectMapper();</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">public static void </span><span style="color:#000000">main(String[] args) </span><span style="font-weight:bold;color:#7F0055">throws </span><span style="color:#000000">IOException {</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// creating a person</span></span>
+<span class="docx-code-line"><span style="color:#000000">    Person paul = </span><span style="font-weight:bold;color:#7F0055">new </span><span style="color:#000000">Person(</span><span style="color:#2A00FF">&quot;Denis&quot;</span><span style="color:#000000">, </span><span style="color:#2A00FF">&quot;Paul&quot;</span><span style="color:#000000">, 40);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// Display JSON</span></span>
+<span class="docx-code-line">    String json = mapper.writeValueAsString(paul);</span>
+<span class="docx-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2A00FF">&quot;JSON=&quot; </span><span style="color:#000000">+ json);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// Instantiate Person from JSON</span></span>
+<span class="docx-code-line"><span style="color:#000000">    Person p = mapper.readValue(json, Person.</span><span style="font-weight:bold;color:#7F0055">class</span><span style="color:#000000">);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// Display Person</span></span>
+<span class="docx-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2A00FF">&quot;Person=&quot; </span><span style="color:#000000">+ p);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// an array</span></span>
+<span class="docx-code-line"><span style="color:#000000">    Person virginie = </span><span style="font-weight:bold;color:#7F0055">new </span><span style="color:#000000">Person(</span><span style="color:#2A00FF">&quot;Radot&quot;</span><span style="color:#000000">, </span><span style="color:#2A00FF">&quot;Virginie&quot;</span><span style="color:#000000">, 20);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    Person[] people = </span><span style="font-weight:bold;color:#7F0055">new </span><span style="color:#000000">Person[]{paul, virginie};</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// display JSON</span></span>
+<span class="docx-code-line">    json = mapper.writeValueAsString(people);</span>
+<span class="docx-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2A00FF">&quot;JSON people=&quot; </span><span style="color:#000000">+ json);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// dictionary</span></span>
+<span class="docx-code-line"><span style="color:#000000">    Map&lt;String, Person&gt; hpeople = </span><span style="font-weight:bold;color:#7F0055">new </span><span style="color:#000000">HashMap&lt;String, Person&gt;();</span></span>
+<span class="docx-code-line"><span style="color:#000000">    hpeople.put(</span><span style="color:#2A00FF">&quot;1&quot;</span><span style="color:#000000">, paul);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    hpeople.put(</span><span style="color:#2A00FF">&quot;2&quot;</span><span style="color:#000000">, virginie);</span></span>
+<span class="docx-code-line"><span style="color:#000000">    </span><span style="color:#3F7F5F">// Display JSON</span></span>
+<span class="docx-code-line">    json = mapper.writeValueAsString(hpeople);</span>
+<span class="docx-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2A00FF">&quot;JSON hpeople=&quot; </span><span style="color:#000000">+ json);</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<p><span>Executing this class produces the following screen output:</span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Json={&quot;lastName&quot;:&quot;Denis&quot;,&quot;firstName&quot;:&quot;Paul&quot;,&quot;age&quot;:40}
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Person = Person[Denis, Paul, 40]
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Json people=[{&quot;lastName&quot;:&quot;Denis&quot;,&quot;firstName&quot;:&quot;Paul&quot;,&quot;age&quot;:40},{&quot;lastName&quot;:&quot;Radot&quot;,&quot;firstName&quot;:&quot;Virginie&quot;,&quot;age&quot;:20}]
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Json people={&quot;2&quot;:{&quot;lastName&quot;:&quot;Radot&quot;,&quot;firstName&quot;:&quot;Virginie&quot;,&quot;age&quot;:20},&quot;1&quot;:{&quot;lastName&quot;:&quot;Denis&quot;,&quot;firstName&quot;:&quot;Paul&quot;,&quot;age&quot;:40}}
+</code></pre></div></td></tr></table></div>
+<p><span>Key takeaways from the example:</span></p>
+<ul>
+<li><span>the &#91;ObjectMapper&#93; object required for JSON/Object transformations: line 11;</span></li>
+<li><span>the &#91;Person&#93; --&gt; JSON transformation: line 17;</span></li>
+<li><span>the JSON --&gt; &#91;Person&#93; transformation: line 20;</span></li>
+<li><span>the &#91;IOException&#93; thrown by both methods: line 13.</span></li>
+</ul>
+
+<h2 id="615-installing-wampserver">6.15. <a id="refheading1315181394789306"></a><span>Installing &#91;</span><a id="wampserver"></a><span> WampServer&#93;</span></h2>
+<p><span>&#91;WampServer&#93; is a software suite for developing in PHP / MySQL / Apache on a Windows machine. We will use it solely for the MySQL DBMS.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image671.png" class="docx-zoomable" style="width:264px;height:194px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image672.png" class="docx-zoomable" style="width:334px;height:206px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>On the &#91;WampServer&#93; website &#91;1&#93;, choose the appropriate version &#91;2&#93;,</span></li>
+<li><span>The downloaded executable is an installer. You will be asked for various pieces of information during the installation. These do not pertain to MySQL, so you can ignore them. Window &#91;3&#93; appears at the end of the installation. Launch &#91;WampServer&#93;,</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image673.png" class="docx-zoomable" style="width:113px;height:94px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image674.png" class="docx-zoomable" style="width:150px;height:213px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>in &#91;4&#93;, the &#91;WampServer&#93; icon appears in the taskbar at the bottom right of the screen &#91;4&#93;,</span></li>
+<li><span>when you click on it, the &#91;5&#93; menu appears. It allows you to manage the Apache server and the MySQL DBMS. To manage the latter, use the &#91;PhpMyAdmin&#93; option,</span></li>
+<li><span>which opens the window shown below,</span></li>
+</ul>
+
+<p><img src="images/image675.png" class="docx-zoomable" style="width:580px;height:234px;" alt="Image" /></p>
+<p><span>We will provide few details on using &#91;PhpMyAdmin&#93;. We demonstrate how to use it in the document.</span></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

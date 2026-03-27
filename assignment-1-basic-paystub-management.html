@@ -1,0 +1,1471 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to Android Tablet Programming with Android Studio">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/en-android-aout-2016/assignment-1-basic-paystub-management.html">
+      
+      
+        <link rel="prev" href="case-study---appointment-management.html">
+      
+      
+        <link rel="next" href="assignment-2---controlling-arduinos-with-an-android-tablet.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>4. Assignment 1: Basic Paystub Management - An Introduction to Android Tablet Programming with Android Studio</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to Android Tablet Programming with Android Studio";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-assignment-1-basic-paystub-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to Android Tablet Programming with Android Studio" class="md-header__button md-logo" aria-label="An Introduction to Android Tablet Programming with Android Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to Android Tablet Programming with Android Studio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Assignment 1: Basic Paystub Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/en-android-aout-2016" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to Android Tablet Programming with Android Studio" class="md-nav__button md-logo" aria-label="An Introduction to Android Tablet Programming with Android Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to Android Tablet Programming with Android Studio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/en-android-aout-2016" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="learning-android-programming.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Learning Android Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="skeleton-of-an-android-client-communicating-with-a-web-service--json.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Skeleton of an Android client communicating with a web service / JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study---appointment-management.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Case Study - Appointment Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Assignment 1: Basic Paystub Management
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="assignment-1-basic-paystub-management.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Assignment 1: Basic Paystub Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. The database
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. The database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1. Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2. Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-java-modeling-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3. Java modeling of the database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-web-server-json-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Web server / JSON installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Web server / JSON installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1. Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-web-servicejson-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2. Web service/JSON URLs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-the-json-responses-from-the-web-servicejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3. The JSON responses from the web service/JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-android-client-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Android client tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-work-to-be-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Work to be done
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignment-2---controlling-arduinos-with-an-android-tablet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Assignment 2 - Controlling Arduinos with an Android Tablet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="appendices.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Appendices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-assignment-1-basic-paystub-management">4. <a id="refheading1646501704398319"></a><span>Assignment 1: Basic Paystub Management</span></h1>
+<h2 id="41-introduction">4.1. <a id="refheading61956428607977"></a><span>Introduction</span></h2>
+<p><span>To apply what we’ve covered previously, we now propose an assignment involving the development of an Android client for tablets, designed to simulate payroll calculations for the employees of an association.</span></p>
+<p><span>The application will have a client/server architecture:</span></p>
+<p><img src="images/image432.png" class="docx-zoomable" style="width:602px;height:435px;" alt="Image" /></p>
+<ul>
+<li><span>the server &#91;1&#93; is provided;</span></li>
+<li><span>you must build the Android client &#91;2&#93;.</span></li>
+</ul>
+
+<h2 id="42-the-database">4.2. <a id="refheading154461029747953"></a><span>The database</span></h2>
+<h3 id="421-definition">4.2.1. <a id="refheading154481029747953"></a><span>Definition</span></h3>
+<p><span>The static data needed to build the pay stub will be stored in a database that we will refer to hereafter as</span><a id="dbpam"></a><b> dbpam</b><span>. This database contains the following tables:</span></p>
+<div style="background-color:#CCCCCC ; padding:0.35em 0.5em ; margin:0.75em 0"><b>EMPLOYEES</b><span> table: contains information about the various child care providers</span></div>
+
+<p><b>Structure</b><span>:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">ID</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>primary key</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">VERSION</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>version number – increments with each modification of the row</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">SS</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Employee&#x27;s Social Security number – unique</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">NAME</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Employee&#x27;s last name</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">FIRST NAME</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>first name</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">ADDRESS</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>their address</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">CITY</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>his/her city</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">ZIP CODE</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>his/her ZIP code</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">INDEMNITY_ID</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Foreign key on the &#91;ID&#93; field of the &#91;INDEMNITES&#93; table</span></p>
+</td>
+</tr>
+</table>
+
+<p><span>Its content could be as follows:</span></p>
+<p><img src="images/image485.png" class="docx-zoomable" style="width:566px;height:63px;" alt="Image" /></p>
+<div style="background-color:#CCCCCC ; padding:0.35em 0.5em ; margin:0.75em 0"><b>COTISATIONS</b><span> table: contains the percentages needed to calculate social security contributions</span></div>
+
+<p><b>Structure</b><span>:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">ID</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>primary key</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">VERSION</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>version number – increments with each modification of the row</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">CSGRDS</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Percentage: General Social Contribution + Contribution to Social Debt Repayment</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">CSGD</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>percentage: deductible general social contribution</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">SECU</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>percentage: social security, widowhood, old age</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">PENSION</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>percentage: supplemental pension + unemployment insurance </span></p>
+</td>
+</tr>
+</table>
+
+<p><span>Its content could be as follows:</span></p>
+<p><img src="images/image486.png" class="docx-zoomable" style="width:270px;height:48px;" alt="Image" /></p>
+<p><span>Social security contribution rates are independent of the employee. The previous table has only one row.</span></p>
+<div style="background-color:#CCCCCC ; padding:0.35em 0.5em ; margin:0.75em 0"><b>ALLOWANCES</b><span> table: contains the elements used to calculate the salary to be paid.</span></div>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">ID</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>primary key</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">VERSION</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>version number – increments with each modification of the row</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">INDEX</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Processing index – unique</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">HOURLY RATE</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Net price in euros for one hour of on-call duty</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">DAILY MAINTENANCE</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>daily allowance in euros per day of care</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">MEAL PER DAY</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Meal allowance in euros per day of care</span></p>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
+<span class="docx-code-line">VACATION PAY</span>
+</code></pre></div>
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<p style='margin:0;'><span>Paid vacation allowance. This is a percentage applied to the base salary.</span></p>
+</td>
+</tr>
+</table>
+
+<p><span>Its content could be as follows:</span></p>
+<p><img src="images/image487.png" class="docx-zoomable" style="width:488px;height:62px;" alt="Image" /></p>
+<p><span>Note that allowances may vary from one child care provider to another. They are linked to a specific child care provider via their pay grade. For example, Ms. Marie Jouveinal, who has a pay grade of 2 (EMPLOYEES table), has an hourly wage of 2.1 euros (INDEMNITES table).</span></p>
+<h3 id="422-generation">4.2.2. <a id="refheading154501029747953"></a><span>Generation</span></h3>
+<p><span>The database generation script &#91;dbpam&#95;hibernate.sql&#93; is provided:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image488.png" class="docx-zoomable" style="width:134px;height:103px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>Create the &#91;dbpam&#95;hibernate&#93; database (this is the name of the database used by the web server/jSON) and ensure that the </span><i>root</i><span> login (without a password) can access it. You can do this as follows:</span></p>
+<p><span>Start MySQL, then &#91;PhpMyAdmin&#93;:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image489.png" class="docx-zoomable" style="width:153px;height:97px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image490.png" class="docx-zoomable" style="width:401px;height:197px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<ul>
+<li><span>&#91;1-2&#93;: Import the &#91;dbpam&#95;hibernate.sql&#93; script and then execute it;</span></li>
+</ul>
+
+<h3 id="423-java-modeling-of-the-database">4.2.3. <a id="refheading154521029747953"></a><span>Java modeling of the database</span></h3>
+<p><span>The elements of the &#91;EMPLOYEES&#93;, &#91;ALLOWANCES&#93;, and &#91;CONTRIBUTIONS&#93; tables are modeled by the following classes:</span></p>
+<p><b><u>&#91;</u></b><a id="employe"></a><b><u> Employee&#93;</u></b></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Employee </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String SS;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String lastName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String firstName;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String address;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String city;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String zipCode;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">allowanceID;</span></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Indemnity indemnity;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Employee() {</span></span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Employee(String lastName, String firstName, String middleName, String address, String city, String zipCode, Indemnity indemnity) {</span></span>
+<span class="docx-code-line">    ...</span>
+<span class="docx-code-line">  }</span>
+<span class="docx-code-line">  // getters and setters</span>
+<span class="docx-code-line">....</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<ul>
+<li><span>lines 8–15: these fields correspond to the columns in the &#91;EMPLOYEES&#93; table;</span></li>
+<li><span>line 16: the &#91;indemniteId&#93; field corresponds to the &#91;INDEMNITE&#95;ID&#93; column, which is the foreign key of the &#91;EMPLOYEES&#93; table;</span></li>
+<li><span>line 17: the employee&#x27;s allowance. This field is not always populated:</span><ul>
+<li><span>it is not filled in when requesting the URL &#91;/employees&#93;,</span></li>
+<li><span>it is when requesting the URL &#91;/salary&#93;;</span></li>
+</ul>
+</li>
+</ul>
+
+<p><span>&#91;</span><a id="indemnite"></a><b><u> Indemnite</u></b><span>&#93;</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Indemnite </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">index;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">baseTime;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double room, </span><span style="color:#000000">daily cleaning;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">meal per day;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">severancePay;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Indemnity() {</span></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Allowance(</span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">index, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">baseHour, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">dailyMaintenance, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">dailyMeal, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">CPAllowance) {</span></span>
+<span class="docx-code-line">       ...</span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">   // getters and setters</span>
+<span class="docx-code-line">   ....</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<ul>
+<li><span>lines 8-14: the fields correspond to the columns of the &#91;INDEMNITES&#93; table;</span></li>
+</ul>
+
+<p><span>&#91;</span><a id="cotisation"></a><b><u> Contribution</u></b><span>&#93;</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Contribution </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">csgrds;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">csgd;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">socialsecurity;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">pension;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Contribution() {</span></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Contribution(</span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">csgrds, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">csgd, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">secu, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">retirement) {</span></span>
+<span class="docx-code-line">       ...</span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line">   // getters and setters</span>
+<span class="docx-code-line">   ...</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<ul>
+<li><span>lines 8-13: the fields correspond to the columns of the &#91;COTISATIONS&#93; table;</span></li>
+</ul>
+
+<h2 id="43-web-server-json-installation">4.3. <a id="refheading61958428607977"></a><span>Web server / JSON installation</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image491.png" class="docx-zoomable" style="width:607px;height:199px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<h3 id="431-installation">4.3.1. <a id="refheading154541029747953"></a><span>Installation</span></h3>
+<p><span>The Java binary for the web/jSON server is provided:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image492.png" class="docx-zoomable" style="width:153px;height:86px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>To start the web/JSON server, proceed as follows:</span></p>
+<ul>
+<li><span>Start the MySQL DBMS;</span></li>
+<li><span>make sure the database &#91;dbpam&#95;hibernate&#93; exists;</span></li>
+<li><span>Open a command prompt window;</span></li>
+<li><span>Navigate to the jar folder;</span></li>
+<li><span>type the command:</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>java -jar pam-server-01-all-1.0.jar
+</code></pre></div>
+
+</li>
+</ul>
+
+<p><span>This assumes that the &#91;java.exe&#93; executable is in your machine&#x27;s PATH. If this is not the case, type the full path to &#91;java.exe&#93;, for example:</span></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>D:\Programs\devjava\java\jdk1.8\bin\java -jar pam-server-01-all-1.0.jar
+</code></pre></div>
+<p><span>Logs are displayed:</span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>.   ____          _            __ _ _
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a> /\\ / ___&#39;_ __ _ <span class="ge">_(_</span>)_ __  __ _ \ \ \ \
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>( ( )\___ | &#39;_ | &#39;<span class="ge">_| | &#39;_</span> \/ _` | \ \ \ \
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a> \\/  ___)| |<span class="ge">_)| | | | | || (_</span>| |  ) ) ) )
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  &#39;  |____| .__|_| |<span class="ge">_|_</span>| |<span class="ge">_\_</span>_, | / / / /
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a> =========|_|==============|___/=/_/_/_/
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a> :: Spring Boot ::        (v1.1.1.RELEASE)
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>2014-10-22 16:45:23.347  INFO 1868 --- [           main] pam.boot.BootWeb                         : Starting BootWeb on Gportpers3 with PID 1868 (D:\Temp\14-10-22\pam\server-pam.jar started by ST in D:\Temp\14-10-22\pam)
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>2014-10-22 16:45:23.414  INFO 1868 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689ab9e2: startup date [Wed Oct 22 16:45:23 CEST 2014]; root of context hierarchy
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>...
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>...
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>2014-10-22 16:45:31.147  INFO 1868 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>2014-10-22 16:45:31.484  INFO 1868 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>2014-10-22 16:45:33.564  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>2014-10-22 16:45:33.804  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/salary/{SS}/{ht}/{jt}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public pam.restapi.PayrollResponse pam.restapi.PamController.getPayroll(java.lang.String, double, int)
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>2014-10-22 16:45:33.805  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/employees],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public pam.restapi.EmployeesResponse pam.restapi.PamController.getEmployees()
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>2014-10-22 16:45:33.807  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped &quot;{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>2014-10-22 16:45:33.807  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a>2014-10-22 16:45:33.839  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>2014-10-22 16:45:33.839  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a>2014-10-22 16:45:34.384  INFO 1868 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a>2014-10-22 16:45:34.535  INFO 1868 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080/http
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a>2014-10-22 16:45:34.538  INFO 1868 --- [           main] pam.boot.BootWeb                         : Started BootWeb in 11.916 seconds (JVM running for 12.725)
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>2014-10-22 16:45:39.329  INFO 1868 --- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689ab9e2: startup date [Wed Oct 22 16:45:23 CEST 2014]; root of context hierarchy
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a>2014-10-22 16:45:39.331  INFO 1868 --- [       Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a>2014-10-22 16:45:39.333  INFO 1868 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><span>line 16: the URL &#91;</span><b>/salary/{SS}/{ht}/{jt}</b><span>&#93; is resolved;</span></li>
+<li><span>line 17: the URL &#91;</span><b>/employees</b><span>&#93; is discovered;</span></li>
+</ul>
+
+<h3 id="432-web-servicejson-urls">4.3.2. <a id="refheading8099721530162"></a><span>Web service/JSON URLs</span></h3>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image493.png" class="docx-zoomable" style="width:574px;height:173px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<p><span>The web service / JSON is implemented by Spring MVC and exposes two URLs:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="color:#000000">@RequestMapping(value = </span><span style="color:#2A00FF">&quot;/employees&quot;</span><span style="color:#000000">, method = RequestMethod.GET, content-type = </span><span style="color:#2A00FF">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">EmployeesResponse getEmployees() {</span></span>
+<span class="docx-code-line">...</span>
+<span class="docx-code-line"><span style="color:#000000">@RequestMapping(value = </span><span style="color:#2A00FF">&quot;/salary/{SS}/{ht}/{jt}&quot;</span><span style="color:#000000">, method = RequestMethod.GET, response-type = </span><span style="color:#2A00FF">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">PaystubResponse getPaystub(@PathVariable(</span><span style="color:#2A00FF">&quot;SS&quot;</span><span style="color:#000000">) String SS, @PathVariable(</span><span style="color:#2A00FF">&quot;ht&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">ht, @PathVariable(</span><span style="color:#2A00FF">&quot;jt&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">jt) {</span></span>
+</code></pre></div>
+
+<p><span>The web service accepts the following two URLs:</span></p>
+<ul>
+<li><span>line 1: </span><b>/employees</b><span>: to retrieve the list of employees;</span></li>
+<li><span>Line 4: </span><b>/salary/SS/ht/jt</b><span>: to retrieve the pay stub for employee #&#91;SS&#93; who worked &#91;ht&#93; hours over &#91;jt&#93; days;</span></li>
+</ul>
+
+<p><span>Here are some screenshots illustrating this.</span></p>
+<p><span>We query the employees:</span></p>
+<p><img src="images/image494.png" class="docx-zoomable" style="width:583px;height:104px;" alt="Image" /></p>
+<p><span>We back up the database, restart the server, and query the employees:</span></p>
+<p><img src="images/image495.png" class="docx-zoomable" style="width:648px;height:105px;" alt="Image" /></p>
+<p><span>We query a salary:</span></p>
+<p><img src="images/image496.png" class="docx-zoomable" style="width:646px;height:114px;" alt="Image" /></p>
+<p><span>We request the salary of a non-existent person:</span></p>
+<p><img src="images/image497.png" class="docx-zoomable" style="width:395px;height:73px;" alt="Image" /></p>
+<h3 id="433-the-json-responses-from-the-web-servicejson">4.3.3. <a id="refheading8099921530162"></a><span>The JSON responses from the web service/JSON</span></h3>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image498.png" class="docx-zoomable" style="width:570px;height:187px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image499.png" class="docx-zoomable" style="width:139px;height:116px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The web service/jSON URLs return responses of type &#91;Response&lt;T&gt;&#93;:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">client.android.dao.service;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.util.List;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Response&lt;T&gt; {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// ----------------- properties</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// operation status</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">status;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// any status messages</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">List&lt;String&gt; messages;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// response body</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">T body;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Response() {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Response(</span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">status, List&lt;String&gt; messages, T body) {</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.status = status;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.messages = messages;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.body = body;</span></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
+<span class="docx-code-line">...</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<ul>
+<li><span>The URL &#91;</span><b>/employees</b><span>&#93; returns a </span><b>Response&lt;List&lt;Employee&gt;&gt;</b><span>;</span></li>
+<li><span>The URL &#91;</span><b>/salary</b><span>&#93; returns a </span><b>Response&lt;PayStub&gt; </b><span>type;</span></li>
+</ul>
+
+<p><span>The &#91;PayrollSheet&#93; class is as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Payroll </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// private fields</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Employee employee;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Contribution contribution;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">PayrollElements payrollElements;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Payroll() {</span></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Payroll(Employee employee, Contribution contribution, SalaryElements salaryElements) {</span></span>
+<span class="docx-code-line">       ...</span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
+<span class="docx-code-line">   ...</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<ul>
+<li><span>line 9: the &#91;Employee&#93; class was introduced in section</span><a href="#employe"><span style="color:#0563C1"><u> 4.2.3</u></span></a><span>;</span></li>
+<li><span>line 10: the &#91;Contribution&#93; class was introduced in section</span><a href="#cotisation"><span style="color:#0563C1"><u> 4.2.3</u></span></a><span>;</span></li>
+</ul>
+
+<p><span>The &#91;SalaryElements&#93; class (line 11) is as follows:</span></p>
+<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">SalaryElements </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// private fields</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">baseSalary;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">socialSecurityContributions;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">maintenanceAllowance;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">mealAllowance;</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">netSalary;</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">ElementsSalary() {</span></span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">ElementsSalary(</span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">baseSalary, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">socialContributions, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">maintenanceAllowance, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">mealAllowance, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">netSalary) {</span></span>
+<span class="docx-code-line">       ...</span>
+<span class="docx-code-line">   }</span>
+<span class="docx-code-line"></span>
+<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
+<span class="docx-code-line">   ...</span>
+<span class="docx-code-line">}</span>
+</code></pre></div>
+
+<h2 id="44-android-client-tests">4.4. <a id="refheading61960428607977"></a><span>Android client tests</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image500.png" class="docx-zoomable" style="width:680px;height:121px;" alt="Image" />
+</td>
+</tr>
+</table>
+
+<p><span>The executable binary for the finished Android client is provided below:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image501.png" class="docx-zoomable" style="width:135px;height:113px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>Use your mouse to drag the &#91;pam-client.apk&#93; file above onto a tablet emulator &#91;GenyMotion&#93;. It will then be saved and executed. Also launch the web/JSON server if you haven’t already done so. The purpose of the Android client is to retrieve the information returned by the web/JSON server and format it. The different views of the Android client are as follows:</span></p>
+<p><span>First, you must connect to the web service / JSON:</span></p>
+<p><img src="images/image502.png" class="docx-zoomable" style="width:638px;height:173px;" alt="Image" /></p>
+<ul>
+<li><span>in &#91;1&#93;, enter the URL of the web/JSON service. With the emulator, enter one of the PC’s IP addresses (but not 127.0.0.1). With a tablet, enter the Wi-Fi address of the web/JSON server machine and disable the server’s firewall if it has one, as it may block incoming calls;</span></li>
+<li><span>In &#91;2&#93;, log in;</span></li>
+</ul>
+
+<p><span>You will then be taken to the simulation page:</span></p>
+<p><img src="images/image503.png" class="docx-zoomable" style="width:637px;height:175px;" alt="Image" /></p>
+<ul>
+<li><span>In &#91;3&#93;, select an employee;</span></li>
+<li><span>In &#91;4&#93;, enter a number of hours;</span></li>
+<li><span>In &#91;5&#93;, enter the number of days;</span></li>
+<li><span>In &#91;6&#93;, run the simulation;</span></li>
+</ul>
+
+<p><span>The resulting simulation page is as follows:</span></p>
+<p><img src="images/image504.png" class="docx-zoomable" style="width:638px;height:414px;" alt="Image" /></p>
+<ul>
+<li><span>in &#91;7&#93;, the simulation results;</span></li>
+<li><span>in &#91;8&#93;, save it;</span></li>
+</ul>
+
+<p><img src="images/image505.png" class="docx-zoomable" style="width:638px;height:245px;" alt="Image" /></p>
+<ul>
+<li><span>in &#91;9&#93;, the list of simulations;</span></li>
+<li><span>in &#91;10&#93;, a simulation is deleted;</span></li>
+</ul>
+
+<p><img src="images/image506.png" class="docx-zoomable" style="width:638px;height:150px;" alt="Image" /></p>
+<ul>
+<li><span>in &#91;11&#93;, there are no more simulations;</span></li>
+<li><span>In &#91;12&#93;, you return to the simulation form;</span></li>
+</ul>
+
+<p><img src="images/image507.png" class="docx-zoomable" style="width:638px;height:414px;" alt="Image" /></p>
+<ul>
+<li><span>in &#91;13&#93;, you return to the form;</span></li>
+<li><span>in &#91;14&#93;, you return to the configuration page;</span></li>
+</ul>
+
+<p><img src="images/image508.png" class="docx-zoomable" style="width:638px;height:157px;" alt="Image" /></p>
+<ul>
+<li><span>in &#91;15&#93;, you return to the initial login form.</span></li>
+</ul>
+
+<h2 id="45-work-to-be-done">4.5. <a id="refheading61962428607977"></a><span>Work to be done</span></h2>
+<p><span>The Android client skeleton presented earlier is provided to you. It was built from the &#91;client-android-skel&#93; project described in Section</span><a href="skeleton-of-an-android-client-communicating-with-a-web-service--json.html#refheading1083471369936500"><span style="color:#0563C1"><u> 2</u></span></a><span>.</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+<img src="images/image509.png" class="docx-zoomable" style="width:139px;height:111px;" alt="Image" />
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
+&nbsp;
+</td>
+</tr>
+</table>
+
+<p><span>The project is executable and already contains the necessary views. You simply need to add code so that the application does what it is supposed to do. The procedure is as follows:</span></p>
+<ul>
+<li><span>run the full version to understand the work to be done;</span></li>
+<li><span>run the lightweight version and study its code. It follows the design methods used in the previous pages;</span></li>
+<li><span>add the missing code;</span></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
