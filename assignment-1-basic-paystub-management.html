@@ -452,30 +452,8 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#42-the-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. The database
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.2. The database">
+    <nav class="md-nav" aria-label="4.1. Introduction">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#421-definition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.1. Definition
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#422-generation" class="md-nav__link">
@@ -489,49 +467,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#423-java-modeling-of-the-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.3. Java modeling of the database
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#43-web-server-json-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3. Web server / JSON installation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.3. Web server / JSON installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#431-installation" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.3.1. Installation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#432-web-servicejson-urls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3.2. Web service/JSON URLs
       
     </span>
   </a>
@@ -655,752 +594,563 @@
 
 
 
-<h1 id="4-assignment-1-basic-paystub-management">4. <a id="refheading1646501704398319"></a><span>Assignment 1: Basic Paystub Management</span></h1>
-<h2 id="41-introduction">4.1. <a id="refheading61956428607977"></a><span>Introduction</span></h2>
-<p><span>To apply what we’ve covered previously, we now propose an assignment involving the development of an Android client for tablets, designed to simulate payroll calculations for the employees of an association.</span></p>
-<p><span>The application will have a client/server architecture:</span></p>
-<p><img src="images/image432.png" class="docx-zoomable" style="width:602px;height:435px;" alt="Image" /></p>
+<p><a id="refheading1646501704398319"></a></p>
+<h1 id="4-assignment-1-basic-paystub-management">4. <span style="color: #365f91">Assignment 1: Basic Paystub Management</span></h1>
+<p><a id="refheading61956428607977"></a></p>
+<h2 id="41-introduction">4.1. <span style="color: #4f81bd">Introduction</span></h2>
+<p>To apply what we’ve covered previously, we now propose an assignment involving the development of an Android client for tablets, designed to simulate payroll calculations for the employees of an association.</p>
+<p>The application will have a client/server architecture:</p>
+<p><img src="images/100000000000035C0000026E84D169AC.png" style="width:15.921cm;height:11.515cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000035C0000026E84D169AC.png" /></p>
 <ul>
-<li><span>the server &#91;1&#93; is provided;</span></li>
-<li><span>you must build the Android client &#91;2&#93;.</span></li>
+  <li>the server [1] is provided;
+  </li>
+  <li>you must build the Android client [2].
+<a id="refheading154461029747953"></a>
+
+## 4.2. <span style="color: #4f81bd">The database</span>
+
+<a id="refheading154481029747953"></a>
+
+### 4.2.1. <span style="color: #4f81bd">Definition</span>
+
+  </li>
 </ul>
 
-<h2 id="42-the-database">4.2. <a id="refheading154461029747953"></a><span>The database</span></h2>
-<h3 id="421-definition">4.2.1. <a id="refheading154481029747953"></a><span>Definition</span></h3>
-<p><span>The static data needed to build the pay stub will be stored in a database that we will refer to hereafter as</span><a id="dbpam"></a><b> dbpam</b><span>. This database contains the following tables:</span></p>
-<div style="background-color:#CCCCCC ; padding:0.35em 0.5em ; margin:0.75em 0"><b>EMPLOYEES</b><span> table: contains information about the various child care providers</span></div>
+<p>The static data needed to build the pay stub will be stored in a database that we will refer to hereafter as<a id="dbpam"></a> <strong>dbpam</strong>. This database contains the following tables:</p>
+<div style="margin:0 0 0.75em 0; background-color:#cccccc; padding:0.35em 0.6em"><b>EMPLOYEES</b> table: contains information about the various child care providers</div>
 
-<p><b>Structure</b><span>:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">ID</span>
+<p><strong>Structure</strong>:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ID
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>primary key</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">VERSION</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">primary key</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>VERSION
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>version number – increments with each modification of the row</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">SS</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">version number – increments with each modification of the row</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SS
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Employee&#x27;s Social Security number – unique</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">NAME</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Employee&#x27;s Social Security number – unique</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>NAME
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Employee&#x27;s last name</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">FIRST NAME</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Employee&#x27;s last name</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>FIRST NAME
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>first name</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">ADDRESS</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">first name</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ADDRESS
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>their address</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">CITY</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">their address</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>CITY
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>his/her city</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">ZIP CODE</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">his/her city</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ZIP CODE
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>his/her ZIP code</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">INDEMNITY_ID</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">his/her ZIP code</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>INDEMNITY_ID
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Foreign key on the &#91;ID&#93; field of the &#91;INDEMNITES&#93; table</span></p>
-</td>
-</tr>
-</table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Foreign key on the [ID] field of the [INDEMNITES] table</div></td></tr></table>
 
-<p><span>Its content could be as follows:</span></p>
-<p><img src="images/image485.png" class="docx-zoomable" style="width:566px;height:63px;" alt="Image" /></p>
-<div style="background-color:#CCCCCC ; padding:0.35em 0.5em ; margin:0.75em 0"><b>COTISATIONS</b><span> table: contains the percentages needed to calculate social security contributions</span></div>
+<p>Its content could be as follows:</p>
+<p><img src="images/10000000000003290000005A7A2F8F71.png" style="width:14.981cm;height:1.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003290000005A7A2F8F71.png" /></p>
+<div style="margin:0 0 0.75em 0; background-color:#cccccc; padding:0.35em 0.6em"><b>COTISATIONS</b> table: contains the percentages needed to calculate social security contributions</div>
 
-<p><b>Structure</b><span>:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">ID</span>
+<p><strong>Structure</strong>:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ID
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>primary key</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">VERSION</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">primary key</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>VERSION
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>version number – increments with each modification of the row</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">CSGRDS</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">version number – increments with each modification of the row</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>CSGRDS
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Percentage: General Social Contribution + Contribution to Social Debt Repayment</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">CSGD</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Percentage: General Social Contribution + Contribution to Social Debt Repayment</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>CSGD
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>percentage: deductible general social contribution</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">SECU</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">percentage: deductible general social contribution</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>SECU
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>percentage: social security, widowhood, old age</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">PENSION</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">percentage: social security, widowhood, old age</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>PENSION
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>percentage: supplemental pension + unemployment insurance </span></p>
-</td>
-</tr>
-</table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">percentage: supplemental pension + unemployment insurance</div></td></tr></table>
 
-<p><span>Its content could be as follows:</span></p>
-<p><img src="images/image486.png" class="docx-zoomable" style="width:270px;height:48px;" alt="Image" /></p>
-<p><span>Social security contribution rates are independent of the employee. The previous table has only one row.</span></p>
-<div style="background-color:#CCCCCC ; padding:0.35em 0.5em ; margin:0.75em 0"><b>ALLOWANCES</b><span> table: contains the elements used to calculate the salary to be paid.</span></div>
+<p>Its content could be as follows:</p>
+<p><img src="images/10000000000001820000004455B7B537.png" style="width:7.151cm;height:1.259cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001820000004455B7B537.png" /></p>
+<p>Social security contribution rates are independent of the employee. The previous table has only one row.</p>
+<div style="margin:0 0 0.75em 0; background-color:#cccccc; padding:0.35em 0.6em"><b>ALLOWANCES</b> table: contains the elements used to calculate the salary to be paid.</div>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">ID</span>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>ID
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>primary key</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">VERSION</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">primary key</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>VERSION
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>version number – increments with each modification of the row</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">INDEX</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">version number – increments with each modification of the row</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>INDEX
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Processing index – unique</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">HOURLY RATE</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Processing index – unique</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>HOURLY RATE
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Net price in euros for one hour of on-call duty</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">DAILY MAINTENANCE</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Net price in euros for one hour of on-call duty</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>DAILY MAINTENANCE
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>daily allowance in euros per day of care</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">MEAL PER DAY</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">daily allowance in euros per day of care</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>MEAL PER DAY
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Meal allowance in euros per day of care</span></p>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<div class="docx-code-rich" data-linenums="false" style="counter-reset: docxline 0;"><pre><code class="language-text">
-<span class="docx-code-line">VACATION PAY</span>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Meal allowance in euros per day of care</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>VACATION PAY
 </code></pre></div>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<p style='margin:0;'><span>Paid vacation allowance. This is a percentage applied to the base salary.</span></p>
-</td>
-</tr>
-</table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Paid vacation allowance. This is a percentage applied to the base salary.</div></td></tr></table>
 
-<p><span>Its content could be as follows:</span></p>
-<p><img src="images/image487.png" class="docx-zoomable" style="width:488px;height:62px;" alt="Image" /></p>
-<p><span>Note that allowances may vary from one child care provider to another. They are linked to a specific child care provider via their pay grade. For example, Ms. Marie Jouveinal, who has a pay grade of 2 (EMPLOYEES table), has an hourly wage of 2.1 euros (INDEMNITES table).</span></p>
-<h3 id="422-generation">4.2.2. <a id="refheading154501029747953"></a><span>Generation</span></h3>
-<p><span>The database generation script &#91;dbpam&#95;hibernate.sql&#93; is provided:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image488.png" class="docx-zoomable" style="width:134px;height:103px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-</tr>
-</table>
+<p>Its content could be as follows:</p>
+<p><img src="images/10000000000002B900000058BF2B5FE8.png" style="width:12.91cm;height:1.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B900000058BF2B5FE8.png" /></p>
+<p>Note that allowances may vary from one child care provider to another. They are linked to a specific child care provider via their pay grade. For example, Ms. Marie Jouveinal, who has a pay grade of 2 (EMPLOYEES table), has an hourly wage of 2.1 euros (INDEMNITES table).</p>
+<p><a id="refheading154501029747953"></a></p>
+<h3 id="422-generation">4.2.2. <span style="color: #4f81bd">Generation</span></h3>
+<p>The database generation script [dbpam_hibernate.sql] is provided:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BF000000932F0E0E55.png" style="display:inline-block; margin:4px;width:3.54cm;height:2.725cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BF000000932F0E0E55.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span>Create the &#91;dbpam&#95;hibernate&#93; database (this is the name of the database used by the web server/jSON) and ensure that the </span><i>root</i><span> login (without a password) can access it. You can do this as follows:</span></p>
-<p><span>Start MySQL, then &#91;PhpMyAdmin&#93;:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image489.png" class="docx-zoomable" style="width:153px;height:97px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image490.png" class="docx-zoomable" style="width:401px;height:197px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-</tr>
-</table>
+<p>Create the [dbpam_hibernate] database (this is the name of the database used by the web server/jSON) and ensure that the <em>root</em> login (without a password) can access it. You can do this as follows:</p>
+<p>Start MySQL, then [PhpMyAdmin]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DA0000008A8AEE8CA8.png" style="display:inline-block; margin:4px;width:4.039cm;height:2.558cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DA0000008A8AEE8CA8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028C0000014124DD40FA.png" style="display:inline-block; margin:4px;width:10.601cm;height:5.219cm;" class="odt-zoomable" data-zoom-src="images/100000000000028C0000014124DD40FA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li><span>&#91;1-2&#93;: Import the &#91;dbpam&#95;hibernate.sql&#93; script and then execute it;</span></li>
+  <li>[1-2]: Import the [dbpam_hibernate.sql] script and then execute it;
+<a id="refheading154521029747953"></a>
+
+### 4.2.3. <span style="color: #4f81bd">Java modeling of the database</span>
+
+  </li>
 </ul>
 
-<h3 id="423-java-modeling-of-the-database">4.2.3. <a id="refheading154521029747953"></a><span>Java modeling of the database</span></h3>
-<p><span>The elements of the &#91;EMPLOYEES&#93;, &#91;ALLOWANCES&#93;, and &#91;CONTRIBUTIONS&#93; tables are modeled by the following classes:</span></p>
-<p><b><u>&#91;</u></b><a id="employe"></a><b><u> Employee&#93;</u></b></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Employee </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Long id;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">version;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String SS;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String lastName;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String firstName;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String address;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String city;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">String zipCode;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">allowanceID;</span></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Indemnity indemnity;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Employee() {</span></span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Employee(String lastName, String firstName, String middleName, String address, String city, String zipCode, Indemnity indemnity) {</span></span>
-<span class="docx-code-line">    ...</span>
-<span class="docx-code-line">  }</span>
-<span class="docx-code-line">  // getters and setters</span>
-<span class="docx-code-line">....</span>
-<span class="docx-code-line">}</span>
+<p>The elements of the [EMPLOYEES], [ALLOWANCES], and [CONTRIBUTIONS] tables are modeled by the following classes:</p>
+<p><u><strong>[</strong></u><a id="employe"></a><u> <strong>Employee]</strong></u></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Employee </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String SS;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String lastName;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String firstName;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String address;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String city;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String zipCode;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">allowanceID;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Indemnity indemnity;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Employee() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Employee(String lastName, String firstName, String middleName, String address, String city, String zipCode, Indemnity indemnity) {</span></span>
+<span class="odt-code-line">    ...</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  // getters and setters</span>
+<span class="odt-code-line">....</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-<li><span>lines 8–15: these fields correspond to the columns in the &#91;EMPLOYEES&#93; table;</span></li>
-<li><span>line 16: the &#91;indemniteId&#93; field corresponds to the &#91;INDEMNITE&#95;ID&#93; column, which is the foreign key of the &#91;EMPLOYEES&#93; table;</span></li>
-<li><span>line 17: the employee&#x27;s allowance. This field is not always populated:</span><ul>
-<li><span>it is not filled in when requesting the URL &#91;/employees&#93;,</span></li>
-<li><span>it is when requesting the URL &#91;/salary&#93;;</span></li>
-</ul>
-</li>
+  <li>lines 8–15: these fields correspond to the columns in the [EMPLOYEES] table;
+  </li>
+  <li>line 16: the [indemniteId] field corresponds to the [INDEMNITE_ID] column, which is the foreign key of the [EMPLOYEES] table;
+  </li>
+  <li>line 17: the employee&#x27;s allowance. This field is not always populated:
+    <ul>
+      <li>it is not filled in when requesting the URL [/employees],
+      </li>
+      <li>it is when requesting the URL [/salary];
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p><span>&#91;</span><a id="indemnite"></a><b><u> Indemnite</u></b><span>&#93;</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Indemnite </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Long id;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">version;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">index;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">baseTime;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double room, </span><span style="color:#000000">daily cleaning;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">meal per day;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">severancePay;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Indemnity() {</span></span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Allowance(</span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">index, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">baseHour, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">dailyMaintenance, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">dailyMeal, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">CPAllowance) {</span></span>
-<span class="docx-code-line">       ...</span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">   // getters and setters</span>
-<span class="docx-code-line">   ....</span>
-<span class="docx-code-line">}</span>
+<p>[<a id="indemnite"></a><u> <strong>Indemnite</strong></u>]</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Indemnite </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">index;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">baseTime;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double room, </span><span style="color:#000000">daily cleaning;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">meal per day;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">severancePay;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Indemnity() {</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Allowance(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">index, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">baseHour, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">dailyMaintenance, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">dailyMeal, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">CPAllowance) {</span></span>
+<span class="odt-code-line">        ...</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">    // getters and setters</span>
+<span class="odt-code-line">   ....</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-<li><span>lines 8-14: the fields correspond to the columns of the &#91;INDEMNITES&#93; table;</span></li>
+  <li>lines 8-14: the fields correspond to the columns of the [INDEMNITES] table;
+  </li>
 </ul>
 
-<p><span>&#91;</span><a id="cotisation"></a><b><u> Contribution</u></b><span>&#93;</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Contribution </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Long id;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">version;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">csgrds;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">csgd;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">socialsecurity;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">pension;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Contribution() {</span></span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Contribution(</span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">csgrds, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">csgd, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">secu, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">retirement) {</span></span>
-<span class="docx-code-line">       ...</span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line">   // getters and setters</span>
-<span class="docx-code-line">   ...</span>
-<span class="docx-code-line">}</span>
+<p>[<a id="cotisation"></a><u> <strong>Contribution</strong></u>]</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Contribution </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">csgrds;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">csgd;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">socialsecurity;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">pension;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Contribution() {</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Contribution(</span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">csgrds, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">csgd, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">secu, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">retirement) {</span></span>
+<span class="odt-code-line">        ...</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line">   // getters and setters</span>
+<span class="odt-code-line">   ...</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-<li><span>lines 8-13: the fields correspond to the columns of the &#91;COTISATIONS&#93; table;</span></li>
+  <li>lines 8-13: the fields correspond to the columns of the [COTISATIONS] table;
+<a id="refheading61958428607977"></a>
+
+## 4.3. <span style="color: #4f81bd">Web server / JSON installation</span>
+
+  </li>
 </ul>
 
-<h2 id="43-web-server-json-installation">4.3. <a id="refheading61958428607977"></a><span>Web server / JSON installation</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image491.png" class="docx-zoomable" style="width:607px;height:199px;" alt="Image" />
-</td>
-</tr>
-</table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BE0000018FD9EFE949.png" style="display:inline-block; margin:4px;width:16.06cm;height:5.278cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BE0000018FD9EFE949.png" /></td></tr></table>
 
-<h3 id="431-installation">4.3.1. <a id="refheading154541029747953"></a><span>Installation</span></h3>
-<p><span>The Java binary for the web/jSON server is provided:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image492.png" class="docx-zoomable" style="width:153px;height:86px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-</tr>
-</table>
+<p><a id="refheading154541029747953"></a></p>
+<h3 id="431-installation">4.3.1. <span style="color: #4f81bd">Installation</span></h3>
+<p>The Java binary for the web/jSON server is provided:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DA0000007B701CC163.png" style="display:inline-block; margin:4px;width:4.039cm;height:2.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DA0000007B701CC163.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span>To start the web/JSON server, proceed as follows:</span></p>
+<p>To start the web/JSON server, proceed as follows:</p>
 <ul>
-<li><span>Start the MySQL DBMS;</span></li>
-<li><span>make sure the database &#91;dbpam&#95;hibernate&#93; exists;</span></li>
-<li><span>Open a command prompt window;</span></li>
-<li><span>Navigate to the jar folder;</span></li>
-<li><span>type the command:</span>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>java -jar pam-server-01-all-1.0.jar
-</code></pre></div>
-
-</li>
+  <li>Start the MySQL DBMS;
+  </li>
+  <li>make sure the database [dbpam_hibernate] exists;
+  </li>
+  <li>Open a command prompt window;
+  </li>
+  <li>Navigate to the jar folder;
+  </li>
+  <li>type the command:
+  </li>
 </ul>
 
-<p><span>This assumes that the &#91;java.exe&#93; executable is in your machine&#x27;s PATH. If this is not the case, type the full path to &#91;java.exe&#93;, for example:</span></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>D:\Programs\devjava\java\jdk1.8\bin\java -jar pam-server-01-all-1.0.jar
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>java -jar pam-server-01-all-1.0.jar
 </code></pre></div>
-<p><span>Logs are displayed:</span></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>.   ____          _            __ _ _
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a> /\\ / ___&#39;_ __ _ <span class="ge">_(_</span>)_ __  __ _ \ \ \ \
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>( ( )\___ | &#39;_ | &#39;<span class="ge">_| | &#39;_</span> \/ _` | \ \ \ \
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a> \\/  ___)| |<span class="ge">_)| | | | | || (_</span>| |  ) ) ) )
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  &#39;  |____| .__|_| |<span class="ge">_|_</span>| |<span class="ge">_\_</span>_, | / / / /
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a> =========|_|==============|___/=/_/_/_/
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a> :: Spring Boot ::        (v1.1.1.RELEASE)
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>2014-10-22 16:45:23.347  INFO 1868 --- [           main] pam.boot.BootWeb                         : Starting BootWeb on Gportpers3 with PID 1868 (D:\Temp\14-10-22\pam\server-pam.jar started by ST in D:\Temp\14-10-22\pam)
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>2014-10-22 16:45:23.414  INFO 1868 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689ab9e2: startup date [Wed Oct 22 16:45:23 CEST 2014]; root of context hierarchy
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>...
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>...
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a>2014-10-22 16:45:31.147  INFO 1868 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>2014-10-22 16:45:31.484  INFO 1868 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>2014-10-22 16:45:33.564  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a>2014-10-22 16:45:33.804  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/salary/{SS}/{ht}/{jt}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public pam.restapi.PayrollResponse pam.restapi.PamController.getPayroll(java.lang.String, double, int)
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a>2014-10-22 16:45:33.805  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/employees],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public pam.restapi.EmployeesResponse pam.restapi.PamController.getEmployees()
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a>2014-10-22 16:45:33.807  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped &quot;{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a>2014-10-22 16:45:33.807  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a>2014-10-22 16:45:33.839  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a>2014-10-22 16:45:33.839  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a>2014-10-22 16:45:34.384  INFO 1868 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a>2014-10-22 16:45:34.535  INFO 1868 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080/http
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a>2014-10-22 16:45:34.538  INFO 1868 --- [           main] pam.boot.BootWeb                         : Started BootWeb in 11.916 seconds (JVM running for 12.725)
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a>2014-10-22 16:45:39.329  INFO 1868 --- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689ab9e2: startup date [Wed Oct 22 16:45:23 CEST 2014]; root of context hierarchy
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a>2014-10-22 16:45:39.331  INFO 1868 --- [       Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a>2014-10-22 16:45:39.333  INFO 1868 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;
+<p>This assumes that the [java.exe] executable is in your machine&#x27;s PATH. If this is not the case, type the full path to [java.exe], for example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>D:\Programs\devjava\java\jdk1.8\bin\java -jar pam-server-01-all-1.0.jar
+</code></pre></div>
+<p>Logs are displayed:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span>
+<span class="normal"><a href="#__codelineno-24-22">22</a></span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span>
+<span class="normal"><a href="#__codelineno-24-24">24</a></span>
+<span class="normal"><a href="#__codelineno-24-25">25</a></span>
+<span class="normal"><a href="#__codelineno-24-26">26</a></span>
+<span class="normal"><a href="#__codelineno-24-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>.   ____          _            __ _ _
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a> /\\ / ___&#39;_ __ _ <span class="ge">_(_</span>)_ __  __ _ \ \ \ \
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>( ( )\___ | &#39;_ | &#39;<span class="ge">_| | &#39;_</span> \/ _` | \ \ \ \
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a> \\/  ___)| |<span class="ge">_)| | | | | || (_</span>| |  ) ) ) )
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>  &#39;  |____| .__|_| |<span class="ge">_|_</span>| |<span class="ge">_\_</span>_, | / / / /
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a> =========|_|==============|___/=/_/_/_/
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a> :: Spring Boot ::        (v1.1.1.RELEASE)
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a>2014-10-22 16:45:23.347  INFO 1868 --- [           main] pam.boot.BootWeb                         : Starting BootWeb on Gportpers3 with PID 1868 (D:\Temp\14-10-22\pam\server-pam.jar started by ST in D:\Temp\14-10-22\pam)
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>2014-10-22 16:45:23.414  INFO 1868 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689ab9e2: startup date [Wed Oct 22 16:45:23 CEST 2014]; root of context hierarchy
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>...
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>...
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a>2014-10-22 16:45:31.147  INFO 1868 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a>2014-10-22 16:45:31.484  INFO 1868 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a>2014-10-22 16:45:33.564  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a>2014-10-22 16:45:33.804  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/salary/{SS}/{ht}/{jt}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public pam.restapi.PayrollResponse pam.restapi.PamController.getPayroll(java.lang.String, double, int)
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a>2014-10-22 16:45:33.805  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/employees],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public pam.restapi.EmployeesResponse pam.restapi.PamController.getEmployees()
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a>2014-10-22 16:45:33.807  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped &quot;{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a>2014-10-22 16:45:33.807  INFO 1868 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a>2014-10-22 16:45:33.839  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a>2014-10-22 16:45:33.839  INFO 1868 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+<a id="__codelineno-24-22" name="__codelineno-24-22"></a>2014-10-22 16:45:34.384  INFO 1868 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+<a id="__codelineno-24-23" name="__codelineno-24-23"></a>2014-10-22 16:45:34.535  INFO 1868 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080/http
+<a id="__codelineno-24-24" name="__codelineno-24-24"></a>2014-10-22 16:45:34.538  INFO 1868 --- [           main] pam.boot.BootWeb                         : Started BootWeb in 11.916 seconds (JVM running for 12.725)
+<a id="__codelineno-24-25" name="__codelineno-24-25"></a>2014-10-22 16:45:39.329  INFO 1868 --- [       Thread-2] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@689ab9e2: startup date [Wed Oct 22 16:45:23 CEST 2014]; root of context hierarchy
+<a id="__codelineno-24-26" name="__codelineno-24-26"></a>2014-10-22 16:45:39.331  INFO 1868 --- [       Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+<a id="__codelineno-24-27" name="__codelineno-24-27"></a>2014-10-22 16:45:39.333  INFO 1868 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit &#39;default&#39;
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span>line 16: the URL &#91;</span><b>/salary/{SS}/{ht}/{jt}</b><span>&#93; is resolved;</span></li>
-<li><span>line 17: the URL &#91;</span><b>/employees</b><span>&#93; is discovered;</span></li>
+  <li>line 16: the URL [<b>/salary/{SS}/{ht}/{jt}</b>] is resolved;
+  </li>
+  <li>line 17: the URL [<b>/employees</b>] is discovered;
+<a id="refheading8099721530162"></a>
+
+### 4.3.2. <span style="color: #4f81bd">Web service/JSON URLs</span>
+
+  </li>
 </ul>
 
-<h3 id="432-web-servicejson-urls">4.3.2. <a id="refheading8099721530162"></a><span>Web service/JSON URLs</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image493.png" class="docx-zoomable" style="width:574px;height:173px;" alt="Image" />
-</td>
-</tr>
-</table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047C0000015BE373E46D.png" style="display:inline-block; margin:4px;width:15.187cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000047C0000015BE373E46D.png" /></td></tr></table>
 
-<p><span>The web service / JSON is implemented by Spring MVC and exposes two URLs:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="color:#000000">@RequestMapping(value = </span><span style="color:#2A00FF">&quot;/employees&quot;</span><span style="color:#000000">, method = RequestMethod.GET, content-type = </span><span style="color:#2A00FF">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">EmployeesResponse getEmployees() {</span></span>
-<span class="docx-code-line">...</span>
-<span class="docx-code-line"><span style="color:#000000">@RequestMapping(value = </span><span style="color:#2A00FF">&quot;/salary/{SS}/{ht}/{jt}&quot;</span><span style="color:#000000">, method = RequestMethod.GET, response-type = </span><span style="color:#2A00FF">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">PaystubResponse getPaystub(@PathVariable(</span><span style="color:#2A00FF">&quot;SS&quot;</span><span style="color:#000000">) String SS, @PathVariable(</span><span style="color:#2A00FF">&quot;ht&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">ht, @PathVariable(</span><span style="color:#2A00FF">&quot;jt&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">jt) {</span></span>
+<p>The web service / JSON is implemented by Spring MVC and exposes two URLs:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="color:#000000">@RequestMapping(value = </span><span style="color:#2a00ff">&quot;/employees&quot;</span><span style="color:#000000">, method = RequestMethod.GET, content-type = </span><span style="color:#2a00ff">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">EmployeesResponse getEmployees() {</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line"><span style="color:#000000">@RequestMapping(value = </span><span style="color:#2a00ff">&quot;/salary/{SS}/{ht}/{jt}&quot;</span><span style="color:#000000">, method = RequestMethod.GET, response-type = </span><span style="color:#2a00ff">&quot;application/json; charset=UTF-8&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">PaystubResponse getPaystub(@PathVariable(</span><span style="color:#2a00ff">&quot;SS&quot;</span><span style="color:#000000">) String SS, @PathVariable(</span><span style="color:#2a00ff">&quot;ht&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">ht, @PathVariable(</span><span style="color:#2a00ff">&quot;jt&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">jt) {</span></span>
 </code></pre></div>
 
-<p><span>The web service accepts the following two URLs:</span></p>
+<p>The web service accepts the following two URLs:</p>
 <ul>
-<li><span>line 1: </span><b>/employees</b><span>: to retrieve the list of employees;</span></li>
-<li><span>Line 4: </span><b>/salary/SS/ht/jt</b><span>: to retrieve the pay stub for employee #&#91;SS&#93; who worked &#91;ht&#93; hours over &#91;jt&#93; days;</span></li>
+  <li>line 1: <b>/employees</b>: to retrieve the list of employees;
+  </li>
+  <li>Line 4: <b>/salary/SS/ht/jt</b>: to retrieve the pay stub for employee #[SS] who worked [ht] hours over [jt] days;
+  </li>
 </ul>
 
-<p><span>Here are some screenshots illustrating this.</span></p>
-<p><span>We query the employees:</span></p>
-<p><img src="images/image494.png" class="docx-zoomable" style="width:583px;height:104px;" alt="Image" /></p>
-<p><span>We back up the database, restart the server, and query the employees:</span></p>
-<p><img src="images/image495.png" class="docx-zoomable" style="width:648px;height:105px;" alt="Image" /></p>
-<p><span>We query a salary:</span></p>
-<p><img src="images/image496.png" class="docx-zoomable" style="width:646px;height:114px;" alt="Image" /></p>
-<p><span>We request the salary of a non-existent person:</span></p>
-<p><img src="images/image497.png" class="docx-zoomable" style="width:395px;height:73px;" alt="Image" /></p>
-<h3 id="433-the-json-responses-from-the-web-servicejson">4.3.3. <a id="refheading8099921530162"></a><span>The JSON responses from the web service/JSON</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image498.png" class="docx-zoomable" style="width:570px;height:187px;" alt="Image" />
-</td>
-</tr>
-</table>
+<p>Here are some screenshots illustrating this.</p>
+<p>We query the employees:</p>
+<p><img src="images/100000000000034100000095DD148806.png" style="width:15.431cm;height:2.76cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000034100000095DD148806.png" /></p>
+<p>We back up the database, restart the server, and query the employees:</p>
+<p><img src="images/100000000000039E00000096254218C9.png" style="width:17.15cm;height:2.778cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039E00000096254218C9.png" /></p>
+<p>We query a salary:</p>
+<p><img src="images/100000000000039B000000A34A921A73.png" style="width:17.09cm;height:3.018cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039B000000A34A921A73.png" /></p>
+<p>We request the salary of a non-existent person:</p>
+<p><img src="images/1000000000000234000000681AB9AB40.png" style="width:10.44cm;height:1.924cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000234000000681AB9AB40.png" /></p>
+<p><a id="refheading8099921530162"></a></p>
+<h3 id="433-the-json-responses-from-the-web-servicejson">4.3.3. <span style="color: #4f81bd">The JSON responses from the web service/JSON</span></h3>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047300000176CA966EB5.png" style="display:inline-block; margin:4px;width:15.069cm;height:4.948cm;" class="odt-zoomable" data-zoom-src="images/100000000000047300000176CA966EB5.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image499.png" class="docx-zoomable" style="width:139px;height:116px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-</tr>
-</table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C6000000A518D396C1.png" style="display:inline-block; margin:4px;width:3.671cm;height:3.059cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C6000000A518D396C1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span>The web service/jSON URLs return responses of type &#91;Response&lt;T&gt;&#93;:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">client.android.dao.service;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.util.List;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Response&lt;T&gt; {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// ----------------- properties</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// operation status</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private int </span><span style="color:#000000">status;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// any status messages</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">List&lt;String&gt; messages;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// response body</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">T body;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Response() {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Response(</span><span style="font-weight:bold;color:#7F0055">int </span><span style="color:#000000">status, List&lt;String&gt; messages, T body) {</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.status = status;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.messages = messages;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7F0055">this</span><span style="color:#000000">.body = body;</span></span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
-<span class="docx-code-line">...</span>
-<span class="docx-code-line">}</span>
+<p>The web service/jSON URLs return responses of type [Response&lt;T&gt;]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">client.android.dao.service;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.util.List;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Response&lt;T&gt; {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// ----------------- properties</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// operation status</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">status;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// any status messages</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">List&lt;String&gt; messages;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// response body</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">T body;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// constructors</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Response() {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Response(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">status, List&lt;String&gt; messages, T body) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.status = status;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.messages = messages;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.body = body;</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// getters and setters</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-<li><span>The URL &#91;</span><b>/employees</b><span>&#93; returns a </span><b>Response&lt;List&lt;Employee&gt;&gt;</b><span>;</span></li>
-<li><span>The URL &#91;</span><b>/salary</b><span>&#93; returns a </span><b>Response&lt;PayStub&gt; </b><span>type;</span></li>
+  <li>The URL [<b>/employees</b>] returns a <b>Response&lt;List&lt;Employee&gt;&gt;</b>;
+  </li>
+  <li>The URL [<b>/salary</b>] returns a <b>Response&lt;PayStub&gt; </b>type;
+  </li>
 </ul>
 
-<p><span>The &#91;PayrollSheet&#93; class is as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">Payroll </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// private fields</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Employee employee;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">Contribution contribution;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private </span><span style="color:#000000">PayrollElements payrollElements;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Payroll() {</span></span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">Payroll(Employee employee, Contribution contribution, SalaryElements salaryElements) {</span></span>
-<span class="docx-code-line">       ...</span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
-<span class="docx-code-line">   ...</span>
-<span class="docx-code-line">}</span>
+<p>The [PayrollSheet] class is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Payroll </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// private fields</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Employee employee;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Contribution contribution;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">PayrollElements payrollElements;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// constructors</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Payroll() {</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Payroll(Employee employee, Contribution contribution, SalaryElements salaryElements) {</span></span>
+<span class="odt-code-line">        ...</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// getters and setters</span></span>
+<span class="odt-code-line">   ...</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
 <ul>
-<li><span>line 9: the &#91;Employee&#93; class was introduced in section</span><a href="#employe"><span style="color:#0563C1"><u> 4.2.3</u></span></a><span>;</span></li>
-<li><span>line 10: the &#91;Contribution&#93; class was introduced in section</span><a href="#cotisation"><span style="color:#0563C1"><u> 4.2.3</u></span></a><span>;</span></li>
+  <li>line 9: the [Employee] class was introduced in section<a href="#employe"><u><span style="color: #0563c1"> 4.2.3</span></u></a>;
+  </li>
+  <li>line 10: the [Contribution] class was introduced in section<a href="#cotisation"><u><span style="color: #0563c1"> 4.2.3</span></u></a>;
+  </li>
 </ul>
 
-<p><span>The &#91;SalaryElements&#93; class (line 11) is as follows:</span></p>
-<div class="docx-code-rich" data-linenums="true" style="counter-reset: docxline 0;"><pre><code class="language-java">
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">package </span><span style="color:#000000">pam.entities;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="font-weight:bold;color:#7F0055">public class </span><span style="color:#000000">SalaryElements </span><span style="font-weight:bold;color:#7F0055">implements </span><span style="color:#000000">Serializable {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// private fields</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">baseSalary;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">socialSecurityContributions;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">maintenanceAllowance;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">mealAllowance;</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">private double </span><span style="color:#000000">netSalary;</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// constructors</span></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">ElementsSalary() {</span></span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="font-weight:bold;color:#7F0055">public </span><span style="color:#000000">ElementsSalary(</span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">baseSalary, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">socialContributions, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">maintenanceAllowance, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">mealAllowance, </span><span style="font-weight:bold;color:#7F0055">double </span><span style="color:#000000">netSalary) {</span></span>
-<span class="docx-code-line">       ...</span>
-<span class="docx-code-line">   }</span>
-<span class="docx-code-line"></span>
-<span class="docx-code-line"><span style="color:#000000">   </span><span style="color:#3F7F5F">// getters and setters</span></span>
-<span class="docx-code-line">   ...</span>
-<span class="docx-code-line">}</span>
+<p>The [SalaryElements] class (line 11) is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">pam.entities;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">SalaryElements </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private static final long </span><span style="color:#000000">serialVersionUID = 1L;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// private fields</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">baseSalary;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">socialSecurityContributions;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">maintenanceAllowance;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">mealAllowance;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">netSalary;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// constructors</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">ElementsSalary() {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">ElementsSalary(</span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">baseSalary, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">socialContributions, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">maintenanceAllowance, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">mealAllowance, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">netSalary) {</span></span>
+<span class="odt-code-line">        ...</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// getters and setters</span></span>
+<span class="odt-code-line">    ...</span>
+<span class="odt-code-line">}</span>
 </code></pre></div>
 
-<h2 id="44-android-client-tests">4.4. <a id="refheading61960428607977"></a><span>Android client tests</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image500.png" class="docx-zoomable" style="width:680px;height:121px;" alt="Image" />
-</td>
-</tr>
-</table>
+<p><a id="refheading61960428607977"></a></p>
+<h2 id="44-android-client-tests">4.4. <span style="color: #4f81bd">Android client tests</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061700000116321EEDE2.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.21cm;" class="odt-zoomable" data-zoom-src="images/100000000000061700000116321EEDE2.png" /></td></tr></table>
 
-<p><span>The executable binary for the finished Android client is provided below:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image501.png" class="docx-zoomable" style="width:135px;height:113px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-</tr>
-</table>
+<p>The executable binary for the finished Android client is provided below:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C1000000A28979742E.png" style="display:inline-block; margin:4px;width:3.57cm;height:2.997cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C1000000A28979742E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span>Use your mouse to drag the &#91;pam-client.apk&#93; file above onto a tablet emulator &#91;GenyMotion&#93;. It will then be saved and executed. Also launch the web/JSON server if you haven’t already done so. The purpose of the Android client is to retrieve the information returned by the web/JSON server and format it. The different views of the Android client are as follows:</span></p>
-<p><span>First, you must connect to the web service / JSON:</span></p>
-<p><img src="images/image502.png" class="docx-zoomable" style="width:638px;height:173px;" alt="Image" /></p>
+<p>Use your mouse to drag the [pam-client.apk] file above onto a tablet emulator [GenyMotion]. It will then be saved and executed. Also launch the web/JSON server if you haven’t already done so. The purpose of the Android client is to retrieve the information returned by the web/JSON server and format it. The different views of the Android client are as follows:</p>
+<p>First, you must connect to the web service / JSON:</p>
+<p><img src="images/10000000000004FD0000015BE18A84BE.png" style="width:16.88cm;height:4.588cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004FD0000015BE18A84BE.png" /></p>
 <ul>
-<li><span>in &#91;1&#93;, enter the URL of the web/JSON service. With the emulator, enter one of the PC’s IP addresses (but not 127.0.0.1). With a tablet, enter the Wi-Fi address of the web/JSON server machine and disable the server’s firewall if it has one, as it may block incoming calls;</span></li>
-<li><span>In &#91;2&#93;, log in;</span></li>
+  <li>in [1], enter the URL of the web/JSON service. With the emulator, enter one of the PC’s IP addresses (but not 127.0.0.1). With a tablet, enter the Wi-Fi address of the web/JSON server machine and disable the server’s firewall if it has one, as it may block incoming calls;
+  </li>
+  <li>In [2], log in;
+  </li>
 </ul>
 
-<p><span>You will then be taken to the simulation page:</span></p>
-<p><img src="images/image503.png" class="docx-zoomable" style="width:637px;height:175px;" alt="Image" /></p>
+<p>You will then be taken to the simulation page:</p>
+<p><img src="images/1000000000000503000001601F903F03.png" style="width:16.85cm;height:4.623cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000503000001601F903F03.png" /></p>
 <ul>
-<li><span>In &#91;3&#93;, select an employee;</span></li>
-<li><span>In &#91;4&#93;, enter a number of hours;</span></li>
-<li><span>In &#91;5&#93;, enter the number of days;</span></li>
-<li><span>In &#91;6&#93;, run the simulation;</span></li>
+  <li>In [3], select an employee;
+  </li>
+  <li>In [4], enter a number of hours;
+  </li>
+  <li>In [5], enter the number of days;
+  </li>
+  <li>In [6], run the simulation;
+  </li>
 </ul>
 
-<p><span>The resulting simulation page is as follows:</span></p>
-<p><img src="images/image504.png" class="docx-zoomable" style="width:638px;height:414px;" alt="Image" /></p>
+<p>The resulting simulation page is as follows:</p>
+<p><img src="images/100000000000050200000340DEB3438A.png" style="width:16.88cm;height:10.956cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000050200000340DEB3438A.png" /></p>
 <ul>
-<li><span>in &#91;7&#93;, the simulation results;</span></li>
-<li><span>in &#91;8&#93;, save it;</span></li>
+  <li>in [7], the simulation results;
+  </li>
+  <li>in [8], save it;
+  </li>
 </ul>
 
-<p><img src="images/image505.png" class="docx-zoomable" style="width:638px;height:245px;" alt="Image" /></p>
+<p><img src="images/1000000000000501000001EB95051507.png" style="width:16.88cm;height:6.47cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000501000001EB95051507.png" /></p>
 <ul>
-<li><span>in &#91;9&#93;, the list of simulations;</span></li>
-<li><span>in &#91;10&#93;, a simulation is deleted;</span></li>
+  <li>in [9], the list of simulations;
+  </li>
+  <li>in [10], a simulation is deleted;
+  </li>
 </ul>
 
-<p><img src="images/image506.png" class="docx-zoomable" style="width:638px;height:150px;" alt="Image" /></p>
+<p><img src="images/10000000000004FB0000012B520E5D9F.png" style="width:16.88cm;height:3.958cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004FB0000012B520E5D9F.png" /></p>
 <ul>
-<li><span>in &#91;11&#93;, there are no more simulations;</span></li>
-<li><span>In &#91;12&#93;, you return to the simulation form;</span></li>
+  <li>in [11], there are no more simulations;
+  </li>
+  <li>In [12], you return to the simulation form;
+  </li>
 </ul>
 
-<p><img src="images/image507.png" class="docx-zoomable" style="width:638px;height:414px;" alt="Image" /></p>
+<p><img src="images/100000000000050200000340524BAAB3.png" style="width:16.88cm;height:10.956cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000050200000340524BAAB3.png" /></p>
 <ul>
-<li><span>in &#91;13&#93;, you return to the form;</span></li>
-<li><span>in &#91;14&#93;, you return to the configuration page;</span></li>
+  <li>in [13], you return to the form;
+  </li>
+  <li>in [14], you return to the configuration page;
+  </li>
 </ul>
 
-<p><img src="images/image508.png" class="docx-zoomable" style="width:638px;height:157px;" alt="Image" /></p>
+<p><img src="images/10000000000005050000013C37948572.png" style="width:16.88cm;height:4.15cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005050000013C37948572.png" /></p>
 <ul>
-<li><span>in &#91;15&#93;, you return to the initial login form.</span></li>
+  <li>in [15], you return to the initial login form.
+  </li>
 </ul>
 
-<h2 id="45-work-to-be-done">4.5. <a id="refheading61962428607977"></a><span>Work to be done</span></h2>
-<p><span>The Android client skeleton presented earlier is provided to you. It was built from the &#91;client-android-skel&#93; project described in Section</span><a href="skeleton-of-an-android-client-communicating-with-a-web-service--json.html#refheading1083471369936500"><span style="color:#0563C1"><u> 2</u></span></a><span>.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-<img src="images/image509.png" class="docx-zoomable" style="width:139px;height:111px;" alt="Image" />
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-<td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">
-&nbsp;
-</td>
-</tr>
-</table>
+<p><a id="refheading61962428607977"></a></p>
+<h2 id="45-work-to-be-done">4.5. <span style="color: #4f81bd">Work to be done</span></h2>
+<p>The Android client skeleton presented earlier is provided to you. It was built from the [client-android-skel] project described in Section<a href="#refheading1083471369936500"><u><span style="color: #0563c1"> 2</span></u></a>.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C60000009F32DA1ED2.png" style="display:inline-block; margin:4px;width:3.671cm;height:2.947cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C60000009F32DA1ED2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span>The project is executable and already contains the necessary views. You simply need to add code so that the application does what it is supposed to do. The procedure is as follows:</span></p>
+<p>The project is executable and already contains the necessary views. You simply need to add code so that the application does what it is supposed to do. The procedure is as follows:</p>
 <ul>
-<li><span>run the full version to understand the work to be done;</span></li>
-<li><span>run the lightweight version and study its code. It follows the design methods used in the previous pages;</span></li>
-<li><span>add the missing code;</span></li>
+  <li>run the full version to understand the work to be done;
+  </li>
+  <li>run the lightweight version and study its code. It follows the design methods used in the previous pages;
+  </li>
+  <li>add the missing code;
+  </li>
 </ul>
 
 
