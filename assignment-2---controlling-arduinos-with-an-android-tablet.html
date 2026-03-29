@@ -141,9 +141,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -151,9 +151,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -283,7 +283,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Home
   
 
     
@@ -1332,44 +1332,44 @@
 <p><strong>See</strong>: project [Example-15] (see section<a href="#refheading667031561570101"><u><span style="color: #0563c1"> 1.16.1</span></u></a>);</p>
 <p>The web/JSON service was implemented using Spring MVC and exposes the following URLs:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="color:#000000">@Controller</span></span>
+<span class="odt-code-line">@Controller</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">WebController {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// business layer</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Autowired</span></span>
+<span class="odt-code-line">  @Autowired</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">IBusinessModel businessModel;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// list of Arduinos</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @RequestMapping(value = </span><span style="color:#2a00ff">&quot;/arduinos&quot;</span><span style="color:#000000">, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ResponseBody</span></span>
+<span class="odt-code-line">  @ResponseBody</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String getArduinos() </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">JsonProcessingException {</span></span>
 <span class="odt-code-line">    ...</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// blinking</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @RequestMapping(value = </span><span style="color:#2a00ff">&quot;/arduinos/blink/{commandId}/{ArduinoId}/{pin}/{duration}/{count}&quot;</span><span style="color:#000000">, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ResponseBody</span></span>
+<span class="odt-code-line">  @ResponseBody</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String makeLEDBlink(@PathVariable(</span><span style="color:#2a00ff">&quot;commandId&quot;</span><span style="color:#000000">) String commandId, @PathVariable(</span><span style="color:#2a00ff">&quot;ArduinoId&quot;</span><span style="color:#000000">) String ArduinoId, @PathVariable(</span><span style="color:#2a00ff">&quot;pin&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">pin, @PathVariable(</span><span style="color:#2a00ff">&quot;duration&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">duration, @PathVariable(</span><span style="color:#2a00ff">&quot;count&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">count) </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">JsonProcessingException {</span></span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// sending JSON commands</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @RequestMapping(value = </span><span style="color:#2a00ff">&quot;/arduinos/commands/{idArduino}&quot;</span><span style="color:#000000">, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ResponseBody</span></span>
+<span class="odt-code-line">  @ResponseBody</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String sendJSONCommands(@PathVariable(</span><span style="color:#2a00ff">&quot;idArduino&quot;</span><span style="color:#000000">) String idArduino, HttpServletRequest request) </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">IOException {</span></span>
 <span class="odt-code-line">    ...</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// read pin</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @RequestMapping(value = </span><span style="color:#2a00ff">&quot;/arduinos/pinRead/{idCommande}/{idArduino}/{pin}/{mode}&quot;</span><span style="color:#000000">, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ResponseBody</span></span>
+<span class="odt-code-line">  @ResponseBody</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String pinRead(@PathVariable(</span><span style="color:#2a00ff">&quot;idCommande&quot;</span><span style="color:#000000">) String idCommande, @PathVariable(</span><span style="color:#2a00ff">&quot;idArduino&quot;</span><span style="color:#000000">) String idArduino, @PathVariable(</span><span style="color:#2a00ff">&quot;pin&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">pin, @PathVariable(</span><span style="color:#2a00ff">&quot;mode&quot;</span><span style="color:#000000">) String mode) </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">JsonProcessingException {</span></span>
 <span class="odt-code-line">    ....</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// write pin</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @RequestMapping(value = </span><span style="color:#2a00ff">&quot;/arduinos/pinWrite/{idCommande}/{idArduino}/{pin}/{mode}/{value}&quot;</span><span style="color:#000000">, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ResponseBody</span></span>
+<span class="odt-code-line">  @ResponseBody</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String pinWrite(@PathVariable(</span><span style="color:#2a00ff">&quot;idCommande&quot;</span><span style="color:#000000">) String idCommande, @PathVariable(</span><span style="color:#2a00ff">&quot;idArduino&quot;</span><span style="color:#000000">) String idArduino, @PathVariable(</span><span style="color:#2a00ff">&quot;pin&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">pin, @PathVariable(</span><span style="color:#2a00ff">&quot;mode&quot;</span><span style="color:#000000">) String mode, @PathVariable(</span><span style="color:#2a00ff">&quot;value&quot;</span><span style="color:#000000">) </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">value) </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">JsonProcessingException {</span></span>
 <span class="odt-code-line">  ...</span>
 <span class="odt-code-line">  }</span>
@@ -1734,8 +1734,8 @@
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">org.androidannotations.annotations.EFragment;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">org.androidannotations.annotations.OptionsMenu;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@EFragment</span></span>
-<span class="odt-code-line"><span style="color:#000000">@OptionsMenu(R.menu.menu_vide)</span></span>
+<span class="odt-code-line">@EFragment</span>
+<span class="odt-code-line">@OptionsMenu(R.menu.menu_vide)</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">ConfigFragment </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">AbstractFragment {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// Fields inherited from the parent class -------------------------------------------------------</span></span>
@@ -1743,10 +1743,8 @@
 </code></pre></div>
 
 <p>Replace line 10 with the following line:</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">@EFragment(R.layout.config)</span></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>@EFragment(R.layout.config)
 </code></pre></div>
-
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Task</strong>: Do the same for the other four fragments by adapting the [@EFragment] attribute of the class.</p>
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
@@ -1861,8 +1859,8 @@
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.fasterxml.jackson.annotation.JsonTypeInfo;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">@JsonIgnoreProperties(ignoreUnknown = </span><span style="font-weight:bold;color:#7f0055">true</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#000000">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)</span></span>
-<span class="odt-code-line"><span style="color:#000000">@JsonSubTypes({</span></span>
+<span class="odt-code-line">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)</span>
+<span class="odt-code-line">@JsonSubTypes({</span>
 <span class="odt-code-line"><span style="color:#000000">  @JsonSubTypes.Type(value = </span><span style="color:#ff0000">ConfigFragmentState</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">),</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @JsonSubTypes.Type(value = </span><span style="color:#ff0000">BlinkFragmentState</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">),</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @JsonSubTypes.Type(value = </span><span style="color:#ff0000">PinReadFragmentState</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">),</span></span>
@@ -1918,8 +1916,8 @@
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.util.List;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.util.Locale;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@EActivity</span></span>
-<span class="odt-code-line"><span style="color:#000000">@OptionsMenu(R.menu.menu_main)</span></span>
+<span class="odt-code-line">@EActivity</span>
+<span class="odt-code-line">@OptionsMenu(R.menu.menu_main)</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">MainActivity </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">AbstractActivity {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// [DAO] layer</span></span>
@@ -1929,7 +1927,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Session session;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// parent class methods -----------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">onCreateActivity() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// log</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(IS_DEBUG_ENABLED) {</span></span>
@@ -1945,17 +1943,17 @@
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">IDao getDao() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">dao;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">AbstractFragment[] getFragments() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return new </span><span style="color:#000000">AbstractFragment[]{</span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">ConfigFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">BlinkFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">PinReadFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">PinWriteFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">CommandsFragment_()};</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">CharSequence getFragmentTitle(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">position) {</span></span>
 <span class="odt-code-line">    Locale l = Locale.getDefault();</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">switch </span><span style="color:#000000">(position) {</span></span>
@@ -1973,13 +1971,13 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return null</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">navigateOnTabSelected(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">position) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// display fragment position</span></span>
 <span class="odt-code-line">    navigateToView(position, ISession.Action.NAVIGATION);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected int </span><span style="color:#000000">getFirstView() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">IMainActivity.VUE_CONFIG;</span></span>
 <span class="odt-code-line">  }</span>
@@ -2222,44 +2220,44 @@
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">org.androidannotations.annotations.OptionsMenu;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">org.androidannotations.annotations.ViewById;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@EFragment(R.layout.config)</span></span>
-<span class="odt-code-line"><span style="color:#000000">@OptionsMenu(R.menu.menu_empty)</span></span>
+<span class="odt-code-line">@EFragment(R.layout.config)</span>
+<span class="odt-code-line">@OptionsMenu(R.menu.menu_empty)</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">ConfigFragment </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">AbstractFragment {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// UI elements</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.btn_Refresh)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.btn_Refresh)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">Button btnRefresh;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.btn_Cancel)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.btn_Cancel)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">Button btnCancel;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.edt_UrlServiceRest)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.edt_UrlServiceRest)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">EditText edtUrlServiceRest;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.txt_IPPortErrorMessage)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.txt_IPPortErrorMessage)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">TextView txtRestServiceErrorMessage;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.ListViewArduinos)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.ListViewArduinos)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">ListView listArduinos;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Refresh)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Refresh)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">refresh() {</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// Fragment lifecycle management -------------------------------------</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">CoreState saveFragment() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return new </span><span style="color:#000000">ConfigFragmentState();</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected int </span><span style="color:#000000">getNumView() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">IMainActivity.VUE_CONFIG;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initFragment(CoreState previousState) {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initView(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// First visit?</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#7f0055">previousState==null</span><span style="color:#000000">){</span></span>
@@ -2267,22 +2265,22 @@
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">updateOnSubmit(CoreState previousState) {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">updateOnRestore(CoreState previousState) {</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">notifyEndOfUpdates() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// buttons</span></span>
 <span class="odt-code-line">    initButtons();</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">notifyEndOfTasks(</span><span style="font-weight:bold;color:#7f0055">boolean </span><span style="color:#000000">runningTasksHaveBeenCanceled) {</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
@@ -2314,13 +2312,13 @@
 <h4 id="56101-the-refresh-button">5.6.10.1. <span style="color: #4f81bd">The [Refresh] button</span></h4>
 <p>For now, we will handle the click on the [Refresh] button as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="color:#000000">@Click(R.id.btn_Refresh)</span></span>
+<span class="odt-code-line">@Click(R.id.btn_Refresh)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doRefresh() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// We&#x27;re going to start a task—we&#x27;re preparing to wait</span></span>
 <span class="odt-code-line">    beginWaiting(1);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Cancel)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Cancel)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doCancel() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(isDebugEnabled) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">      Log.d(className, </span><span style="color:#2a00ff">&quot;Cancellation requested&quot;</span><span style="color:#000000">);</span></span>
@@ -2338,7 +2336,7 @@
 <span class="odt-code-line">}</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// fragment lifecycle management -------------------------------------</span></span>
 <span class="odt-code-line">...</span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">notifyEndOfTasks(</span><span style="font-weight:bold;color:#7f0055">boolean </span><span style="color:#000000">runningTasksHaveBeenCanceled) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// buttons in their initial state</span></span>
 <span class="odt-code-line">    initButtons();</span>
@@ -2379,7 +2377,7 @@
 <span class="odt-code-line">// the entered values</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String urlServiceRest;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Rafraichir)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Rafraichir)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doRafraichir() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// we check the inputs</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(!pageValid()) {</span></span>
@@ -2524,10 +2522,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D40000009AAABB051C.png" style="display:inline-block; margin:4px;width:3.93cm;height:2.856cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D40000009AAABB051C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.ListViewArduinos)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.ListViewArduinos)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">ListView listArduinos;</span></span>
 <span class="odt-code-line">..</span>
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Rafraichir)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Rafraichir)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doRefresh() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// check the input</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(!pageValid()) {</span></span>
@@ -2768,7 +2766,7 @@
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/resources</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
 
-<p><a id="refheading80481807515049"></a><u><strong>The view manager for an item in the Arduino list</strong></u></p>
+<p><u><strong><a id="refheading80481807515049"></a>The view manager for an item in the Arduino list</strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D40000009A2A45E146.png" style="display:inline-block; margin:4px;width:3.93cm;height:2.856cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D40000009A2A45E146.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>The [ListArduinosAdapter] class is the class called by the [ListView] to display each item in the Arduino list. Its code is as follows:</p>
@@ -3014,7 +3012,7 @@
 <hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>To correctly restore the states of the fragments, their [getNumView] and [saveFragment] methods must be modified. For example, the one for the [BlinkFragment] fragment is currently as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">CoreState saveFragment() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// the fragment must be saved</span></span>
 <span class="odt-code-line"><span style="color:#000000">    DummyFragmentState state = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">DummyFragmentState();</span></span>
@@ -3023,7 +3021,7 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// if there is nothing to save, use [return new CoreState();] and remove the [DummyFragmentState] class</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected int </span><span style="color:#000000">getNumView() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Return the fragment number in the array of fragments managed by the activity (see MainActivity)</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> 0;</span></span>
@@ -3042,13 +3040,13 @@
 
 <p>However, it must be saved in the element corresponding to the fragment ID [BlinkFragment] in the fragment array defined in the [MainActivity] class (line 9 below):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
-<span class="odt-code-line"><span style="color:#000000">@EActivity</span></span>
-<span class="odt-code-line"><span style="color:#000000">@OptionsMenu(R.menu.menu_main)</span></span>
+<span class="odt-code-line">@EActivity</span>
+<span class="odt-code-line">@OptionsMenu(R.menu.menu_main)</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">MainActivity </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">AbstractActivity {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">...</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">AbstractFragment[] getFragments() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return new </span><span style="color:#000000">AbstractFragment[]{</span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">ConfigFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">BlinkFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">PinReadFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">PinWriteFragment_(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">CommandsFragment_()};</span></span>
 <span class="odt-code-line">  }</span>
@@ -3082,7 +3080,7 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// if there is nothing to save, use [return new CoreState();] and remove the [DummyFragmentState] class</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected int </span><span style="color:#000000">getNumView() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Return the fragment ID in the array of fragments managed by the activity (see MainActivity)</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#ff0000">IMainActivity.VUE_BLINK</span><span style="color:#000000">;</span></span>
@@ -3105,8 +3103,8 @@
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.fasterxml.jackson.annotation.JsonTypeInfo;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">@JsonIgnoreProperties(ignoreUnknown = </span><span style="font-weight:bold;color:#7f0055">true</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#000000">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)</span></span>
-<span class="odt-code-line"><span style="color:#000000">@JsonSubTypes({</span></span>
+<span class="odt-code-line">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)</span>
+<span class="odt-code-line">@JsonSubTypes({</span>
 <span class="odt-code-line"><span style="color:#000000">  @JsonSubTypes.Type(value = ConfigFragmentState.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">),</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @JsonSubTypes.Type(value = BlinkFragmentState.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">),</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @JsonSubTypes.Type(value = PinReadFragmentState.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">),</span></span>
@@ -3131,7 +3129,7 @@
 
 <p>The [saveFragment] method of the [BlinkFragment] fragment must be rewritten as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">CoreState saveFragment() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// the fragment must be saved</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#ff0000">BlinkFragmentState </span><span style="color:#000000">state = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#ff0000">BlinkFragmentState</span><span style="color:#000000">();</span></span>
@@ -3167,21 +3165,21 @@
 <span class="odt-code-line">...</span>
 <span class="odt-code-line">  <span style="color:#3f7f5f">// fragment lifecycle management -------------------------------------</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">CoreState saveFragment() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    ConfigFragmentState state = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">ConfigFragmentState();</span></span>
 <span class="odt-code-line">    state.setTxtMsgErreurUrlServiceRestVisible(txtMsgErreurUrlServiceRest.getVisibility() == View.VISIBLE);</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">state;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initFragment(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// listArduinos adapter</span></span>
 <span class="odt-code-line"><span style="color:#000000">    adapterListArduinos = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">ListArduinosAdapter(activity, R.layout.listarduinos_item, session.getCheckedArduinos(), </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initView(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Link listview to adapter</span></span>
 <span class="odt-code-line">    listArduinos.setAdapter(adapterListArduinos);</span>
@@ -3198,12 +3196,12 @@
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">updateOnSubmit(CoreState previousState) {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">updateOnRestore(CoreState previousState) {</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
@@ -3304,7 +3302,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// adapter for the list of Arduinos</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">ListArduinosAdapter adapterListArduinos;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Rafraichir)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Rafraichir)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doRefresh() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">...</span></span>
 <span class="odt-code-line">  }</span>
@@ -3338,14 +3336,14 @@
 <span class="odt-code-line">    cancelWaitingTasks();</span>
 <span class="odt-code-line">}</span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initFragment(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// listArduinos adapter</span></span>
 <span class="odt-code-line"><span style="color:#000000">    listArduinosAdapter = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">ListArduinosAdapter(activity, R.layout.listarduinos_item, session.getCheckedArduinos(), </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initView(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// bind listview / adapter</span></span>
 <span class="odt-code-line">    listArduinos.setAdapter(adapterListArduinos);</span>
@@ -3443,7 +3441,7 @@
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">  <span style="color:#3f7f5f">// visual components</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ViewById(R.id.ListViewArduinos)</span></span>
+<span class="odt-code-line">  @ViewById(R.id.ListViewArduinos)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">ListView listArduinos;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// Arduino list adapter</span></span>
@@ -3453,14 +3451,14 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// methods required by the parent class -------------------------------------------------------</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">...</span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initFragment(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// listArduinos adapter</span></span>
 <span class="odt-code-line"><span style="color:#000000">    adapterListArduinos = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">ListArduinosAdapter(activity, R.layout.listarduinos_item, session.getCheckedArduinos(), </span><span style="font-weight:bold;color:#7f0055">true</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">initView(CoreState previousState) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Link listview / adapter</span></span>
 <span class="odt-code-line">    listArduinos.setAdapter(adapterListArduinos);</span>
@@ -3664,21 +3662,21 @@
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.util.ArrayList;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.util.List;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@EBean(scope = EBean.Scope.Singleton)</span></span>
+<span class="odt-code-line">@EBean(scope = EBean.Scope.Singleton)</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Dao </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">AbstractDao </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">IDao {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// Web service client</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @RestService</span></span>
+<span class="odt-code-line">  @RestService</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">WebClient webClient;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// security</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Bean</span></span>
+<span class="odt-code-line">  @Bean</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected </span><span style="color:#000000">MyAuthInterceptor authInterceptor;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// the RestTemplate</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">RestTemplate restTemplate;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// RestTemplate factory</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">SimpleClientHttpRequestFactory factory;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @AfterInject</span></span>
+<span class="odt-code-line">  @AfterInject</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">afterInject() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// log</span></span>
 <span class="odt-code-line"><span style="color:#000000">    Log.d(className, </span><span style="color:#2a00ff">&quot;afterInject&quot;</span><span style="color:#000000">);</span></span>
@@ -3691,19 +3689,19 @@
 <span class="odt-code-line">    webClient.setRestTemplate(restTemplate);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setUrlServiceWebJson(String url) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Set the web service URL</span></span>
 <span class="odt-code-line">    webClient.setRootUrl(url);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setUser(String user, String password) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Register the user in the interceptor</span></span>
 <span class="odt-code-line">    authInterceptor.setUser(user, password);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setTimeout(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">timeout) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(isDebugEnabled) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">      Log.d(className, String.format(</span><span style="color:#2a00ff">&quot;setTimeout thread=%s, timeout=%s&quot;</span><span style="color:#000000">, Thread.currentThread().getName(), timeout));</span></span>
@@ -3713,7 +3711,7 @@
 <span class="odt-code-line">    factory.setConnectTimeout(timeout);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setBasicAuthentication(</span><span style="font-weight:bold;color:#7f0055">boolean </span><span style="color:#000000">isBasicAuthenticationNeeded) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(isDebugEnabled) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">      Log.d(className, String.format(</span><span style="color:#2a00ff">&quot;setBasicAuthentication thread=%s, isBasicAuthenticationNeeded=%s&quot;</span><span style="color:#000000">, Thread.currentThread().getName(), isBasicAuthenticationNeeded));</span></span>
@@ -3736,11 +3734,11 @@
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// Specific IDao implementation -----------------------------------------------</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Observable&lt;Response&lt;List&lt;Arduino&gt;&gt;&gt; getArduinos() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// web client execution</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">getResponse(</span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">IRequest&lt;Response&lt;List&lt;Arduino&gt;&gt;&gt;() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">      @Override</span></span>
+<span class="odt-code-line">      @Override</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Response&lt;List&lt;Arduino&gt;&gt; getResponse() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">webClient.getArduinos();</span></span>
 <span class="odt-code-line">      }</span>
@@ -3773,8 +3771,8 @@
 <p>We have already introduced the [MainActivity] activity in Section<a href="#refheading80459807515049"><u><span style="color: #0563c1"> 5.6.8</span></u></a>. It extends the [AbstractActivity] class and, as such, implements the [IMainActivity] interface, which itself extends the [IDao] interface. Whenever a method is added to the [IDao] interface, it must be implemented in the [MainActivity] class. The [IDao.getArduinos] method added to the [IDao] interface will be implemented as follows in [MainActivity]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">...</span>
-<span class="odt-code-line"><span style="color:#000000">@EActivity</span></span>
-<span class="odt-code-line"><span style="color:#000000">@OptionsMenu(R.menu.menu_main)</span></span>
+<span class="odt-code-line">@EActivity</span>
+<span class="odt-code-line">@OptionsMenu(R.menu.menu_main)</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">MainActivity </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">AbstractActivity {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// [DAO] layer</span></span>
@@ -3786,7 +3784,7 @@
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// IDao implementation -----------------------------------------</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Observable&lt;Response&lt;List&lt;Arduino&gt;&gt;&gt; getArduinos() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">dao.getArduinos();</span></span>
 <span class="odt-code-line">  }</span>
@@ -3804,7 +3802,7 @@
 
 <p>In the [ConfigFragment] class, the code executed when the [Refresh] button is clicked is currently as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Rafraichir)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Rafraichir)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doRefresh() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">...</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// request the list of Arduinos in the background</span></span>
@@ -3832,7 +3830,7 @@
 
 <p>We need to rewrite lines 10–16, which hard-coded a response of type [Response&lt;List&lt;Arduino&gt;&gt;]. We now need to request this list from the [DAO] layer via the activity. The code becomes as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#000000">  @Click(R.id.btn_Rafraichir)</span></span>
+<span class="odt-code-line">  @Click(R.id.btn_Rafraichir)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected void </span><span style="color:#000000">doRefresh() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// check the inputs</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(!pageValid()) {</span></span>
@@ -3845,7 +3843,7 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// execute the asynchronous task</span></span>
 <span class="odt-code-line"><span style="color:#000000">    executeInBackground(mainActivity.getArduinos(), </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">Action1&lt;Response&lt;List&lt;Arduino&gt;&gt;&gt;() {</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">      @Override</span></span>
+<span class="odt-code-line">      @Override</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">call(Response&lt;List&lt;Arduino&gt;&gt; response) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// process the response</span></span>
 <span class="odt-code-line">        consumeArduinosResponse(response);</span>
@@ -4008,9 +4006,9 @@
           https://tahe.developpez.com
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
-        <em>Creative Commons Attribution – Non-Commercial –
-        ShareAlike 3.0 Unported Licence</em>.
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
       </div>
 
     </div>
