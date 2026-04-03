@@ -479,8 +479,41 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.1. Project Architecture">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Hardware">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-the-arduino" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1. The Arduino
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-the-tablet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2. The tablet
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#523-the-genymotion-emulator" class="md-nav__link">
@@ -537,6 +570,17 @@
     <span class="md-ellipsis">
       
         5.4.2. The URLs exposed by the web/JSON service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-web-service-json-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4.3. Web service / JSON testing
       
     </span>
   </a>
@@ -660,8 +704,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5672-the-corestate-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.7.2. The [CoreState] class
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#568-the-mainactivity-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.8. The [MainActivity] class
+      
+    </span>
+  </a>
   
 </li>
         
@@ -744,6 +810,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#56106-fragment-state-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.10.6. Fragment state management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#56107-fragment-lifecycle-management" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -779,7 +856,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.6.11. Communication between views">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5612-the-dao-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.12. The [DAO] layer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6.12. The [DAO] layer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -804,8 +892,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#56123-the-dao-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.12.3. The [Dao] class
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5613-the-mainactivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.13. The [MainActivity]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5614-the-configfragment-fragment-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6.14. The [ConfigFragment] fragment revisited
+      
+    </span>
+  </a>
   
 </li>
         
@@ -889,13 +1010,10 @@
   <li>Block [1], the web server/JSON and Arduinos, will be provided to you;
   </li>
   <li>you will need to build block [2], the Android tablet program to communicate with the web server / JSON.
-<a id="refheading4297419988080711"></a>
-
-## 5.2. <span style="color: #4f81bd">Hardware</span>
-
   </li>
 </ul>
-
+<p><a id="refheading4297419988080711"></a></p>
+<h2 id="52-hardware">5.2. <span style="color: #4f81bd">Hardware</span></h2>
 <p>The following components are available to you:</p>
 <ul>
   <li>an Arduino with an Ethernet shield, an LED, and a temperature sensor;
@@ -907,13 +1025,10 @@
   <li>two network cables to connect the Arduino and the PC to the same private network;
   </li>
   <li>an Android tablet;
-<a id="refheading100303791917881"></a>
-
-### 5.2.1. <span style="color: #4f81bd">The Arduino</span>
-
   </li>
 </ul>
-
+<p><a id="refheading100303791917881"></a></p>
+<h3 id="521-the-arduino">5.2.1. <span style="color: #4f81bd">The Arduino</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051B0000012908657145.png" style="display:inline-block; margin:4px;width:17.291cm;height:3.928cm;" class="odt-zoomable" data-zoom-src="images/100000000000051B0000012908657145.png" /></td></tr></table>
 
 <p>Here’s how to connect the various components together:</p>
@@ -944,11 +1059,11 @@
   <li>in [4], assign this adapter the IP address [192.168.2.1] and the subnet mask [255.255.255.0];
   </li>
   <li>in [5], click [OK] as many times as necessary to exit the wizard.
-<a id="refheading100305791917881"></a>
-
-### 5.2.2. <span style="color: #4f81bd">The tablet</span>
-
   </li>
+</ul>
+<p><a id="refheading100305791917881"></a></p>
+<h3 id="522-the-tablet">5.2.2. <span style="color: #4f81bd">The tablet</span></h3>
+<ul>
   <li>Using your Wi-Fi adapter, connect your computer to the Wi-Fi network we will provide. Do the same with your tablet;
   </li>
   <li>Check your PC’s Wi-Fi IP address by typing [ipconfig] in a Command Prompt window. You will find an address like [192.168.x.y];
@@ -1474,13 +1589,10 @@
   <li>[error]: an error code, 0 if OK, otherwise something else;
   </li>
   <li>[status]: a dictionary containing the response specific to the command. It is usually empty unless the command requested the reading of a value from the Arduino, in which case that value will be placed in this dictionary;
-<a id="refheading8099718047449791"></a>
-
-### 5.4.3. <span style="color: #4f81bd">Web service / JSON testing</span>
-
   </li>
 </ul>
-
+<p><a id="refheading8099718047449791"></a></p>
+<h3 id="543-web-service-json-testing">5.4.3. <span style="color: #4f81bd">Web service / JSON testing</span></h3>
 <p>Get familiar with the web server / JSON by testing the following URLs:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>URL
@@ -1841,13 +1953,10 @@
   <li>lines 46–50: the numbers of the five fragments;
   </li>
   <li>line 34: fragment adjacency. The developer can set a value here within the range [1, FRAGMENTS_COUNT-1];
-<a id="refheading129674626603739"></a>
-
-#### 5.6.7.2. <span style="color: #4f81bd">The [CoreState] class</span>
-
   </li>
 </ul>
-
+<p><a id="refheading129674626603739"></a></p>
+<h4 id="5672-the-corestate-class">5.6.7.2. <span style="color: #4f81bd">The [CoreState] class</span></h4>
 <p>The [CoreState] class is the parent class of fragment states:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">client.android.architecture.custom;</span></span>
@@ -1880,13 +1989,10 @@
 
 <ul>
   <li>lines 12–16: the state classes for the five fragments must be declared here;
-<a id="refheading80459807515049"></a>
-
-### 5.6.8. <span style="color: #4f81bd">The [MainActivity] class</span>
-
   </li>
 </ul>
-
+<p><a id="refheading80459807515049"></a></p>
+<h3 id="568-the-mainactivity-class">5.6.8. <span style="color: #4f81bd">The [MainActivity] class</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E6000000F687900901.png" style="display:inline-block; margin:4px;width:4.26cm;height:4.556cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E6000000F687900901.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>The [MainActivity] class will be as follows:</p>
@@ -2958,13 +3064,10 @@
 
 <ul>
   <li>line 18: the list of Arduinos created by the previous lines is placed in the session;
-<a id="refheading129397837583237"></a>
-
-#### 5.6.10.6. <span style="color: #4f81bd">Fragment state management</span>
-
   </li>
 </ul>
-
+<p><a id="refheading129397837583237"></a></p>
+<h4 id="56106-fragment-state-management">5.6.10.6. <span style="color: #4f81bd">Fragment state management</span></h4>
 <p>When the device is rotated, the view’s visual components are rendered (by default) in the state they were in when the view was designed:</p>
 <ul>
   <li>the [ListView] contains the items the designer placed there;
@@ -3507,13 +3610,10 @@
   <li>Lines 11–15: If a checkbox is checked in tab X, the [checked] property of the Arduino in row 2 is set to <i>true </i>(line 14);
   </li>
   <li>when switching to tab Y, the [ListView] of the Arduinos in that tab is displayed. In line 9, we see that if the Arduino in row 2 has its [checked] property set to <i>true</i>, then the [ck] checkbox in row 5 will be checked;
-<a id="refheading80471807515049"></a>
-
-### 5.6.12. <span style="color: #4f81bd">The [DAO] layer</span>
-
   </li>
 </ul>
-
+<p><a id="refheading80471807515049"></a></p>
+<h3 id="5612-the-dao-layer">5.6.12. <span style="color: #4f81bd">The [DAO] layer</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058B000000EAAC8ED5EE.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.969cm;" class="odt-zoomable" data-zoom-src="images/100000000000058B000000EAAC8ED5EE.png" /></td></tr></table>
 
 <p><strong>Note</strong>: For this section, review the implementation of the [DAO] layer in the [example-16B] project (see section<a href="#refheading1314121394789306"><u><span style="color: #0563c1"> 2.8.3</span></u></a>).</p>
@@ -3635,13 +3735,10 @@
   <li>line 23: the server URL used to retrieve the list of Arduinos via a GET request. Note that this URL is relative to the root URL [RestClientRootUrl] on line 16;
   </li>
   <li>line 24: the server returns a JSON string of type [Response&lt;List&lt;Arduino&gt;&gt;]. This JSON string is automatically deserialized into the [Response&lt;List&lt;Arduino&gt;&gt;] type using the JSON converter [MappingJackson2HttpMessageConverter] from line 15;
-<a id="refheading129385837583237"></a>
-
-#### 5.6.12.3. <span style="color: #4f81bd">The [Dao] class</span>
-
   </li>
 </ul>
-
+<p><a id="refheading129385837583237"></a></p>
+<h4 id="56123-the-dao-class">5.6.12.3. <span style="color: #4f81bd">The [Dao] class</span></h4>
 <p>The [Dao] class implements the [IDao] interface as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">client.android.dao.service;</span></span>
@@ -3759,13 +3856,10 @@
   <li>line 94: the type T of [IRequest&lt;T&gt;] must be the type T of the <i>Observable&lt;T&gt; </i>result of the method on line 92, so here, a type [Response&lt;List&lt;Arduino&gt;&gt;];
   </li>
   <li>line 97: the method [IRequest.getResponse()] delegates the work to the method [webClient.getArduinos()] that we introduced. [webClient], defined on line 24, is instantiated by the AA library and is an instance of the [WebClient] interface that we introduced;
-<a id="refheading129387837583237"></a>
-
-### 5.6.13. <span style="color: #4f81bd">The [MainActivity]</span>
-
   </li>
 </ul>
-
+<p><a id="refheading129387837583237"></a></p>
+<h3 id="5613-the-mainactivity">5.6.13. <span style="color: #4f81bd">The [MainActivity]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F2000001200E0435D5.png" style="display:inline-block; margin:4px;width:4.48cm;height:5.332cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F2000001200E0435D5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>We have already introduced the [MainActivity] activity in Section<a href="#refheading80459807515049"><u><span style="color: #0563c1"> 5.6.8</span></u></a>. It extends the [AbstractActivity] class and, as such, implements the [IMainActivity] interface, which itself extends the [IDao] interface. Whenever a method is added to the [IDao] interface, it must be implemented in the [MainActivity] class. The [IDao.getArduinos] method added to the [IDao] interface will be implemented as follows in [MainActivity]:</p>
@@ -3793,13 +3887,10 @@
 
 <ul>
   <li>lines 15–18: the [getArduinos] method is implemented by delegating the work to the [Dao] class that we just introduced and to which we have a reference on line 8;
-<a id="refheading129407837583237"></a>
-
-### 5.6.14. <span style="color: #4f81bd">The [ConfigFragment] fragment revisited</span>
-
   </li>
 </ul>
-
+<p><a id="refheading129407837583237"></a></p>
+<h3 id="5614-the-configfragment-fragment-revisited">5.6.14. <span style="color: #4f81bd">The [ConfigFragment] fragment revisited</span></h3>
 <p>In the [ConfigFragment] class, the code executed when the [Refresh] button is clicked is currently as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line">  @Click(R.id.btn_Rafraichir)</span>
