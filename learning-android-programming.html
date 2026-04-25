@@ -11170,7 +11170,7 @@
   </li>
 </ul>
 <p><a id="refheading2086761855421712"></a></p>
-<h4 id="11615-the-web-service-json">1.16.1.5. <span style="color: #4f81bd"><span style="color: #000000">The web service / JSON</span></span></h4>
+<h4 id="11615-the-web-service-json">1.16.1.5. <span style="color: #000000">The web service / JSON</span></h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010E000000E2F1563D67.png" width="189" height="158" style="display:inline-block; margin:4px;width:5.001cm;height:4.186cm;" class="odt-zoomable" data-zoom-src="images/100000000000010E000000E2F1563D67.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000F6F3317B83.png" width="183" height="172" style="display:inline-block; margin:4px;width:4.851cm;height:4.554cm;" class="odt-zoomable" data-zoom-src="images/1000000000000106000000F6F3317B83.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -11915,7 +11915,7 @@
   </li>
 </ul>
 <p><a id="refheading1312281394789306"></a></p>
-<h5 id="116243-the-response-class">1.16.2.4.3. <span style="color: #243f60"><em><span style="color: #000000">The [Response] class</span></em></span></h5>
+<h5 id="116243-the-response-class">1.16.2.4.3. <span style="color: #000000">The [Response] class</span></h5>
 <p><span style="color: #000000">The [getAlea] method of the [IDao] interface returns a response of type [Response] as follows:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> exemples.android.dao;</span>
@@ -14843,7 +14843,7 @@
   </li>
   <li><span style="color: #000000">lines 13–18: handle the click on the [Remove] link;</span>
   </li>
-  <li><span style="color: #000000">line 16: the </span><i><span style="color: #000000">[Vue1Fragment].doRetirer </span></i><span style="color: #000000">method handles this click. It makes more sense to have the fragment displaying the [ListView] handle this event. It has an overview that the [ListAdapter] class does not have. The reference to the [Vue1Fragment] fragment was passed as the fourth parameter to the class constructor;</span>
+  <li><span style="color: #000000">line 16: the </span><i><span style="color: #000000">[Vue1Fragment].doRetirer </span></i><span style="color: #000000">method handles this click. It makes more sense to have the fragment displaying the [ListView] handle this event. It has an overview that the [ListAdapter] class does not </span><span style="color: #000000">have. The reference to the [Vue1Fragment] fragment was passed as the fourth parameter to the class constructor;</span>
   </li>
   <li><span style="color: #000000">Lines 20–25: Handle the click on the checkbox. The action performed on it is reflected in the data it displays. This is for the following reason: The [ListView] is a list that displays only a portion of its items. Thus, a list item is sometimes hidden and sometimes displayed. When element #i needs to be displayed, the [getView] method from line 2 above is called for position #i. Line 10 will recalculate the state of the checkbox based on the data it is linked to. Therefore, it must store the state of the checkbox over time;</span>
   </li>
@@ -15684,7 +15684,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> onCreate(Bundle savedInstanceState) {</span></span>
 <span class="odt-code-line">    <span style="color:#000000">// parent</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">super</span><span style="color:#000000">.onCreate(savedInstanceState);</span></span>
-<span class="odt-code-line">        // restoring activity</span>
+<span class="odt-code-line">     // restoring activity</span>
 <span class="odt-code-line">    // ...</span>
 <span class="odt-code-line">  }</span>
 </code></pre></div>
@@ -15957,7 +15957,7 @@
 <h3 id="1234-saving-the-vue1fragment-fragment">1.23.4. <span style="color: #4f81bd">Saving the [Vue1Fragment] fragment</span></h3>
 <p>Fragments are saved in the [saveFragment] method called by the parent class [AbstractFragment]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"> <span style="color:#000000">// save fragment status</span></span>
+<span class="odt-code-line">// save fragment status</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> saveFragment() {</span></span>
 <span class="odt-code-line">    <span style="color:#000000">// log</span></span>
@@ -16221,8 +16221,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
