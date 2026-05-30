@@ -1520,7 +1520,7 @@
 
 
 
-<p><a id="refheading1083471369936500"></a></p>
+<p><span id="refheading1083471369936500" name="refheading1083471369936500" class="odt-bookmark-anchor"></span></p>
 <h1 id="2-skeleton-of-an-android-client-communicating-with-a-web-service-json">2. Skeleton of an Android client communicating with a web service / jSON</h1>
 <p><span style="color: #000000">We now provide a skeleton Android application that communicates with one or more web services / jSON. This is the [client-android-skel] project, which can be found in the [architecture] folder of the examples:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1541,7 +1541,7 @@
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This skeleton was used for all subsequent examples. Due to their diversity, what worked for one example might not work for the next. Since the skeleton was used for a total of seven examples, numerous iterations took place. If it were used for an eighth example, it is possible that the specific nature of this new example would again generate new errors. Nevertheless, using this template will significantly simplify the writing of future examples. Indeed, managing a fragment’s lifecycle (update, save, restore) combined with the concept of fragment adjacency is particularly complex. Here, it is completely hidden within the [AbstractFragment] class.</span></p>
-<p><a id="refheading1312981394789306"></a></p>
+<p><span id="refheading1312981394789306" name="refheading1312981394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="21-android-client-architecture">2.1. Android Client Architecture</h2>
 <p><span style="color: #000000">The proposed Android client is based on the following architecture:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1562,7 +1562,7 @@
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/1000000000000130000001A4CE109143.png" width="213" height="294" style="width:5.63cm;height:7.781cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000130000001A4CE109143.png" /></p>
 <p><span style="color: #000000">We will present the various elements of this project one by one.</span></p>
-<p><a id="refheading1313001394789306"></a></p>
+<p><span id="refheading1313001394789306" name="refheading1313001394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="22-the-gradle-configuration">2.2. The Gradle configuration</h2>
 <p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000001420000010F2568E4CD.png" width="225" height="190" style="width:5.96cm;height:5.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001420000010F2568E4CD.png" /></p>
@@ -1636,7 +1636,7 @@
 </ul>
 
 <p><span style="color: #000000"> </span></p>
-<p><a id="refheading1313021394789306"></a></p>
+<p><span id="refheading1313021394789306" name="refheading1313021394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="23-the-application-manifest">2.3. The application manifest</h2>
 <p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000000C8000000A76198C4F3.png" width="140" height="117" style="width:3.701cm;height:3.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C8000000A76198C4F3.png" /></p>
@@ -1687,7 +1687,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">resources</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading1313041394789306"></a></p>
+<p><span id="refheading1313041394789306" name="refheading1313041394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="24-organizing-java-code">2.4. Organizing Java Code</h2>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000C1000000D3388F195C.png" width="135" height="148" style="width:3.57cm;height:3.911cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C1000000D3388F195C.png" /></p>
@@ -1702,13 +1702,13 @@
   </li>
 </ul>
 
-<p><a id="refheading1313061394789306"></a></p>
+<p><span id="refheading1313061394789306" name="refheading1313061394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="25-activity-elements">2.5. Activity elements</h2>
 <p><span style="color: #000000">  </span></p>
 <p><img src="images/10000000000000EF00000180CFC29EAB.png" width="167" height="269" style="width:4.431cm;height:7.11cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF00000180CFC29EAB.png" /></p>
 <p><img src="images/10000000000000BC000000F176B180AA.png" width="132" height="169" style="width:3.48cm;height:4.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000BC000000F176B180AA.png" /></p>
 <p><img src="images/10000000000003B5000000B1DC923D8D.png" width="680" height="127" style="width:17.999cm;height:3.357cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003B5000000B1DC923D8D.png" /></p>
-<p><a id="refheading1173561938318812"></a></p>
+<p><span id="refheading1173561938318812" name="refheading1173561938318812" class="odt-bookmark-anchor"></span></p>
 <h3 id="251-the-view-associated-with-the-activity">2.5.1. The view associated with the activity</h3>
 <p>The view [activity_main.xml] associated with the activity is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1766,7 +1766,7 @@
 </code></pre></div>
 
 <p>For now, it is empty. The developer will fill it in as needed.</p>
-<p><a id="refheading1313081394789306"></a></p>
+<p><span id="refheading1313081394789306" name="refheading1313081394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="252-the-fragment-container-mypager">2.5.2. The fragment container [MyPager]</h3>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000D0000000DAA01E525A.png" width="146" height="153" style="width:3.851cm;height:4.039cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D0000000DAA01E525A.png" /></p>
@@ -1842,7 +1842,7 @@
   </li>
 </ul>
 
-<p><a id="refheading1313101394789306"></a></p>
+<p><span id="refheading1313101394789306" name="refheading1313101394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="253-the-corestate-class">2.5.3. The [CoreState] class</h3>
 <p><img src="images/10000000000000F300000097C7E8BEA5.png" width="170" height="106" style="width:4.5cm;height:2.799cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F300000097C7E8BEA5.png" /></p>
 <p>The [CoreState] class is the parent class for the states of the various fragments:</p>
@@ -1880,7 +1880,7 @@
   </li>
 </ul>
 
-<p><a id="refheading1313121394789306"></a></p>
+<p><span id="refheading1313121394789306" name="refheading1313121394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="254-the-imainactivity-interface">2.5.4. The [IMainActivity] interface</h3>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000DC000000D02A1067A3.png" width="154" height="146" style="width:4.069cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DC000000D02A1067A3.png" /></p>
@@ -1966,7 +1966,7 @@
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The [IMainActivity] interface is the second element of the architecture that the developer must complete (line 45).</span></p>
-<p><a id="refheading102688620392366"></a></p>
+<p><span id="refheading102688620392366" name="refheading102688620392366" class="odt-bookmark-anchor"></span></p>
 <h3 id="255-the-idao-interface">2.5.5. The [IDao] interface</h3>
 <p>The [IMainActivity] interface extends the following [IDao] interface:</p>
 <p><img src="images/10000000000000F0000000BBED915784.png" width="168" height="131" style="width:4.45cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000BBED915784.png" /></p>
@@ -2003,7 +2003,7 @@
   </li>
 </ul>
 
-<p><a id="refheading1313141394789306"></a></p>
+<p><span id="refheading1313141394789306" name="refheading1313141394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="256-the-session">2.5.6. The session</h3>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000E800000119B289D3E9.png" width="163" height="197" style="width:4.3cm;height:5.2cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E800000119B289D3E9.png" /></p>
@@ -2229,10 +2229,10 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313161394789306"></a></p>
+<p><span id="refheading1313161394789306" name="refheading1313161394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="257-the-abstract-class-abstractactivity">2.5.7. The abstract class [AbstractActivity]</h3>
 <p><img src="images/10000000000000DC000000D0CA82C43A.png" width="154" height="146" style="width:4.069cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DC000000D0CA82C43A.png" /></p>
-<p><a id="refheading1313181394789306"></a></p>
+<p><span id="refheading1313181394789306" name="refheading1313181394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2571-skeleton">2.5.7.1. Skeleton</h4>
 <p>The [AbstractActivity] class is a class with over 300 lines of code. We will examine it step by step. Its skeleton is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2337,7 +2337,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313201394789306"></a></p>
+<p><span id="refheading1313201394789306" name="refheading1313201394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2572-implement-the-imainactivity-interface">2.5.7.2. Implement the [IMainActivity] interface</h4>
 <p>The implementation of the [IMainActivity] interface (see section<a href="#refheading1313121394789306"> 2.5.4 </a> ) is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2359,7 +2359,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1313221394789306"></a></p>
+<p><span id="refheading1313221394789306" name="refheading1313221394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2573-saving-the-state-of-the-activity-and-its-fragments">2.5.7.3. Saving the state of the activity and its fragments</h4>
 <p>The state of the activity and its fragments is entirely contained within the session. Therefore, we need to save the session. Here, we are reusing what was done in the [Exemple-22] project (see section<a href="learning-android-programming.html#refheading1312801394789306"> 1.23 </a> ):</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2385,7 +2385,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1313241394789306"></a></p>
+<p><span id="refheading1313241394789306" name="refheading1313241394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2574-restoring-the-state-of-the-activity-and-its-fragments">2.5.7.4. Restoring the state of the activity and its fragments</h4>
 <p>This involves restoring the session. We proceed as shown in [Exemple-22]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2428,7 +2428,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313261394789306"></a></p>
+<p><span id="refheading1313261394789306" name="refheading1313261394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2575-initialization-of-the-dao-layer">2.5.7.5. Initialization of the [DAO] layer</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
@@ -2463,7 +2463,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313281394789306"></a></p>
+<p><span id="refheading1313281394789306" name="refheading1313281394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2576-initialization-of-the-view-associated-with-the-activity">2.5.7.6. Initialization of the view associated with the activity</h4>
 <p>The view associated with the activity was presented in the section<a href="#refheading1173561938318812"> 2.5.1 </a> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2553,7 +2553,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313301394789306"></a></p>
+<p><span id="refheading1313301394789306" name="refheading1313301394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2577-tab-management">2.5.7.7. Tab Management</h4>
 <p>The [IMainActivity] interface may require a tab bar. This is added and managed as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2660,7 +2660,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313321394789306"></a></p>
+<p><span id="refheading1313321394789306" name="refheading1313321394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2578-the-customtablayout-tab-manager">2.5.7.8. The [CustomTabLayout] tab manager</h4>
 <p><img src="images/10000000000000C90000007167E1E9C9.png" width="141" height="79" style="width:3.72cm;height:2.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C90000007167E1E9C9.png" /></p>
 <p>We use a custom tab manager to display tab titles in different fonts. The [CustomTabLayout] class is as follows:</p>
@@ -2735,7 +2735,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313341394789306"></a></p>
+<p><span id="refheading1313341394789306" name="refheading1313341394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2579-latest-initializations">2.5.7.9. Latest initializations</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
@@ -2782,7 +2782,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313361394789306"></a></p>
+<p><span id="refheading1313361394789306" name="refheading1313361394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="25710-handling-the-placeholder-image">2.5.7.10. Handling the placeholder image</h4>
 <p>In the [AbstractActivity] class, the placeholder image is managed by the following two methods:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2800,7 +2800,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1313381394789306"></a></p>
+<p><span id="refheading1313381394789306" name="refheading1313381394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="25711-implementation-of-the-idao-interface">2.5.7.11. Implementation of the [IDao] interface</h4>
 <p>In the [AbstractActivity] class, the [IDao] interface (see section<a href="#refheading102688620392366"> 2.5.5 </a> ) is implemented as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2845,7 +2845,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313401394789306"></a></p>
+<p><span id="refheading1313401394789306" name="refheading1313401394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="25712-implementation-of-the-fragment-handler">2.5.7.12. Implementation of the fragment handler</h4>
 <p>In the [AbstractActivity] class, the fragment handler is implemented as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2899,7 +2899,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313421394789306"></a></p>
+<p><span id="refheading1313421394789306" name="refheading1313421394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="25713-the-onresume-method">2.5.7.13. The [onResume] method</h4>
 <p>The [onResume] method is executed shortly before the view associated with the activity becomes visible. It is used here to select a tab after a save/restore:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2922,7 +2922,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313441394789306"></a></p>
+<p><span id="refheading1313441394789306" name="refheading1313441394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="25714-summary">2.5.7.14. Summary</h4>
 <p>The abstract class [AbstractActivity] will be the parent class of the application’s single activity.</p>
 <p>The child activity must implement the following six methods:</p>
@@ -2953,7 +2953,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> String className;</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading1313461394789306"></a></p>
+<p><span id="refheading1313461394789306" name="refheading1313461394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="258-the-mainactivity-activity">2.5.8. The [MainActivity] activity</h3>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000CC00000093272BC873.png" width="143" height="103" style="width:3.78cm;height:2.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000CC00000093272BC873.png" /></p>
@@ -3044,11 +3044,11 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313481394789306"></a></p>
+<p><span id="refheading1313481394789306" name="refheading1313481394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="26-the-dao-layer">2.6. The [DAO] layer</h2>
 <p><img src="images/10000000000003A6000000B43B40F99C.png" width="680" height="131" style="width:17.999cm;height:3.468cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003A6000000B43B40F99C.png" /></p>
 <p><img src="images/10000000000000F0000000BBF6DFBD89.png" width="168" height="131" style="width:4.45cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000BBF6DFBD89.png" /></p>
-<p><a id="refheading1313501394789306"></a></p>
+<p><span id="refheading1313501394789306" name="refheading1313501394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="261-the-idao-interface">2.6.1. The IDao interface</h3>
 <p>It was introduced in the section<a href="#refheading102688620392366"> 2.5.5 </a> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3080,7 +3080,7 @@ The [Session] class is as follows:</span></p>
 </code></pre></div>
 
 <p>The developer will add the methods for their [DAO] layer starting on line 24.</p>
-<p><a id="refheading1313521394789306"></a></p>
+<p><span id="refheading1313521394789306" name="refheading1313521394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="262-the-webclient-interface">2.6.2. The [WebClient] interface</h3>
 <p><img src="images/10000000000000F0000000BB0EF9A1DD.png" width="168" height="131" style="width:4.45cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000BB0EF9A1DD.png" /></p>
 <p>The [WebClient] interface is as follows:</p>
@@ -3106,7 +3106,7 @@ The [Session] class is as follows:</span></p>
 </code></pre></div>
 
 <p>The developer will add the methods that communicate with the URL exposed by the jSON server starting from line 17.</p>
-<p><a id="refheading117348727448062"></a></p>
+<p><span id="refheading117348727448062" name="refheading117348727448062" class="odt-bookmark-anchor"></span></p>
 <h3 id="263-the-authentication-interceptor-myauthinterceptor">2.6.3. The authentication interceptor [MyAuthInterceptor]</h3>
 <p><img src="images/10000000000000F0000000BB070F0511.png" width="168" height="131" style="width:4.45cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000BB070F0511.png" /></p>
 <p>The [MyAuthInterceptor] class is as follows:</p>
@@ -3156,7 +3156,7 @@ The [Session] class is as follows:</span></p>
 </code></pre></div>
 <p>where [code] is the Base64 encoding of the string &#x27;user:mp&#x27;. This class is only used if the server jSON expects this form of authentication. There are others.</p>
 <p><strong>Note</strong>: The use of this class is illustrated in the section<a href="case-study---appointment-management.html#refheading722231954521739"> 3.6.3.1 </a> .</p>
-<p><a id="refheading1313541394789306"></a></p>
+<p><span id="refheading1313541394789306" name="refheading1313541394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="264-the-abstractdao-class">2.6.4. The [AbstractDao] class</h3>
 <p><img src="images/10000000000000F0000000BB584DE9C5.png" width="168" height="131" style="width:4.45cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000BB584DE9C5.png" /></p>
 <p>The [AbstractDao] class is as follows:</p>
@@ -3271,7 +3271,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313561394789306"></a></p>
+<p><span id="refheading1313561394789306" name="refheading1313561394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="265-the-class-dao">2.6.5. The class [Dao]</h3>
 <p><img src="images/10000000000000F0000000BB0ADB4C40.png" width="168" height="131" style="width:4.45cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F0000000BB0ADB4C40.png" /></p>
 <p>The [Dao] class is as follows:</p>
@@ -3393,10 +3393,10 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313581394789306"></a></p>
+<p><span id="refheading1313581394789306" name="refheading1313581394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="27-the-fragments">2.7. The fragments</h2>
 <p><img src="images/10000000000001060000015EB7DC621C.png" width="183" height="245" style="width:4.851cm;height:6.481cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001060000015EB7DC621C.png" /></p>
-<p><a id="refheading118044727448062"></a></p>
+<p><span id="refheading118044727448062" name="refheading118044727448062" class="odt-bookmark-anchor"></span></p>
 <h3 id="271-the-menuitemstate-class">2.7.1. The [MenuItemState] class</h3>
 <p>The [MenuItemState] class encapsulates the state of a option menu:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3424,7 +3424,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading118747727448062"></a></p>
+<p><span id="refheading118747727448062" name="refheading118747727448062" class="odt-bookmark-anchor"></span></p>
 <h3 id="272-the-utils-class">2.7.2. The [Utils] class</h3>
 <p>The [Utils] class contains static utility methods:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -3476,10 +3476,10 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1313601394789306"></a></p>
+<p><span id="refheading1313601394789306" name="refheading1313601394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="273-the-parent-class-abstractfragment">2.7.3. The parent class [AbstractFragment]</h3>
 <p><span style="color: #000000">The [AbstractFragment] class contains elements common to all fragments of the application. As in the [AbstractActivity] class, its code is complex. We will analyze it step by step here as well.</span></p>
-<p><a id="refheading1313621394789306"></a></p>
+<p><span id="refheading1313621394789306" name="refheading1313621394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2731-the-skeleton">2.7.3.1. The skeleton</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> client.android.architecture.core;</span></span></span>
@@ -3602,7 +3602,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313641394789306"></a></p>
+<p><span id="refheading1313641394789306" name="refheading1313641394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2732-the-constructor">2.7.3.2. The constructor</h4>
 <p><span style="color: #000000">The class constructor is as follows:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -3632,7 +3632,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313661394789306"></a></p>
+<p><span id="refheading1313661394789306" name="refheading1313661394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2733-menu-management">2.7.3.3. Menu Management</h4>
 <p><span style="color: #000000">In our architecture, </span><strong><span style="color: #000000">every fragment must have a menu, even if it is empty</span></strong><span style="color: #000000">. The logs have shown that when the method [onCreateOptionsMenu]—which runs when the fragment has a menu—executes, the fragment has already been associated with its activity, view, and menu and is about to become visible. This is therefore the moment when the visual interface and the menu can be updated. It is in this [onCreateOptionsMenu] method that we instruct the child fragment to update itself.</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -3735,7 +3735,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313681394789306"></a></p>
+<p><span id="refheading1313681394789306" name="refheading1313681394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2734-handling-the-wait-for-the-completion-of-an-asynchronous-task">2.7.3.4. Handling the wait for the completion of an asynchronous task</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">   <span style="color:#000000">// subscriptions to observables</span></span></span>
@@ -3782,7 +3782,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313701394789306"></a></p>
+<p><span id="refheading1313701394789306" name="refheading1313701394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2735-exception-handling">2.7.3.5. Exception Handling</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// gestion exception -------------------------------------------------------------------</span></span></span>
@@ -3810,7 +3810,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313721394789306"></a></p>
+<p><span id="refheading1313721394789306" name="refheading1313721394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2736-handling-asynchronous-operations">2.7.3.6. Handling Asynchronous Operations</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -4007,7 +4007,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313741394789306"></a></p>
+<p><span id="refheading1313741394789306" name="refheading1313741394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2737-fragment-lifecycle-management">2.7.3.7. Fragment Lifecycle Management</h4>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#3f7f5f">// life cycle --------------------------------------------------------</span></span></span>
@@ -4207,7 +4207,7 @@ The [Session] class is as follows:</span></p>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">In the lifecycle, the [onActivityCreated] method is executed immediately after the [onCreateView] method. The call to the latter method indicates that the view associated with the fragment must be rebuilt. We simply note this on line 10.</span></p>
-<p><a id="refheading1313761394789306"></a></p>
+<p><span id="refheading1313761394789306" name="refheading1313761394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2738-updating-the-fragment">2.7.3.8. Updating the fragment</h4>
 <p><span style="color: #000000">Updating the fragment is the last operation performed on the fragment before it becomes visible and waits for user actions. It is handled by the following code:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -4614,7 +4614,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313781394789306"></a></p>
+<p><span id="refheading1313781394789306" name="refheading1313781394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="274-an-example-fragment">2.7.4. An example fragment</h3>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">   </span></p>
@@ -4753,10 +4753,10 @@ The [Session] class is as follows:</span></p>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">To illustrate the use of the [client-android-skel] project, we will first use simple examples before moving on to a more comprehensive case study.</span></p>
-<p><a id="refheading1313801394789306"></a></p>
+<p><span id="refheading1313801394789306" name="refheading1313801394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="28-illustrative-exercises">2.8. Illustrative exercises</h2>
 <p>We’ll start by refactoring examples that have already been written.</p>
-<p><a id="refheading1313821394789306"></a></p>
+<p><span id="refheading1313821394789306" name="refheading1313821394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="281-example-17b">2.8.1. Example-17B</h3>
 <p>We’ll revisit Example 17 from the section<a href="learning-android-programming.html#refheading379941563054364"> 1.18 </a> . This is a single-fragment application with no asynchronous tasks and no tabs. We’ll examine it to see how it behaves when the device is rotated. We’ll enter the following:</p>
 <p><img src="images/100000000000054D000003387179AE5C.png" width="670" height="407" style="width:17.729cm;height:10.765cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000054D000003387179AE5C.png" /></p>
@@ -4775,7 +4775,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313841394789306"></a></p>
+<p><span id="refheading1313841394789306" name="refheading1313841394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2811-the-exemple-17b-project">2.8.1.1. The [Exemple-17B] project</h4>
 <p><span style="color: #000000">We duplicate the [client-android-skel] project in examples/Example-17B. Then we load the new [1] project:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -4834,7 +4834,7 @@ The [Session] class is as follows:</span></p>
 <p><span style="color: #000000">  </span></p>
 <p><img src="images/100000000000016E0000009BC6A382E0.png" width="293" height="124" style="width:7.751cm;height:3.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016E0000009BC6A382E0.png" /></p>
 <p><span style="color: #000000">You must remove the annotation [@Override] from line 135. There are now no more errors. We will use this as a starting point to modify the project.</span></p>
-<p><a id="refheading1313861394789306"></a></p>
+<p><span id="refheading1313861394789306" name="refheading1313861394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2812-the-status-of-the-vue1fragment-fragment">2.8.1.2. The status of the [Vue1Fragment] fragment</h4>
 <p><span style="color: #000000">The [Vue1Fragment] fragment needs to save information when the device is rotated so that it can be fully restored. We create a [Vue1FragmentState] class for this purpose:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -4852,7 +4852,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1313881394789306"></a></p>
+<p><span id="refheading1313881394789306" name="refheading1313881394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2813-project-customization">2.8.1.3. Project Customization</h4>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/100000000000012B00000171113658A7.png" width="209" height="258" style="width:5.54cm;height:6.83cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012B00000171113658A7.png" /></p>
@@ -4972,7 +4972,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313901394789306"></a></p>
+<p><span id="refheading1313901394789306" name="refheading1313901394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2814-the-mainactivity-activity">2.8.1.4. The [MainActivity] activity</h4>
 <p><span style="color: #000000">The [MainActivity] activity currently looks like this:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -5111,7 +5111,7 @@ The [Session] class is as follows:</span></p>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Only the method in lines 41–44 needs to be modified. It must return the array of the application’s fragments. On line 43, </span><strong><span style="color: #000000">don’t forget to add the underscore after the fragment name</span></strong><span style="color: #000000">.</span></p>
-<p><a id="refheading1313921394789306"></a></p>
+<p><span id="refheading1313921394789306" name="refheading1313921394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2815-the-state-of-fragment-fragmentstate">2.8.1.5. The state of fragment [FragmentState]</h4>
 <p>Following the rotation tests performed on the [Exemple-17] project, it was decided to store the following elements of the fragment:</p>
 <ul>
@@ -5146,7 +5146,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1313941394789306"></a></p>
+<p><span id="refheading1313941394789306" name="refheading1313941394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2816-the-fragment-abstractfragment">2.8.1.6. The fragment [AbstractFragment]</h4>
 <p><span style="color: #000000">Currently, the fragment&#x27;s lifecycle is managed by two methods (lines 6 and 32):</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -5377,10 +5377,10 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1313961394789306"></a></p>
+<p><span id="refheading1313961394789306" name="refheading1313961394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2817-tests">2.8.1.7. Tests</h4>
 <p><span style="color: #000000">The reader is invited to test this project and verify that the fragment is preserved after one or more successive rotations.</span></p>
-<p><a id="refheading1313981394789306"></a></p>
+<p><span id="refheading1313981394789306" name="refheading1313981394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="282-example-23-weather-client">2.8.2. Example-23: Weather Client</h3>
 <p><span style="color: #000000">Some websites provide weather information in the form of jSON strings. Here is an example:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -5395,7 +5395,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314001394789306"></a></p>
+<p><span id="refheading1314001394789306" name="refheading1314001394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2821-the-project">2.8.2.1. The Project</h4>
 <p><img src="images/100000000000010600000149138DFD37.png" width="183" height="230" style="width:4.851cm;height:6.091cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010600000149138DFD37.png" /></p>
 <p><span style="color: #000000">The project was built based on the [client-android-skel] project. It has the following characteristics:</span></p>
@@ -5406,7 +5406,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314021394789306"></a></p>
+<p><span id="refheading1314021394789306" name="refheading1314021394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2822-project-customization">2.8.2.2. Project Customization</h4>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000F9000000F5A2D51545.png" width="174" height="172" style="width:4.611cm;height:4.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000F5A2D51545.png" /></p>
@@ -5521,7 +5521,7 @@ The [Session] class is as follows:</span></p>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">It is empty because there is no inter-fragment communication in this application.</span></p>
-<p><a id="refheading1314041394789306"></a></p>
+<p><span id="refheading1314041394789306" name="refheading1314041394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2823-the-dao-layer">2.8.2.3. The [DAO] layer</h4>
 <p><img src="images/100000000000010500000120B52E6FCC.png" width="183" height="201" style="width:4.83cm;height:5.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010500000120B52E6FCC.png" /></p>
 <p>In the [DAO] layer, three classes must be customized: </p>
@@ -5724,7 +5724,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314061394789306"></a></p>
+<p><span id="refheading1314061394789306" name="refheading1314061394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2824-the-mainactivity-activity">2.8.2.4. The [MainActivity] activity</h4>
 <p><img src="images/10000000000000D600000091685849C4.png" width="150" height="101" style="width:3.96cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D600000091685849C4.png" /></p>
 <p>The [MainActivity] activity is as follows:</p>
@@ -5808,7 +5808,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314081394789306"></a></p>
+<p><span id="refheading1314081394789306" name="refheading1314081394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2825-the-fragment-meteofragment">2.8.2.5. The fragment [MeteoFragment]</h4>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000FF000000CF1ABC127E.png" width="178" height="145" style="width:4.72cm;height:3.829cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FF000000CF1ABC127E.png" /></p>
@@ -6151,7 +6151,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314101394789306"></a></p>
+<p><span id="refheading1314101394789306" name="refheading1314101394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2826-tests">2.8.2.6. Tests</h4>
 <p>We now run the example:</p>
 <p><img src="images/10000000000005010000010BB084047E.png" width="670" height="140" style="width:17.729cm;height:3.694cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005010000010BB084047E.png" /></p>
@@ -6259,7 +6259,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314121394789306"></a></p>
+<p><span id="refheading1314121394789306" name="refheading1314121394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="283-example-16b">2.8.3. Example-16B</h3>
 <p>Here we refactor Example 16 from the section<a href="learning-android-programming.html#refheading949421723138940"> 1.17 </a> . It presents a fragment that makes asynchronous calls to a random number server. Let’s see how it behaves during a device rotation:</p>
 <p><img src="images/100000000000044C0000029E7F10224F.png" width="670" height="408" style="width:17.729cm;height:10.799cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044C0000029E7F10224F.png" /></p>
@@ -6270,7 +6270,7 @@ The [Session] class is as follows:</span></p>
 
 <p><img src="images/1000000000000402000002A0B58CBBF6.png" width="670" height="437" style="width:17.729cm;height:11.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000402000002A0B58CBBF6.png" /></p>
 <p>We see that we have lost all the error messages. We will try to improve this.</p>
-<p><a id="refheading1314141394789306"></a></p>
+<p><span id="refheading1314141394789306" name="refheading1314141394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2831-the-example-16b-project">2.8.3.1. The Example-16B project</h4>
 <p>We copy the [client-android-skel] project into the [exemples/Exemple-16B] project, then load the new project:</p>
 <p><img src="images/10000000000000F10000010E7C7C92B1.png" width="169" height="189" style="width:4.461cm;height:5.001cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F10000010E7C7C92B1.png" /></p>
@@ -6318,7 +6318,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314161394789306"></a></p>
+<p><span id="refheading1314161394789306" name="refheading1314161394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2832-creating-a-report-for-the-vue1fragment-fragment">2.8.3.2. Creating a report for the [Vue1Fragment] fragment</h4>
 <p>We have seen that certain information from the fragment will need to be saved during a rotation in order to restore the fragment to its state prior to the rotation. We therefore create a [Vue1FragmentState] state, which is empty for now:</p>
 <p><img src="images/10000000000000EF0000006ADCF83B4A.png" width="167" height="74" style="width:4.431cm;height:1.96cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EF0000006ADCF83B4A.png" /></p>
@@ -6332,7 +6332,7 @@ The [Session] class is as follows:</span></p>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading1314181394789306"></a></p>
+<p><span id="refheading1314181394789306" name="refheading1314181394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2833-project-customization">2.8.3.3. Project Customization</h4>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000000F9000000F5A2D51545.png" width="174" height="172" style="width:4.611cm;height:4.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000F5A2D51545.png" /></p>
@@ -6447,7 +6447,7 @@ The [Session] class is as follows:</span></p>
 
 <p><span style="color: #000000"> </span></p>
 <p>It is empty because there is no inter-fragment communication in this application.</p>
-<p><a id="refheading1314201394789306"></a></p>
+<p><span id="refheading1314201394789306" name="refheading1314201394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2834-the-dao-layer">2.8.3.4. The [DAO] layer</h4>
 <p><img src="images/100000000000012C000000CDE37E4DC5.png" width="210" height="144" style="width:5.549cm;height:3.799cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012C000000CDE37E4DC5.png" /></p>
 <p>In the [DAO] layer, three classes must be customized: </p>
@@ -6676,7 +6676,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314221394789306"></a></p>
+<p><span id="refheading1314221394789306" name="refheading1314221394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2835-the-mainactivity-activity">2.8.3.5. The [MainActivity] activity</h4>
 <p><img src="images/10000000000000D600000091685849C4.png" width="150" height="101" style="width:3.96cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D600000091685849C4.png" /></p>
 <p>The [MainActivity] activity is as follows:</p>
@@ -6767,7 +6767,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314241394789306"></a></p>
+<p><span id="refheading1314241394789306" name="refheading1314241394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2836-the-state-of-the-fragment-vue1fragment">2.8.3.6. The state of the fragment [Vue1Fragment]</h4>
 <p><img src="images/100000000000013700000123E27F825A.png" width="218" height="204" style="width:5.761cm;height:5.39cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000013700000123E27F825A.png" /></p>
 <p>The [Vue1FragmentState] class will be as follows:</p>
@@ -6802,7 +6802,7 @@ The [Session] class is as follows:</span></p>
 </code></pre></div>
 
 <p>To determine what needed to be saved in the fragment, we rotated the device in various situations and observed what was lost upon restoration. We concluded that the information in lines 10–23 needed to be saved.</p>
-<p><a id="refheading1314261394789306"></a></p>
+<p><span id="refheading1314261394789306" name="refheading1314261394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2837-the-fragment-vue1fragment">2.8.3.7. The fragment [Vue1Fragment]</h4>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/10000000000001210000012352B44924.png" width="202" height="204" style="width:5.35cm;height:5.39cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001210000012352B44924.png" /></p>
@@ -6849,7 +6849,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314281394789306"></a></p>
+<p><span id="refheading1314281394789306" name="refheading1314281394789306" class="odt-bookmark-anchor"></span></p>
 <h5 id="28371-handling-the-click-on-the-executer-button">2.8.3.7.1. Handling the click on the [Exécuter] button</h5>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span>Click(R.id.btn_Executer)</span></span>
@@ -6981,7 +6981,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314301394789306"></a></p>
+<p><span id="refheading1314301394789306" name="refheading1314301394789306" class="odt-bookmark-anchor"></span></p>
 <h5 id="28372-the-fragment-lifecycle">2.8.3.7.2. The fragment lifecycle</h5>
 <p><span style="color: #000000">The fragment lifecycle is managed by the following methods:</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -7127,7 +7127,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314321394789306"></a></p>
+<p><span id="refheading1314321394789306" name="refheading1314321394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2838-tests">2.8.3.8. Tests</h4>
 <p>The reader is invited to perform the following tests:</p>
 <ul>
@@ -7139,7 +7139,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314341394789306"></a></p>
+<p><span id="refheading1314341394789306" name="refheading1314341394789306" class="odt-bookmark-anchor"></span></p>
 <h3 id="284-example-22b">2.8.4. Example-22B</h3>
 <p><span style="color: #000000">Here we revisit Example 22 to refactor it according to the model of the [client-android-skel] project. Recall that the [Exemple-22] project correctly handles the save/restore cycle of fragments during rotation and that it served as the basis for the [client-android-skel] project.</span></p>
 <p><span style="color: #000000"> </span></p>
@@ -7194,7 +7194,7 @@ The [Session] class is as follows:</span></p>
 <p><span style="color: #000000">At this point, we can attempt an initial compilation. A first type of error appears: incorrect </span><em><span style="color: #000000">imports </span></em><span style="color: #000000">because classes have changed packages. We correct these </span><em><span style="color: #000000">imports</span></em><span style="color: #000000">. A second type of error is due to the fact that the fragments do not implement all the methods of their parent class [AbstractFragment]. We correct this by pressing (Alt+Enter).</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The remaining errors stem from differences between the old and new [AbstractFragment] classes. For now, we ignore them.</span></p>
-<p><a id="refheading1314361394789306"></a></p>
+<p><span id="refheading1314361394789306" name="refheading1314361394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2841-project-customization">2.8.4.1. Project Customization</h4>
 <p><span style="color: #000000">   </span></p>
 <p><img src="images/1000000000000130000001510FD6177A.png" width="213" height="236" style="width:5.63cm;height:6.241cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000130000001510FD6177A.png" /></p>
@@ -7319,7 +7319,7 @@ The [Session] class is as follows:</span></p>
 
 <p><span style="color: #000000"> </span></p>
 <p>This is the session for project [Exemple-22].</p>
-<p><a id="refheading1314381394789306"></a></p>
+<p><span id="refheading1314381394789306" name="refheading1314381394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2842-the-mainactivity-activity">2.8.4.2. The [MainActivity] activity</h4>
 <p><img src="images/10000000000000D600000091685849C4.png" width="150" height="101" style="width:3.96cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000D600000091685849C4.png" /></p>
 <p>The [MainActivity] activity is as follows:</p>
@@ -7377,7 +7377,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314401394789306"></a></p>
+<p><span id="refheading1314401394789306" name="refheading1314401394789306" class="odt-bookmark-anchor"></span></p>
 <h5 id="28421-implementation-of-the-parent-class-methods">2.8.4.2.1. Implementation of the parent class methods</h5>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content">// methods parent class -----------------------</span></span>
@@ -7452,7 +7452,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314421394789306"></a></p>
+<p><span id="refheading1314421394789306" name="refheading1314421394789306" class="odt-bookmark-anchor"></span></p>
 <h5 id="28422-tab-management">2.8.4.2.2. Tab Management</h5>
 <p>Tabs are managed by the following methods:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -7518,7 +7518,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314441394789306"></a></p>
+<p><span id="refheading1314441394789306" name="refheading1314441394789306" class="odt-bookmark-anchor"></span></p>
 <h5 id="28423-menu-management">2.8.4.2.3. Menu Management</h5>
 <p>The activity is associated with the following menu: [menu_main.xml]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -7629,7 +7629,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314461394789306"></a></p>
+<p><span id="refheading1314461394789306" name="refheading1314461394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2843-the-fragment-vue1fragment">2.8.4.3. The fragment [Vue1Fragment]</h4>
 <p>Here is the final version for the fragment:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -7750,7 +7750,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314481394789306"></a></p>
+<p><span id="refheading1314481394789306" name="refheading1314481394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2844-the-state-placeholderfragmentstate">2.8.4.4. The state [PlaceHolderFragmentState]</h4>
 <p>The state of the fragment [PlaceHolderFragment] will be as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -7782,7 +7782,7 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314501394789306"></a></p>
+<p><span id="refheading1314501394789306" name="refheading1314501394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2845-the-fragment-placeholderfragment">2.8.4.5. The fragment [PlaceHolderFragment]</h4>
 <p>The fragment [PlaceHolderFragment] will be as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -7897,10 +7897,10 @@ The [Session] class is as follows:</span></p>
   </li>
 </ul>
 
-<p><a id="refheading1314521394789306"></a></p>
+<p><span id="refheading1314521394789306" name="refheading1314521394789306" class="odt-bookmark-anchor"></span></p>
 <h4 id="2846-tests">2.8.4.6. Tests</h4>
 <p>The reader is invited to test the application by rotating the device to verify that the displayed fragment does not lose its state. We will also examine the logs.</p>
-<p><a id="refheading1314541394789306"></a></p>
+<p><span id="refheading1314541394789306" name="refheading1314541394789306" class="odt-bookmark-anchor"></span></p>
 <h2 id="29-conclusion">2.9. Conclusion</h2>
 <p>At the end of this chapter, we have a [client-android-skel] Android client template project communicating with a web service / jSON with the following characteristics:</p>
 <ul>

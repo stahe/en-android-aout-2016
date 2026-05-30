@@ -657,9 +657,9 @@
 
 
 
-<p><a id="refheading1646501704398319"></a></p>
+<p><span id="refheading1646501704398319" name="refheading1646501704398319" class="odt-bookmark-anchor"></span></p>
 <h1 id="4-tp-1-basic-management-of-a-pay-stub">4. TP 1: Basic management of a pay stub</h1>
-<p><a id="refheading61956428607977"></a></p>
+<p><span id="refheading61956428607977" name="refheading61956428607977" class="odt-bookmark-anchor"></span></p>
 <h2 id="41-introduction">4.1. Introduction</h2>
 <p>To apply what we’ve covered previously, we now propose a project involving the development of an Android client for tablets, designed to simulate payroll calculations for the employees of an association.</p>
 <p>The application will have a client/server architecture:</p>
@@ -671,11 +671,11 @@
   </li>
 </ul>
 
-<p><a id="refheading154461029747953"></a></p>
+<p><span id="refheading154461029747953" name="refheading154461029747953" class="odt-bookmark-anchor"></span></p>
 <h2 id="42-the-database">4.2. The database</h2>
-<p><a id="refheading154481029747953"></a></p>
+<p><span id="refheading154481029747953" name="refheading154481029747953" class="odt-bookmark-anchor"></span></p>
 <h3 id="421-definition">4.2.1. Definition</h3>
-<p>The static data needed to build the pay stub will be stored in a database that we will refer to hereafter <strong>as</strong><a id="dbpam"></a> dbpam . This database contains the following tables:</p>
+<p>The static data needed to build the pay stub will be stored in a database that we will refer to hereafter <strong>as</strong><span id="dbpam" name="dbpam" class="odt-bookmark-anchor"></span> dbpam . This database contains the following tables:</p>
 <div style="margin:0 0 0.75em 0; background-color:#cccccc; padding:0.35em 0.6em">Table <b>EMPLOYES</b>: contains information about the various child care providers</div>
 
 <p><strong>Structure</strong>:</p>
@@ -764,7 +764,7 @@
 <p>Its content could be as follows:</p>
 <p><img src="images/10000000000002B900000058BF2B5FE8.png" width="488" height="62" style="width:12.91cm;height:1.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B900000058BF2B5FE8.png" /></p>
 <p>Note that allowances may vary from one child care provider to another. They are linked to a specific child care provider via their pay grade. Thus, Ms. Marie Jouveinal, who has a pay grade of 2 (table EMPLOYES), has an hourly wage of 2.1 euros (table INDEMNITES).</p>
-<p><a id="refheading154501029747953"></a></p>
+<p><span id="refheading154501029747953" name="refheading154501029747953" class="odt-bookmark-anchor"></span></p>
 <h3 id="422-generation">4.2.2. Generation</h3>
 <p>The database generation script [dbpam_hibernate.sql] is provided:</p>
 <p><img src="images/10000000000000BF000000932F0E0E55.png" width="134" height="103" style="width:3.54cm;height:2.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000BF000000932F0E0E55.png" /></p>
@@ -777,10 +777,10 @@
   </li>
 </ul>
 
-<p><a id="refheading154521029747953"></a></p>
+<p><span id="refheading154521029747953" name="refheading154521029747953" class="odt-bookmark-anchor"></span></p>
 <h3 id="423-java-database-modeling">4.2.3. Java database modeling</h3>
 <p>The elements of tables [EMPLOYES], [INDEMNITES], and [COTISATIONS] are modeled by the following classes:</p>
-<p><u><strong>[Employe]</strong></u><a id="employe"></a></p>
+<p><u><strong>[Employe]</strong></u><span id="employe" name="employe" class="odt-bookmark-anchor"></span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> pam.entities;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -826,7 +826,7 @@
   </li>
 </ul>
 
-<p>[Indemnite]<a id="indemnite"></a></p>
+<p>[Indemnite]<span id="indemnite" name="indemnite" class="odt-bookmark-anchor"></span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> pam.entities;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -860,7 +860,7 @@
   </li>
 </ul>
 
-<p>[Cotisation]<a id="cotisation"></a></p>
+<p>[Cotisation]<span id="cotisation" name="cotisation" class="odt-bookmark-anchor"></span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> pam.entities;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -892,11 +892,11 @@
   </li>
 </ul>
 
-<p><a id="refheading61958428607977"></a></p>
+<p><span id="refheading61958428607977" name="refheading61958428607977" class="odt-bookmark-anchor"></span></p>
 <h2 id="43-web-server-installation-json">4.3. Web server installation / jSON</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004BE0000018FD9EFE949.png" width="607" height="200" style="display:inline-block; margin:4px;width:16.06cm;height:5.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BE0000018FD9EFE949.png" /></td></tr></table>
 
-<p><a id="refheading154541029747953"></a></p>
+<p><span id="refheading154541029747953" name="refheading154541029747953" class="odt-bookmark-anchor"></span></p>
 <h3 id="431-installation">4.3.1. Installation</h3>
 <p>The Java binary for the web server / jSON is provided:</p>
 <p><img src="images/10000000000000DA0000007B701CC163.png" width="153" height="86" style="width:4.039cm;height:2.281cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DA0000007B701CC163.png" /></p>
@@ -981,7 +981,7 @@
   </li>
 </ul>
 
-<p><a id="refheading8099721530162"></a></p>
+<p><span id="refheading8099721530162" name="refheading8099721530162" class="odt-bookmark-anchor"></span></p>
 <h3 id="432-the-url-of-the-web-servicejson">4.3.2. The URL of the web service/jSON</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000047C0000015BE373E46D.png" width="574" height="174" style="display:inline-block; margin:4px;width:15.187cm;height:4.591cm;" class="odt-zoomable" data-zoom-src="images/100000000000047C0000015BE373E46D.png" /></td></tr></table>
 
@@ -1011,7 +1011,7 @@
 <p><img src="images/100000000000039B000000A34A921A73.png" width="646" height="114" style="width:17.09cm;height:3.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000039B000000A34A921A73.png" /></p>
 <p>We query the salary of a non-existent person:</p>
 <p><img src="images/1000000000000234000000681AB9AB40.png" width="395" height="73" style="width:10.44cm;height:1.93cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000234000000681AB9AB40.png" /></p>
-<p><a id="refheading8099921530162"></a></p>
+<p><span id="refheading8099921530162" name="refheading8099921530162" class="odt-bookmark-anchor"></span></p>
 <h3 id="433-responses-json-from-the-web-service-json">4.3.3. Responses jSON from the web service / jSON</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000047300000176CA966EB5.png" width="570" height="187" style="display:inline-block; margin:4px;width:15.069cm;height:4.948cm;" class="odt-zoomable" data-zoom-src="images/100000000000047300000176CA966EB5.png" /></td></tr></table>
 
@@ -1119,7 +1119,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading61960428607977"></a></p>
+<p><span id="refheading61960428607977" name="refheading61960428607977" class="odt-bookmark-anchor"></span></p>
 <h2 id="44-android-client-tests">4.4. Android client tests</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000061700000116321EEDE2.png" width="680" height="121" style="display:inline-block; margin:4px;width:17.999cm;height:3.209cm;" class="odt-zoomable" data-zoom-src="images/100000000000061700000116321EEDE2.png" /></td></tr></table>
 
@@ -1187,7 +1187,7 @@
   </li>
 </ul>
 
-<p><a id="refheading61962428607977"></a></p>
+<p><span id="refheading61962428607977" name="refheading61962428607977" class="odt-bookmark-anchor"></span></p>
 <h2 id="45-work-to-be-done">4.5. Work to be done</h2>
 <p>The Android client skeleton presented earlier is provided here. It was built from the [client-android-skel] project described in the section<a href="skeleton-of-an-android-client-communicating-with-a-web-service--json.html#refheading1083471369936500"> 2 </a> .</p>
 <p><img src="images/10000000000000C60000009F32DA1ED2.png" width="139" height="111" style="width:3.671cm;height:2.94cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C60000009F32DA1ED2.png" /></p>
