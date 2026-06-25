@@ -1314,9 +1314,9 @@
 
 <p>The program code is heavily commented. Interested readers may refer to it. We simply highlight the lines of code that configure the bidirectional client/server communication between the Arduino and the PC:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">#include &lt;SPI.h&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">#include &lt;Ethernet.h&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">#include &lt;ajSON.h&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">#include &lt;SPI.h&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">#include &lt;Ethernet.h&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">#include &lt;ajSON.h&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// ---------------------------------- CONFIGURATION DE L&#x27;ARDUINO UNO</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// adresse MAC de l&#x27;Arduino UNO</span></span>
@@ -1565,7 +1565,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String ip;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> port;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// getters and setters</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
@@ -1641,7 +1641,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>fait clignoter la led de la pin n° 8
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a> de l&#39;Arduino identified by kitchen,
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>de l&#39;Arduino identified by kitchen,
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a> 20 fois toutes les 100 ms.
 </code></pre></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
@@ -1650,7 +1650,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>lecture analogique de la pin n° 0 de
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a> l&#39;Arduino identified by kitchen
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>l&#39;Arduino identified by kitchen
 </code></pre></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>http://localhost:8080/arduinos/
@@ -1658,7 +1658,7 @@
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>lecture binaire de la pin n° 5 de
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a> l&#39;Arduino identified by kitchen
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>l&#39;Arduino identified by kitchen
 </code></pre></div>
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>http://localhost:8080/arduinos/
@@ -2578,7 +2578,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String ip;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> port;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// getters and setters</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
